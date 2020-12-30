@@ -1,13 +1,15 @@
 import React from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './NavbarElements'
 
-const navbar=()=> (
+const navbar=({toggle})=> (
     <>
       <Nav>
           <NavLink to = "/">
               <h1>GreenPark</h1>
           </NavLink>
-          <Bars/>
+      
+            <Bars onClick= {toggle}/>
+       
           <NavMenu>
               <NavLink to = "/"activeStyle>
                   Home
