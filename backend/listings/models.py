@@ -9,7 +9,8 @@ class Listing(models.Model):
     class HomeType(models.TextChoices):
         HOUSE ='House'
         CONDO ='Condo'
-        TOWNHOUSE ='Townhouse'    
+        TOWNHOUSE ='Townhouse' 
+        OFFICE ='Office'   
         
     realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
     slug = models.CharField(max_length=200, unique=True)

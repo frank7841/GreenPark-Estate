@@ -5,7 +5,7 @@ import Sidebar from '../components/sidebar/Sidebar'
 
 
 
-const Layout =(props)=> {
+const Layout =()=> {
     
     
 
@@ -18,7 +18,7 @@ const Layout =(props)=> {
     <div>
     <Sidebar isOpen= {isOpen} toggle= {toggle}/>    
     <Navbar toggle= {toggle}/>
-    {props.children}
+    {/* {props.children} */}
     </div>
 
 );
