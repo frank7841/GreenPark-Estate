@@ -1,10 +1,11 @@
 @import url(./components/_notfound.css);
+@import url(./components/_navigation.css);
 
 @import "https://fonts.googleapis.com/css?family=Sora&display=swap";
 *{
     font-family: 'sora', sans-serif;
-    /* box-sizing: border-box;
+    box-sizing: border-box;
     margin:0;
-    padding: 0; */
+    padding: 0; 
 
 }

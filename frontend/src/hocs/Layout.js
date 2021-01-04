@@ -1,26 +1,18 @@
-import React, {useState} from 'react'
-import Navbar from '../components/navbar/Navbar'
-import Sidebar from '../components/sidebar/Sidebar'
+import React from 'react'
+import Navbar from '../components/Navbar'
 
 
 
 
-const Layout =()=> {
-    
-    
 
-    const [isOpen, setIsOpen] = useState(false)
+const Layout = (props) => {
 
-    const toggle= () =>{
-        setIsOpen(!isOpen)
-    }
-    return (
-    <div>
-    <Sidebar isOpen= {isOpen} toggle= {toggle}/>    
-    <Navbar toggle= {toggle}/>
-    {/* {props.children} */}
-    </div>
-
-);
-    }
+    return ( 
+        <>
+        
+        <Navbar/>
+        {props.children}
+        </>
+    );
+}
 export default Layout;

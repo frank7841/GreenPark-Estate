@@ -1,0 +1,15 @@
+.nav-item{
+text-decoration: none;
+color:#010101;
+}
+.nav-item:hover{
+    border-bottom:2px solid
+}
+.nav-item:active{
+    color:green;
+}
+@media screen and (max-width:767px){
+    .nav-item{
+        color: #ffffff;
+    }
+}
