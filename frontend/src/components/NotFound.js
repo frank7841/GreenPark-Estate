@@ -13,8 +13,8 @@ const notfound =() =>(
           Sorry, an error has occured, Requested page not found!
         </div>
         <div className="error-actions">
-          <a href="http://www.jquery2dotnet.com" className="btn btn-primary btn-lg"><span className="glyphicon glyphicon-home" />
-            Take Me Home </a><a href="http://www.jquery2dotnet.com" className="btn btn-default btn-lg"><span className="glyphicon glyphicon-envelope" /> Contact Support </a>
+          <a href="/" className="btn btn-primary btn-lg"><span className="glyphicon glyphicon-home" />
+            Take Me Home </a><a href="/" className="btn btn-default btn-lg"><span className="glyphicon glyphicon-envelope" /> Contact Support </a>
         </div>
       </div>
     </div>

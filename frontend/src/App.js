@@ -11,6 +11,9 @@ import SignUp from './containers/SignUp'
 import NotFound from './components/NotFound'
 import Layout from './hocs/Layout'
 
+import provider from 'react-redux'
+import store from './store'
+
 import './css/main.css';
 
 const App=()=> (
