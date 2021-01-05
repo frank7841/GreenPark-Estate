@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import styled from 'styled-components';
 import {NavLink,  Link} from 'react-router-dom';
-
+import {connect} from 'react-redux';
+import {logout} from '../actions/auth';
+import Alert from './Alert';
+import propTypes from 'prop-types';
 
 const Ul = styled.ul`
   list-style:none;
@@ -38,7 +41,9 @@ const Ul = styled.ul`
 const NavBtn = styled.nav`
     display:flex;
     align-items: center;
-    margin-right:24px;
+    margin-right:15px;
+    padding-top:1.5rem;
+    
     
   `
 const NavBtnLink = styled(Link)`
@@ -62,21 +67,48 @@ text-decoration: none;
 
 `
 
-const RightNav = ({open}) => {
+const RightNav = ({ auth:{isAuthenticated, loading}, logout, open} ) => {
+
+    const authLinks = (
+        <a className="top-van-link" onClick={logout} href="#!">Logout</a>
+
+    );
+    const guestLinks = (
+      <>
+          <li><NavLink className = "nav-item"exact to='/signup'>Sign Up</NavLink></li>
+          <li><NavLink className = "nav-btn nav-item"exact to = "/login">Login </NavLink></li>
+    </>
+    );
     
     return (
+        <>
         <Ul open = {open}  >
           <li><NavLink className="nav-item" exact to='/' >Home</NavLink></li>
           <li><NavLink className ="nav-item" exact to ='/listings'>Listings</NavLink></li>
           <li> <NavLink className = "nav-item" exact to ='/service'>Services</NavLink> </li>
           <li><NavLink className ="nav-item"exact to ='/about'>About</NavLink></li>
           <li><NavLink className = "nav-item"exact to= '/contact'>Contacts</NavLink></li>
-          <li>Sign Up</li>
+          {/* <li><NavLink className = "nav-item"exact to='/signup'>Sign Up</NavLink></li>
           <NavBtn>
                <NavBtnLink to = "/login">Login</NavBtnLink>
-           </NavBtn>
-        </Ul>     
+           </NavBtn> */}
+           <> { !loading && (<>{ isAuthenticated ? authLinks : guestLinks }</>) }</>
+        </Ul>
+       
+        <Alert/>   
+        </>  
     )
 }
 
-export default RightNav
+RightNav.propTypes= {
+
+logout: propTypes.func. isRequired,
+auth: propTypes.func. isRequired,
+}
+
+
+const mapStateToProps = state=> ({
+    auth:state.auth
+})
+
+export default connect(mapStateToProps, {logout})(RightNav)

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const notfound =() =>(
-    <div className="container cover-notfound">
+    <div className="container-fluid cover-notfound">
   <div className="row">
     <div className="col-md-12">
       <div className="error-template">

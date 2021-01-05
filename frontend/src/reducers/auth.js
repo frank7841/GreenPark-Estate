@@ -9,7 +9,7 @@ import store from '../store';
 
 const initialState = {
     token:localStorage.getItem('token'), 
-    IsAuthenticated: null,
+    isAuthenticated: null,
     loading: false
 
 };
@@ -21,7 +21,7 @@ const initialState = {
              localStorage. setItem('token', payload.access);
              return {
              ...state,
-             IsAuthenticated:true,
+             isAuthenticated:true,
              loading:false,
              token:payload.success
              }
