@@ -9,16 +9,19 @@ color:#010101;
     color:green;
 }
 @media screen and (max-width:767px){
-    .nav-item{
+    .nav-item {
         color: #ffffff;
     }
+    
+    
+   
 }
 
 
 .nav-btn{
 
-    border-radius:4px;
-background: green;
+border-radius:4px;
+background: #228B22;
 padding: 8px  18px;
 color:#ffffff;
 cursor:pointer;
@@ -33,4 +36,21 @@ text-decoration: none;
     color:#ffffff;
     border: 2px solid blue;
      
+}
+.top-van-link{
+    text-decoration: none;
+    display: flex;
+    padding: 18px;
+    font-size: 18px;
+    margin-right: -20px;
+    color: #1a1a1a;
+    
+}
+@media screen and (max-width:767px){
+
+    .top-van-link{
+        color:#ffffff;
+        display: flex;
+        justify-content:flex-start;
+    }
 }

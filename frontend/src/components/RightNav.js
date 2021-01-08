@@ -1,6 +1,6 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import styled from 'styled-components';
-import {NavLink,  Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {logout} from '../actions/auth';
 import Alert from './Alert';
@@ -27,6 +27,7 @@ const Ul = styled.ul`
         padding-top:3.5rem;
         transform:${({open})=> open ? 'translateX(0)': 'translateX(100%)'};
         transition:transform 0.3s ease-in-out;
+        z-index:9;
 
     li{
         color:#ffffff;
@@ -38,36 +39,7 @@ const Ul = styled.ul`
     }
 `;
 
-const NavBtn = styled.nav`
-    display:flex;
-    align-items: center;
-    margin-right:15px;
-    padding-top:1.5rem;
-    
-    
-  `
-const NavBtnLink = styled(Link)`
-border-radius:4px;
-background: green;
-padding: 8px  18px;
-color:#ffffff;
-cursor:pointer;
-border: none;
-transition: all 0.2s ease-in-out;
-text-decoration: none;
-
-&:hover{
-    transition: all 0.2s ease-in-out;
-    background:  #1a1a1a;
-    color:#ffffff;
-    border: 2px solid blue;
-     
-}
-
-
-`
-
-const RightNav = ({ auth:{isAuthenticated, loading}, logout, open} ) => {
+const RightNav = ({  open, auth:{isAuthenticated, loading}, logout} ) => {
 
     const authLinks = (
         <a className="top-van-link" onClick={logout} href="#!">Logout</a>
@@ -102,8 +74,8 @@ const RightNav = ({ auth:{isAuthenticated, loading}, logout, open} ) => {
 
 RightNav.propTypes= {
 
-logout: propTypes.func. isRequired,
-auth: propTypes.func. isRequired,
+logout: propTypes.func.isRequired,
+auth: propTypes.func.isRequired
 }
 
 

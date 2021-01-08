@@ -1,6 +1,8 @@
 @import url(./components/_notfound.css);
 @import url(./components/_navigation.css);
 @import url(./components/alert.css);
+@import url(./components/login.css);
+@import url(./components/home.css);
 
 @import "https://fonts.googleapis.com/css?family=Sora&display=swap";
 *{
