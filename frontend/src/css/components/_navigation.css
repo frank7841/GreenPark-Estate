@@ -1,5 +1,5 @@
 .nav-item{
-text-decoration: none;
+text-decoration: none!important;
 color:#010101;
 }
 .nav-item:hover{
@@ -27,7 +27,7 @@ color:#ffffff;
 cursor:pointer;
 border: none;
 transition: all 0.2s ease-in-out;
-text-decoration: none;
+text-decoration: none!important;
 
 }
 .nav-btn:hover{

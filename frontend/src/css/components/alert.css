@@ -5,6 +5,7 @@
     width:100%;
     height: auto;
     opacity: 90%;
+    z-index: 2;
     
 }
 .alert--success{

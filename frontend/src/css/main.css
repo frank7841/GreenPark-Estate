@@ -3,6 +3,7 @@
 @import url(./components/alert.css);
 @import url(./components/login.css);
 @import url(./components/home.css);
+@import url(./components/listingsform.css);
 
 @import "https://fonts.googleapis.com/css?family=Sora&display=swap";
 *{

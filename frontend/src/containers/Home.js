@@ -7,7 +7,7 @@ import Pagination from '../components/Pagination'
 import { Carousel }  from 'react-bootstrap';
 
 const Home=()=> {
-    const [listings,serListings]= useState([]);
+    const [listings,setListings]= useState([]);
     const [currentPage,setCurrentPage]= useState([1]);
     const [listingsPerPage,setListingsPerPage]= useState([3]);
     const [active,setActive]= useState(1);
@@ -94,29 +94,33 @@ const Home=()=> {
                             Sky Rocket Your business with state of the art office spaces </p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        {/* <Carousel.Item>
-                            <img
-                            className="d-block w-100 image-height"
-                            src={process.env.PUBLIC_URL + 'image/image5.jpg'}
-                            alt="First slide"
-                            />
-                            <Carousel.Caption>
-                            <h3>Fifth slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100 image-height"
-                            src={process.env.PUBLIC_URL + 'image/image1.jpg'}
-                            alt="First slide"
-                            />
-                            <Carousel.Caption >
-                            <h3 >Sixth slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item> */}
+                    
                     </Carousel>
+                    <section className="home-form">
+                        <ListingForm setListings= {setListings}></ListingForm>
+                    </section>
+                    <section className="home-listings">
+                        <Listings listings = {currentListings}>
+
+                        </Listings>
+                    </section>
+                    <section className="Listings-Pagination">
+                        <div className="row">
+                            {
+                            listings.length !==0 ?(
+                                <Pagination
+                                itemsPerPage = {listingsPerPage}
+                                count= {listings.length}
+                                visitPage={visitPage}
+                                previous={previous_number}
+                                next={next_number}
+                                active={active}
+                                setActive={setActive}
+                                />
+                            ): null
+                            }
+                        </div>
+                    </section>
             </div>
         </main>
     )

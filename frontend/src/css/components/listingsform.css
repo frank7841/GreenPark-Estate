@@ -1,0 +1,17 @@
+.listing-form{
+    margin:10px;
+    padding-top:2em;
+}
+
+option{
+    border:none;
+}
+
+.top-add  {
+    border-bottom: 1px solid black;
+    width:auto;
+    background-color: #7f5a83;  
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    color:white;
+    
+}
