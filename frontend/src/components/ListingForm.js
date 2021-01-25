@@ -2,27 +2,39 @@ import React, { useState} from 'react'
 import axios from 'axios'
 import Loader from 'react-loader-spinner'
 import PropTypes from 'prop-types'
-import { Form, Button, Col, InputGroup } from 'react-bootstrap';
+import { Form, Button, Col} from 'react-bootstrap';
 
 const Listingform = (props)=> {
-    const[formData, setFormData]= useState({
-        sale_type:'For sale',
-        price:'Ksh 0',
-        bedrooms: '0+',
-        property_type: 'House',
-        sqft: '1000+',
-        days_listed:'1 or less',
-        has_photos: '1+',
-        open_house:'False',
-        keywords:''
+  const [formData, setFormData] = useState({
+    sale_type: 'For Sale',
+    price: 'ksh 0+',
+    bedrooms: '0+',
+    property_type: 'House',
+    bathrooms: '0+',
+    sqft: '400+',
+    days_listed: '1 or less',
+    has_photos: '1+',
+    open_house: 'false',
+    keywords: ''
+});
 
-    });
-    const{sale_type, price, bedrooms,bathrooms, property_type, sqft, days_listed, has_photos, open_house, keywords}= formData;
+    const { sale_type, price, bedrooms, property_type, bathrooms, sqft, days_listed, has_photos, property_availability, keywords } = formData;
+
 
     const [loading, setLoading]= useState(false);
 
     const onChange = e => setFormData({...formData, [e.target.name]: e.target.value});
-
+    
+  //   const onClick = e => {
+  //     if (e.target.type === 'checkbox' && e.target.value === 'false') {
+  //         setFormData({ ...formData, [e.target.name]: 'true' })
+  //         console.log({ open_house });
+  //     }
+  //     else if (e.target.type === 'checkbox' && e.target.value === 'true') {
+  //         setFormData({ ...formData, [e.target.name]: 'false' })
+  //         console.log({ open_house });
+  //     }
+  // };
     const onSubmit = e =>{
         e.preventDefault();
 
@@ -30,7 +42,7 @@ const Listingform = (props)=> {
             "Content-Type": "application/json"
         };
         setLoading(true);
-        axios.post('http://localhost:8000/api/listings/search', {sale_type, price, bedrooms,bathrooms, property_type, sqft, days_listed, has_photos, open_house, keywords} )
+        axios.post('http://localhost:8000/api/listings/search', { sale_type, price, bedrooms, property_type, bathrooms, sqft, days_listed, has_photos, property_availability, keywords } )
         .then(res =>{
             setLoading(false);
             props.setListings(res.data);
@@ -44,7 +56,6 @@ const Listingform = (props)=> {
     }
     return (
         <>
-        <div className="top-add text-center"><h3>Search. See. Love!</h3></div>
         <div className="listing-form">
         <Form onSubmit={e=>onSubmit(e)} >
         <Form.Row>
@@ -121,15 +132,17 @@ const Listingform = (props)=> {
                   <option>4+ </option>
             </Form.Control>
          </Form.Group>
-         <Form.Group>
-          <Form.Check
-          onChange ={e=> onChange(e)}
-            name="open_house"
-            label="Open Houses"
-            value= {open_house}
-          />
-              </Form.Group>
-         
+         <Form.Group as={Col} md="2" className="form-group">
+            <Form.Label>Available</Form.Label>
+            <Form.Control as ="select"
+              name="property_availability"
+              onChange={e=> onChange(e)}
+              value= {property_availability}>
+                  <option>True</option>
+                  <option>False</option>
+            </Form.Control>
+          </Form.Group>
+      
          
           </Form.Row>
           <Form.Row>
@@ -139,9 +152,10 @@ const Listingform = (props)=> {
               name="sqft"
               onChange={e=> onChange(e)}
               value= {sqft}>
-                  <option>1000+</option>
+                  <option>400+</option>
                   <option>1200+</option>
-                  <option>1800+</option>
+                  <option>1400+</option>
+                  <option>1600+</option>
                   <option>2000+</option>
                   <option>Any</option>
             </Form.Control>
@@ -189,7 +203,7 @@ const Listingform = (props)=> {
          <Form.Group as={Col} md="2" >
          {loading ?
             <Loader
-              type= "oval"
+              type= "Oval"
               color="424242"
               height={50}
               width={50}
@@ -213,3 +227,4 @@ Listingform.propTypes ={
 };
 
 export default Listingform 
+

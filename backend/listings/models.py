@@ -14,7 +14,10 @@ class Listing(models.Model):
         PLOTS ='plots'
         SHOPS ='shops'
         OFFICE ='Office'
-           
+    class AvailableType(models.TextChoices):
+        TRUE = 'True'
+        FALSE = 'False'
+          
         
     realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
     slug = models.CharField(max_length=200, unique=True)
@@ -29,7 +32,7 @@ class Listing(models.Model):
     bathrooms =models.DecimalField(max_digits=2, decimal_places =1)
     property_type = models.CharField(max_length= 50, choices =PropertyType.choices, default=PropertyType.HOME)
     sqft = models.IntegerField()
-    open_house = models.BooleanField(default=False)
+    property_availability = models.CharField(max_length=50, choices=AvailableType.choices, default=AvailableType.TRUE)
     photo_main = models.ImageField(upload_to='photos/%Y/%m/%d')
     photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
     photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)

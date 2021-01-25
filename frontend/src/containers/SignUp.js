@@ -56,7 +56,7 @@ const SignUp=({setAlert, isAuthenticated, signup})=> {
                         <input type="text" name="name" id="username" className="form__input" placeholder="Enter Your Name" value={name} onChange={e=>onChange(e)} required />
                         </div>
                         <div className="row">
-                        <input type="email" name="email" id="username" className="form__input" placeholder="example@gmail.com" value={email} onChange={e=>onChange(e)} required />
+                        <input type="email" name="email" id="email" className="form__input" placeholder="example@gmail.com" value={email} onChange={e=>onChange(e)} required />
                         </div>
                         <div className="row">
                         {/* <span class="fa fa-lock"></span> */}
@@ -64,7 +64,7 @@ const SignUp=({setAlert, isAuthenticated, signup})=> {
                         </div>
                         <div className="row">
                         {/* <span class="fa fa-lock"></span> */}
-                        <input type="password" name="password2" id="password" className="form__input" placeholder="Confirm Password" value={password2} onChange={e=>onChange(e)} required minLength='6' />
+                        <input type="password" name="password2" id="password2" className="form__input" placeholder="Confirm Password" value={password2} onChange={e=>onChange(e)} required minLength='6' />
                         </div>
                         
                         <div className="row">

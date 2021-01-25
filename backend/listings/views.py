@@ -3,13 +3,13 @@ from rest_framework.views import APIView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import permissions
 from .models import Listing
-from .serializers import LinstingSerializer, ListingDetailSerializer
+from .serializers import ListingSerializer, ListingDetailSerializer
 from datetime import datetime, timezone, timedelta
 
 class ListingsView(ListAPIView):
     queryset =Listing.objects.order_by('-list_date').filter(is_published = True)
     permission_classes = (permissions.AllowAny ,)
-    serializer_class = LinstingSerializer
+    serializer_class = ListingSerializer
     lookup_field = 'slug'
     
 class ListingView(RetrieveAPIView):
@@ -19,7 +19,7 @@ class ListingView(RetrieveAPIView):
         
 class SearchView(APIView):
     permission_classes = (permissions.AllowAny ,)
-    serializer_class = LinstingSerializer
+    serializer_class = ListingSerializer
     
     def post(self, request,format =None):
         queryset = Listing.objects.order_by('-list_date').filter(is_published = True)
@@ -91,7 +91,7 @@ class SearchView(APIView):
         
         
         
-        bathrooms=data['bathrooms']
+        bathrooms= data['bathrooms']
         if bathrooms == '0+':
             bathrooms = 0.0
             
@@ -235,14 +235,14 @@ class SearchView(APIView):
                 slug = query.slug
                 queryset = queryset.exclude(slug__iexact=slug)
                     
-        open_house = data['open_house']
-        queryset=queryset.filter(open_house__iexact=open_house)
+        property_availability = data['property_availability']
+        queryset=queryset.filter(property_availability__iexact=property_availability)
         
         keywords = data['keywords']
         queryset =queryset.filter(description__icontains=keywords)
         
         
         
-        serializers = LinstingSerializer(queryset, many=True)
+        serializers = ListingSerializer(queryset, many=True)
         
         return Response(serializers.data)                                                
