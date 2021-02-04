@@ -31,25 +31,25 @@ class SearchView(APIView):
         price = data['price']
         if price == 'ksh 0+':
             price = 0
-        elif price =='Ksh 2,000,000':
+        elif price =='Ksh 2,000,000+':
             price = 2000000
             
-        elif price =='Ksh 4,000,000':
+        elif price =='Ksh 4,000,000+':
             price = 4000000
     
-        elif price =='Ksh 6,000,000':
+        elif price =='Ksh 6,000,000+':
             price = 6000000
             
-        elif price =='Ksh 8,000,000':
+        elif price =='Ksh 8,000,000+':
             price = 8000000
 
-        elif price =='Ksh 12,000,000':
+        elif price =='Ksh 12,000,000+':
             price = 12000000
 
-        elif price =='Ksh 24,000,000':
+        elif price =='Ksh 24,000,000+':
             price = 24000000
 
-        elif price =='Ksh 48,000,000':
+        elif price =='Ksh 48,000,000+':
             price = 48000000
             
         elif price =='Any':

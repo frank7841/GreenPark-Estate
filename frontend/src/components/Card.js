@@ -17,27 +17,27 @@ const card = (props) => {
                 {props.title}
             </h3>
             <div className="card-header">
-            <img class="card-img-top" src={props.photo_main} alt="property "/>
+            <img className="card-img-top" src={props.photo_main} alt="property "/>
             </div>
             <div className="card-body">
                 <div className="card-text">
                     <p className="location">{props.address},{props.city}, {props.county}</p>
                     <div className="row">
                         <div className="col-sm">
-                            <p classNmae="card-info">Price: <NumberFormat value={props.price} displayType={'text'} thousandSEperator={true} prefix={'Ksh'}/> </p> 
-                            <p classNmae="card-info">Bedrooms:{props.bedrooms}</p> 
-                            <p classNmae="card-info">Bathrooms:{props.bathrooms}</p> 
+                            <p className="card-info">Price: <NumberFormat value={props.price} displayType={'text'} thousandSeparator={true} prefix={'Ksh'}/> </p> 
+                            <p className="card-info">Bedrooms:{props.bedrooms}</p> 
+                            <p className="card-info">Bathrooms:{props.bathrooms}</p> 
 
                         </div>
                         <div className="col-sm">
-                            <p classNmae="card-sale-tyoe">{props.sale_type}</p> 
-                            <p classNmae="card-property-type">{props.property_type}</p> 
-                            <p classNmae="card-sqft">Sqft:{props.sqft}</p> 
+                            <p className="card-sale-tyoe">{props.sale_type}</p> 
+                            <p className="card-property-type">{props.property_type}</p> 
+                            <p className="card-sqft">Sqft:{props.sqft}</p> 
 
                         </div> 
  
                     </div>
-                    <Link classNmae="card-link" to={`/listings/${props.slug}`}>View Listings</Link>
+                    <Link className="card-link" to={`/listings/${props.slug}`}>View Listings</Link>
                 </div>
             </div>
             </div>
