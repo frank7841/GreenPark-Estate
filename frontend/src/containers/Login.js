@@ -26,7 +26,7 @@ const Login=({login, isAuthenticated})=> {
         return <Redirect to='/' />;
 
         return (
-            <div>
+            <>
                 <Helmet>
                     <title>Nibora Real Estate| Login</title>
                     <meta
@@ -67,7 +67,7 @@ const Login=({login, isAuthenticated})=> {
                 </div>
             </div>
             </div>
-	</div>
+	</>
            
         )
 };

@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 
-const listings=({ listings})=> {
+function listings({ listings}) {
     const getListings=()=> {
         let listingsOnPage = [];
         let result= [];
@@ -45,7 +45,8 @@ const listings=({ listings})=> {
     }
     return (
         <div>
-            {getListings()}
+            {/* {getListings()} */}
+            
         </div>
     )
 }
