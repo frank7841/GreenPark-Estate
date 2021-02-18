@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ListingForm from '../components/ListingForm';
 import Listings from '../components/Listings';
 import Pagination from '../components/Pagination';
+import Footer from '../components/footer'
 
 const Home = () => {
     const [listings, setListings] = useState([]);
@@ -32,8 +33,10 @@ const Home = () => {
             setActive(currentPage + 1);
         }
     };
+    
 
     return (
+       
         <main className='home'>
              <HelmetProvider>
             <Helmet>
@@ -44,13 +47,13 @@ const Home = () => {
                 />
             </Helmet>
             </HelmetProvider>
-            <section className='home__form'>
+            <section className='home-form'>
                 <ListingForm setListings={setListings} />
             </section>
-            <section className='home__listings'>
+            <section className='home-listings'>
                 <Listings listings={currentListings} />
             </section>
-            <section className='home__pagination'>
+            <section className='home-pagination'>
                 <div className='row'>
                     {
                         listings.length !== 0 ? (
@@ -67,7 +70,12 @@ const Home = () => {
                     }
                 </div>
             </section>
+            
+        
+        
+        <Footer/>
         </main>
+      
     );
 };
 

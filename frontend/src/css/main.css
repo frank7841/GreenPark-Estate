@@ -4,6 +4,8 @@
 @import url(./components/login.css);
 @import url(./components/home.css);
 @import url(./components/listingsform.css);
+@import url(./components/footer.css);
+@import url(./components/pagination.css);
 
 @import "https://fonts.googleapis.com/css?family=Sora&display=swap";
 *{

@@ -1,0 +1,20 @@
+.pagination-number{
+    display: inline-block;
+    font-size: 1.6rem;
+    color:rgb(26, 158, 136);
+    padding:1rem;
+    cursor:pointer;
+    border: 0.1 rem solid rgb(37, 90, 51) ;
+    margin:0.1rem;
+    user-select: none;
+
+}
+.pagination-number-active{
+    color: #ffffff;
+    background-color: #0bb4a0;
+}
+.pagination-number:hover{
+    color: #ffffff;
+    background-color: #0bb4a0;
+
+}

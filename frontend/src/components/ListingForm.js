@@ -22,6 +22,7 @@ const Listingform = (props)=> {
 
 
     const [loading, setLoading]= useState(false);
+    
 
     const onChange = e => setFormData({...formData, [e.target.name]: e.target.value});
     
@@ -82,6 +83,7 @@ const Listingform = (props)=> {
               <option>7+</option>
             </select>
           </div>
+
 
           <div className="form-group col-sm">
             <label htmlFor ="property_type">Property Type</label>
@@ -178,13 +180,13 @@ const Listingform = (props)=> {
             weight={50}
              />
              </div> :
-             <button className="btn btn-success" onClick={e=>onSubmit(e)} type="submit">Save </button>
+             <button className="btn btn-success">Save </button>
 
             }
-          
-      </div>
+
+        </div>
       </div>      
-      </form>
+    </form>
       
 
     )
