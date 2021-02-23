@@ -45,7 +45,7 @@ function listings({ listings}) {
     }
     return (
         <div>
-            {/* {getListings()} */}
+            <Card/>
             
         </div>
     )

@@ -1,0 +1,13 @@
+.card-property{
+    margin: 1.5rem;
+}
+.card-link{
+    border: 1px solid #228B22;
+    border-radius: 4px;
+    padding: 0.25rem;
+    color:#228B22;
+
+}
+.card-infomation{
+    color:#228B22!important;
+}

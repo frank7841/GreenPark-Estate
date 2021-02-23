@@ -6,6 +6,9 @@
 @import url(./components/listingsform.css);
 @import url(./components/footer.css);
 @import url(./components/pagination.css);
+@import url(./components/card.css);
+@import url(./components/service.css);
+
 
 @import "https://fonts.googleapis.com/css?family=Sora&display=swap";
 *{
