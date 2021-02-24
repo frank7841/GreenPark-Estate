@@ -7,6 +7,7 @@ import Scroll from '../components/Scroll'
 const Service=()=> {
     useEffect(()=>{
         Aos.init({duration:2000})
+        Aos.refresh()
 
     }, []);   
     return( 
@@ -22,16 +23,16 @@ const Service=()=> {
             </HelmetProvider>
             <Scroll showBelow={250}/>
 
-                <div className="service-top ">
-                  <img  src={process.env.PUBLIC_URL + 'image/assets/img/servicebg.jpg'} alt="Service"/>
+                <div className="service-top">
+                  <img data-aos="fade-in" src={process.env.PUBLIC_URL + 'image/assets/img/servicebg.jpg'} alt="Service"/>
                 </div>  
                 
                  <div className="text-block">
-                        <h4>Searching For a Home, a Hotel, a Guest House, Office Spaces, Land,  with Nibora, You will find the difference is Night and Day. </h4>
-                        <p>What is so different you ask? Well, Nibora Real Estate  is here to find you not <strong>JUST</strong> four walls and a roof. We are here and dedicated to connect you to a community, to things that inspires you, and to a space that also inspires you. We are focused to earning your trust rather than comision.    </p>
+                        <h4 data-aos="slide-right">Searching For a Home, a Hotel, a Guest House, Office Spaces, Land,  with Nibora, You will find the difference is Night and Day. </h4>
+                        <p data-aos="fade-in">What is so different you ask? Well, Nibora Real Estate  is here to find you not <strong>JUST</strong> four walls and a roof. We are here and dedicated to connect you to a community, to things that inspires you, and to a space that also inspires you. We are focused to earning your trust rather than comision.    </p>
                  </div>
                  <div className="service-top-mobile">
-                    <img  src={process.env.PUBLIC_URL + 'image/assets/img/Service.png'} alt="Service"/>
+                    <img data-aos="fade-in" src={process.env.PUBLIC_URL + 'image/assets/img/Service.png'} alt="Service"/>
                 </div>
                 <div className="height"></div> 
                 <div className="service-head">
