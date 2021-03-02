@@ -3,13 +3,16 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Scroll from '../components/Scroll'
+import ReadMoreReact from 'read-more-react';
+import{makeStyles} from '@material-ui/core/styles'
 
 
 const About=()=> {
     useEffect(()=>{
-        Aos.init({duration:8000})
+        Aos.init({duration:4000})
 
     }, []);   
+  
     return(
     
         <div>
@@ -26,7 +29,7 @@ const About=()=> {
            <div className="about-header container">
                <div className="row">
                    <div className="col-sm-7">
-                        <hr className="top-about"/>
+                        {/* <hr className="top-about"/> */}
                         <h3 className="hola-Nibora" data-aos="slide-up"> Hola! We are Nibora Realtors.</h3>
                         <div className="row">
                             <div className="col-sm-10">
@@ -35,41 +38,60 @@ const About=()=> {
                             <div className="col-sm-2"></div>
                         </div>
                     </div>
-                    <div className="service-image col-sm-5">
-                        <img data-aos="slide-left" src={process.env.PUBLIC_URL + 'image/assets/img/hand-shake.jpg'} alt="Done deal"/>
+                    <div className="col-sm-5">
+                    
+                        <h3 className="hola-Nibora">Learn More</h3>
+                        <hr className="top-about"/>
+                        <ul className="learn-link">
+                        <li className="learn-padding">
+                                <a className="item-link"href="#">
+                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/bolt.svg'} alt="why choose us"/></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="icon-title">Why choose Us&nbsp;»</span></a>
+
+                           </li>
+                           <li className="learn-padding">
+                                <a className="item-link"href="#">
+                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/users.svg'} alt="why choose us"/></span>
+                                <span class="icon-title">Our Associates&nbsp;»</span></a>
+
+                           </li>
+                           <li  className="learn-padding" >
+                                <a className="item-link"href="#">
+                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/user.svg'} alt="why choose us"/></span>
+                                <span class="icon-title">Advertise with us&nbsp;»</span></a>
+
+                           </li>
+                        </ul>
+            
                     </div>
                 </div>
             </div>    
             <div className="height"></div>
-            <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6">
-                        <hr className="top-about"/>
-                        <h3 className="hola-Nibora text-centre">How we help</h3>    
-                        <p className="service-text">This is How we help</p>
-                        </div>
-                        <div className="col-sm-6 height">
-                            <img  src="" alt="How we help"/>
-                        </div>
-                       
-                    </div>
-
-                    <div className="row">
-                    <div className="col-sm-6 height">
-                            <img  src="" alt="How we help"/>
-                        </div>
-                        <div className="col-sm-6">
-                            <hr className="top-about"/>
-                            <h3 className="hola-Nibora text-centre">Who we help</h3>    
-                            <p className="service-text">This is How we help</p>
-                        </div>
-                       
-                    </div>
-                    <div className="mission-statement">
-                        Mission Statement
-                    </div>
+            <div className="container-fluid">
+                <div className="maintxt">
+                    <img  src= {process.env.PUBLIC_URL + 'image/assets/img/about-us-3.jpg'} alt="Our principles" className="img-responsive"/>
+                    <section className="overlay-text">
+                        
+                    </section>
+                </div>    
+            </div>        
+            {/* <div className="container">        
+                <hr className="top-about"/>
+              
+                <h3 className="hola-Nibora text-centre">Why Choose Us</h3>    
+                <ol>
+                    <li>We know what to look for</li>
+                    <li>You will be introduced to a professional network </li>
+                    <li>At Nibora, we pride ourselves with extensive market Knowledge</li>
+                    <li>We provide valuable price guidelines.</li>
+                    <li>Our Negotiating Skills are off the charts</li>
+                    <li>We have access to off-Market listings.</li>
+                    <li>Nibora Realtors provide the best home staging advice. </li>
+                    <li>We ultimately save your time and energy.</li>
                     
-            </div>
+                </ol>
+
+            </div>   */}
         </div>
     );
 }

@@ -8,6 +8,7 @@ import Listings from './containers/Listings'
 import ListingDetail from './containers/ListingDetail'
 import Login from './containers/Login'
 import SignUp from './containers/SignUp'
+import how from './containers/how'
 import NotFound from './components/NotFound'
 import Layout from './hocs/Layout'
 
@@ -25,6 +26,7 @@ const App=()=> (
               <Route exact path ='/about' component = {About}/>
               <Route exact path ='/service' component = {Service}/>
               <Route exact path ='/contact' component = {Contact}/>
+              <Route exact path ='/how' component = {how}/>
               <Route exact path ='/listings' component = {Listings}/>
               <Route exact path ='/listings/:id' component = {ListingDetail}/>
               <Route exact path ='/login' component = {Login}/>
