@@ -25,7 +25,7 @@ const About=()=> {
                 />
             </Helmet>
             </HelmetProvider>
-            <div className="height"></div>
+            {/* <div className="height"></div> */}
            <div className="about-header container">
                <div className="row">
                    <div className="col-sm-7">
@@ -66,32 +66,36 @@ const About=()=> {
                     </div>
                 </div>
             </div>    
-            <div className="height"></div>
-            <div className="container-fluid">
+            <div className="container-fluid guideline-on-pc">
                 <div className="maintxt">
                     <img  src= {process.env.PUBLIC_URL + 'image/assets/img/about-us-3.jpg'} alt="Our principles" className="img-responsive"/>
                     <section className="overlay-text">
-                        
-                    </section>
-                </div>    
-            </div>        
-            {/* <div className="container">        
-                <hr className="top-about"/>
-              
-                <h3 className="hola-Nibora text-centre">Why Choose Us</h3>    
-                <ol>
-                    <li>We know what to look for</li>
-                    <li>You will be introduced to a professional network </li>
-                    <li>At Nibora, we pride ourselves with extensive market Knowledge</li>
-                    <li>We provide valuable price guidelines.</li>
-                    <li>Our Negotiating Skills are off the charts</li>
-                    <li>We have access to off-Market listings.</li>
-                    <li>Nibora Realtors provide the best home staging advice. </li>
-                    <li>We ultimately save your time and energy.</li>
-                    
-                </ol>
+                        <div className="container">
+                            <div className="about-principles">
+                                <h2> <span className="about-text-color"> our guiding principles</span></h2>
+                                <p className="principles-text">We re proud of our company's heritage and accomplishments: They define who we are today and guides us to who we will be tommorrow.</p>
+                                <p className="principles-text">We succeed because we think  creatively, we assess opportunities astutely , and act quickly than others.This are our lifeblood.</p>
+                                <p className="principles-text">We hold ourselves to the highest standards, not standards set by others. </p>
+                                <p className="principles-text">Our single minded persuit is creating extraordinery value to our customers and patners. </p>
+                               
 
-            </div>   */}
+                            </div>
+                        </div>
+                    </section>
+                </div>  
+            </div>       
+            <div className="height"></div>
+            <div className="guideline-mobile">
+            <img  src= {process.env.PUBLIC_URL + 'image/assets/img/guiding-mobile.png'} alt="Our principles" className="img-responsive"/>
+                <div className="content">
+                    <h2 className="principles-header"> guiding principles</h2>
+                    <p className="principles-text">We re proud of our company's heritage and accomplishments: <br/>They define who we are today and guides us to who we will be tommorrow.</p>
+                    <p className="principles-text">We succeed because we think  creatively, we assess opportunities astutely, and act quickly than others.This are our lifeblood.</p>
+                    <p className="principles-text">We hold ourselves to the highest standards, not standards set by others. </p>
+                    <p className="principles-text">Our single minded persuit is creating extraordinery value to our customers and patners. </p>
+                </div>
+            </div> 
+            <div></div>
         </div>
     );
 }

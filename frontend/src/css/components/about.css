@@ -44,13 +44,78 @@
 }
 .overlay-text{
     position: absolute;
-    bottom: 8px;
-    border: 1px solid black;
+    bottom: 0;
+    border: 1px solid rgb(83, 82, 0,0.5);
     width: 100%;
-    height:45%;
+    height:50%;
     margin: 0!important;
+    background-color:rgba(58, 58, 0, 0.5);
+    opacity: 1;
+
     
 }
+.about-principles{
+    z-index: 8;
+    border-left: 4px solid #c2c507;
+    position:absolute;
+    max-height:250px;
+    height: 90%;
+    bottom:0px;
+}
+.about-text-color{
+    color: #ffffff;
+    margin-left:2rem;
+    margin-bottom: 200px;
+    font-weight: bolder;
+    opacity: 10;
+}
+.principles-text{
+    margin-left:2rem;
+    color: #ffffff;
+    font-size: 20px;
 
+}
+.guideline-mobile{
+    visibility:hidden;
+    display: none;
+}
+@media screen and (max-width:768px){
+    .guideline-on-pc{
+        display: none;
+    }
+    .guideline-mobile{
+        display: block;
+        visibility:visible;
+        position: relative;
+        max-width: 100%;
+        background: rgb(0, 0, 0); /* Fallback color*/
+        background: rgba(0, 0, 0, 0.5); 
+    
+        
 
+    }
+   
+    .guideline-mobile .content{
+        position: absolute; /* Position the background text */
+        bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1; /* Grey text */
+        width: 100%; /* Full width */
+        
+
+    
+    }
+    .principles-header{
+        margin-left:2rem;
+        color: #ffffff;
+        font-weight: bolder;    
+    }
+    .content{
+        top:0;
+    }
+    .img-responsive{
+        height:600px!important;
+    }
+}
 /*  */

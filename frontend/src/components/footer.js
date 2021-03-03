@@ -1,11 +1,41 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faFacebookF , faTwitter, faInstagram, faYoutube,faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import background from './about-us-3.jpg'
 
 
 const Footer=()=> {
+
+    const styles= {
+        footer: {
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        
+     },
+     
+        fsection:{ 
+            maxWidth: '110%',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        }
+
+
+    }
     return (
-        <footer className="container-fluid ">
+            <footer style= {styles.footer}>
+            <div className="container-fluid fsection" style ={styles.fsection}>
+            <div className="mail-height"></div>
+                    <div className=" card card-background col-sm-6">
+                        <div className="card-body ">
+                            <h2 className="text-center">Sign up now!</h2>
+                            <p className="text-center">Get the best prices, latest news, new listings notification, and exclusive promotions conveniently in your inbox!  </p>
+                            <div className="input-group mb-3 subscribe">
+                            <input type="text" className="form-control" placeholder="example@gmail.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <button className=" btn-success" type="button" id="button-addon2">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+              
             <div className="height"></div>
             <div className="row">
             <div className="height"></div>
@@ -20,21 +50,31 @@ const Footer=()=> {
                             < a className="social-links" href="#"> <FontAwesomeIcon icon={faLinkedinIn} size="sm" /></a>
                     </div>
                 </div>
+                
+                <div className="col-sm address-footer">
+                    <h4 className="footer-border"> Links</h4>
+                    <ul className="learn-link">
+                        <li className="color-white"><a className="item-link" href="#">Contact us&nbsp;»</a> </li>
+                        <li className="color-white"><a  className="item-link"href="#">Our Associates&nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link" href="#">Advertise with us&nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link" href="#">Why choose us&nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link" href="#">What we do &nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link" href="#">About us&nbsp;»</a> </li>
+                    </ul>
+                </div>
                 <div className="col-sm address-footer">
                     <h4>Address</h4>
 
 
                 </div>
-                <div className="col-sm address-footer">
-                    <h4> Links</h4>
-                </div>
-
-                <div className="col-sm address-footer">
-                    <h4>Join Our Newsleter</h4>
-                </div>
 
             </div>
+            <div className="copyright text-center">
+            <small>&copy; Copyright {new Date().getFullYear()}, Nibora Realtors</small>
+            </div>
+            </div>
         </footer>
+       
     )
 }
 export default Footer;

@@ -47,3 +47,20 @@ export default function How() {
         </>
     )
 }
+{/* <div className="container">        
+                <hr className="top-about"/>
+              
+                <h3 className="hola-Nibora text-centre">Why Choose Us</h3>    
+                <ol>
+                    <li>We know what to look for</li>
+                    <li>You will be introduced to a professional network </li>
+                    <li>At Nibora, we pride ourselves with extensive market Knowledge</li>
+                    <li>We provide valuable price guidelines.</li>
+                    <li>Our Negotiating Skills are off the charts</li>
+                    <li>We have access to off-Market listings.</li>
+                    <li>Nibora Realtors provide the best home staging advice. </li>
+                    <li>We ultimately save your time and energy.</li>
+                    
+                </ol>
+
+            </div>   */}

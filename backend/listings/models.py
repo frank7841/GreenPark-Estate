@@ -12,6 +12,7 @@ class Listing(models.Model):
         HOTEL='Hotel'
         TOWNHOUSE ='Townhouse' 
         PLOTS ='Plots'
+        LAND ='Land'
         SHOPS ='Shops'
         OFFICE ='Office'
     class AvailableType(models.TextChoices):

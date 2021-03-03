@@ -93,6 +93,7 @@ const Listingform = (props)=> {
               <option>Townhouse</option>
               <option>Hotel</option>
               <option>Plots</option>
+              <option>Land</option>
               <option>Shops</option>
               <option>Office</option>
             </select>
