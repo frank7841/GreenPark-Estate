@@ -1,0 +1,126 @@
+.contact-section{
+    height: 400px;
+    padding-left: 5%;
+    padding-top: 15%;
+  
+}
+h1.contact-section{
+    font-weight: 400;
+    font-size: 40px!important;
+    color: rgb(246, 249, 253);
+    text-align: center;
+    font-weight: 900!important;
+}
+.contact-img-section{
+    height: 450px;
+}
+.contact-border{
+    height:250px;
+    background-color: #e5eee5;
+    margin: 4px;
+    padding-top:20px;
+}
+
+.link-height{
+    font-size: 20px;
+    color: #000;
+}
+.contact-icon{
+    height:70px;
+    padding:10px;
+}
+.link-height-meeting{
+    padding:7px;
+    background-color: #ff7a59;
+    color: #ffffff;
+
+}
+a.link-contact:hover{
+    text-decoration: none;
+}
+.link-height-meeting:hover{
+    opacity: 0.5;
+}
+.press{
+    height:150px;
+}
+.inquiry-form{
+    height:500px;
+    position: relative;
+}
+.form-inquiry{
+    /* Center vertically and horizontally */
+    position: absolute;
+    margin: -25px 0 0 -25p
+
+}
+@media screen and (max-width:768px){
+    .contact-img{
+        display: none;
+    }
+    .contact-mobile{
+        text-align: center!important;
+        width: 100%!important;
+    }
+}
+
+/* test case */
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, rgb(203, 207, 202) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top: 55px;;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  /* .content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    left:50%;
+    padding:10px;
+    position:relative;
+    transform:translate(-50%, -50%);
+    margin-top:20%;
+  } */
+  
+
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+  .form-qiury{
+      background-color:rgba(255,255,255,.8);
+      padding-top: 5%;
+      margin-top: 5%;
+  }
+  .form-input{
+      
+      padding:10px;
+      margin-left: 15px;
+      box-shadow: 0 5px rgba(93, 64, 55, 0.4), 0 10px rgba(93, 64, 55, 0.3),
+      0 15px rgba(93, 64, 55, 0.2), 0 20px rgba(93, 64, 55, 0.1),
+      0 25px rgba(93, 64, 55, 0.05),
+      -5px 5px 40px rgba(100, 0, 0, 0.4);
+
+  }
+  .contact-info{
+      padding-left: 5%;
+  }

@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Footer from '../components/footer'
 import Scroll from '../components/Scroll'
 import ReadMoreReact from 'read-more-react';
 import{makeStyles} from '@material-ui/core/styles'
@@ -95,7 +96,43 @@ const About=()=> {
                     <p className="principles-text">Our single minded persuit is creating extraordinery value to our customers and patners. </p>
                 </div>
             </div> 
-            <div></div>
+            <div className="height"></div>
+            <div className="height"></div>
+            <div className="call-to-acction">
+                <div className="container">
+                    <div className="col-sm text-center">
+                        <h4>Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
+                            <div className="height"></div>
+                            <a className="find-your-home-link" href="#"><span className="find-your-home"> Find Your Home</span></a>
+
+                    </div>
+
+                </div>
+            </div>
+            <div className="height"></div>
+            <div className="height"></div>
+            <hr/>
+            <div className="core-values container-fluid">
+            <div className="height"></div>
+                <div className="container">
+                    <div className="col-sm-6">
+                        <div className="vission ">
+                            <h3>Our vision</h3>
+                            <p>We strive to ...</p>
+                        </div>
+                        <div className="vission">
+                            <h3>Our Mision</h3>
+                            <p>We are ...</p>
+                        </div>
+                    </div>
+                    <div className="col-sm-6">
+
+                    </div>
+                </div>
+                <div className="height"></div>
+            </div>
+
+            <Footer/>
         </div>
     );
 }

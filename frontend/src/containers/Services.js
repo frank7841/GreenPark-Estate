@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Scroll from '../components/Scroll'
+import Footer from '../components/footer'
 
 const Service=()=> {
     useEffect(()=>{
@@ -110,15 +111,27 @@ const Service=()=> {
                             <br/>
                             {/* <p className="service-text">Nibora Realtors provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p> */}
                             <br/>
-                            <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/">Property Value </a>
+                            <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/">Property Valuers </a>
                         </div>
                       
                     </div>
                 </div>
-                <div className="service-contact">
-                    Requets a call from us
-                </div>
+                <div className="height"></div>
+            <div className="height"></div>
+            <div className="call-to-acction">
+                <div className="container">
+                    <div className="col-sm text-center">
+                        <h4>Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
+                            <div className="height"></div>
+                            <a className="find-your-home-link" href="#"><span className="find-your-home"> Start a conversation</span></a>
 
+                    </div>
+
+                </div>
+            </div>
+            <div className="height"></div>
+            <div className="height"></div>
+            <Footer/> 
             
         </>
     )

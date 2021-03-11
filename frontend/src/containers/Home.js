@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ListingForm from '../components/ListingForm';
 import Listings from '../components/Listings';
 import Pagination from '../components/Pagination';
+import HomeBanner from '../components/HomeBanner';
 import Footer from '../components/footer'
 
 const Home = () => {
@@ -47,6 +48,7 @@ const Home = () => {
                 />
             </Helmet>
             </HelmetProvider>
+            <HomeBanner/>
             <section className='home-form'>
                 <ListingForm setListings={setListings} />
             </section>

@@ -36,7 +36,7 @@ const HomeBanner=()=> {
                 alt="Third slide"
                 />
 
-                <Carousel.Caption >
+                <Carousel.Caption  >
                 <p className="caption-details"><h3>Dream Houses for sale</h3>
                 Keep Calm! Lets Us get You  Your dream Home</p>
                 </Carousel.Caption>
@@ -48,7 +48,7 @@ const HomeBanner=()=> {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <p className="caption-details"><h3>Office Spaces for Rent/Sale</h3>
+                <p  className="caption-details"><h3>Office Spaces for Rent/Sale</h3>
                 Sky Rocket Your business with state of the art office spaces </p>
                 </Carousel.Caption>
             </Carousel.Item>

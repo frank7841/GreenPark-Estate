@@ -62,4 +62,7 @@ hr.footer-links{
     font-size: larger;
     color: #afaaaa;
 }
-
+.item-link-footer:hover{
+    text-decoration: underline;
+    color: rgb(245, 247, 246);
+}
