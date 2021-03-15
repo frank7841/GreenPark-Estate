@@ -5,7 +5,7 @@ import NumberFormat from 'react-number-format';
 
 
 
-const card = (props) => {
+const Card = (props) => {
     // function numberWithCommas(x) {
     //     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     //   }
@@ -44,7 +44,7 @@ const card = (props) => {
         </div>
     )
 };
-card.propTypes = {
+Card.propTypes = {
     title: PropTypes.string.isRequired,
     photo_main: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
@@ -59,4 +59,4 @@ card.propTypes = {
     slug: PropTypes.string.isRequired,
 };
 
-export default card
+export default Card

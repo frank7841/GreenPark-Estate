@@ -4,7 +4,9 @@ import Loader from 'react-loader-spinner'
 import PropTypes from 'prop-types'
 
 
-const Listingform = (props)=> {
+function  Listingform (props){
+
+  
   const [formData, setFormData] = useState({
     sale_type: 'For Sale',
     price: 'ksh 0+',
@@ -33,11 +35,22 @@ const Listingform = (props)=> {
             "Content-Type": "application/json"
         };
         setLoading(true);
-        axios.post('http://localhost:8000/api/listings/search', { sale_type, price, bedrooms, property_type, bathrooms, sqft, days_listed, has_photos, property_availability, keywords } )
+        axios.post('http://localhost:8000/api/listings/search',
+         {sale_type,
+          price,
+          bedrooms, 
+          property_type, 
+          bathrooms, 
+          sqft, 
+          days_listed, 
+          has_photos, 
+          property_availability, 
+          keywords 
+        } )
         .then(res =>{
             setLoading(false);
             props.setListings(res.data);
-            window.scrollTo(0,0);
+            window.scrollTo(60,50);
 
         })
         .catch(err=>{

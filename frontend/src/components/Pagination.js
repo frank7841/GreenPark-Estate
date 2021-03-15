@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const pagination=(props)=> {
+function Pagination(props) {
     const getNumbers=()=>{
         let numbers = [];
         let itemsPerPage = props.itemsPerPage
@@ -49,7 +49,7 @@ const pagination=(props)=> {
     )
 
 }
-    pagination.propTypes = {
+    Pagination.propTypes = {
         itemsPerPage: PropTypes.number.isRequired,
         count: PropTypes.number.isRequired,
         next: PropTypes.func.isRequired,
@@ -59,4 +59,5 @@ const pagination=(props)=> {
         
 
     };
-export default pagination
+export default Pagination
+    

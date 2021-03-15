@@ -31,7 +31,7 @@ const Footer=()=> {
                             <p className="text-center">Get the best prices, latest news, new listings notification, and exclusive promotions conveniently in your inbox!  </p>
                             <div className="input-group mb-3 subscribe">
                             <input type="text" className="form-control" placeholder="example@gmail.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                            <button className=" btn-success" type="button" id="button-addon2">Subscribe</button>
+                            <button className=" btn-success " type="button" id="button-addon2"><span className="sign-up-button">Sign Up</span></button>
                             </div>
                         </div>
                     </div>

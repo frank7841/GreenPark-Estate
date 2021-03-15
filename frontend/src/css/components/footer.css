@@ -66,3 +66,6 @@ hr.footer-links{
     text-decoration: underline;
     color: rgb(245, 247, 246);
 }
+.sign-up-button{
+    padding:5px;
+}

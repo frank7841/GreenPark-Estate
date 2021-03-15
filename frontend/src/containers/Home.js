@@ -29,7 +29,7 @@ const Home = () => {
     };
 
     const next_number = () => {
-        if (currentPage !== Math.ceil(listings.length / 3)) {
+        if (currentPage !== Math.ceil(listings.length/3)) {
             setCurrentPage(currentPage + 1);
             setActive(currentPage + 1);
         }
