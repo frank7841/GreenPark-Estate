@@ -1,3 +1,8 @@
+.home-form{
+    background-color:#263134
+  
+     }
+     
 .listing-form{
     margin:10px;
     padding-top:2em;
@@ -21,3 +26,15 @@ option{
     justify-content:center;
     align-items: center;
 }
+.label{
+    color:orange;
+    font-weight: 900;
+  }
+  select.input-design{
+    font-size:17px;
+    font-weight: 700;
+  }
+  input.input-design{
+   font-size:17px;
+   font-weight: 700;
+ }

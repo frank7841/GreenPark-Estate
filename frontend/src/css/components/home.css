@@ -37,8 +37,8 @@
     transform: translate(-50%, -50%);
   }
   .image-height{
-      height: 350px;
-      background: linear-gradient(315deg, #485461 0%, #28313b 74%);;
+      height: 450px;
+      background: linear-gradient(315deg, #485461 0%, #28313b 60%);;
      /* position: fixed; */
   }
 
@@ -59,6 +59,7 @@
  }
  .home_pagination{
    margin-bottom:6rem;
+   padding-top: 1.6rem;
  }
  .carousel-caption{
    border: 0.2px solid rgba(0, 0, 0, 0.3)!important;  
@@ -66,3 +67,4 @@
    background: rgb(0, 0, 0); 
    background: rgba(0, 0, 0, 0.3);
  }
+ 

@@ -1,0 +1,50 @@
+.nibora-realtors{
+    margin-top: 30%!important;
+    background-color:rgba(15, 6, 6, 0.4);
+    width: 90%;
+    /* color:#ffffff;
+    font-weight: 900;
+    font-size: 30px; */
+    margin-left: 5%;;
+}
+a.nibora-search-link{
+    padding-top: 10%;
+    font-size: 20px;
+    color:rgb(252, 248, 248);
+    margin-left: 5%;
+    font-weight: 900;
+    border-bottom: 4px solid rgb(248, 247, 244);
+    cursor: pointer;
+}
+a.nibora-search-link:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+p.dont-settle {
+    padding:20px;
+    color:#ffffff;
+    font-weight: 900;
+    line-height: 60px;
+    font-size: 30px!important;
+    
+}
+.pre-text{
+    color:#ffffff!important;
+    padding-left: 20px;
+} 
+.searchlink-location{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.link-awesome{
+    text-decoration: underline;
+    color: #ffffff;
+}
+.link-awesome:hover{
+    color: rgb(1, 3, 10);
+}
+@media screen and (max-width:968px){
+    .pre-text{
+        display: none
+    }
+}

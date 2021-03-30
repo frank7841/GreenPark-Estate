@@ -1,3 +1,4 @@
+
 .about-header{
     padding-top:50px;
 }
@@ -38,10 +39,10 @@
     border:1px solid black;
     align-items: start!important;
 }
-.maintxt {
+/* .maintxt {
     position: relative;
 
-}
+} */
 .overlay-text{
     position: absolute;
     bottom: 0;
@@ -64,23 +65,35 @@
 }
 .about-text-color{
     color: #ffffff;
-    margin-left:2rem;
-    margin-bottom: 200px;
+    padding-bottom: 3rem;
     font-weight: bolder;
-    opacity: 10;
+    font-size: 35px;
+    
 }
-.principles-text{
+p.principles-text{
     margin-left:2rem;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 20px!important;
+    line-height: 30px;
+  
 
 }
 .guideline-mobile{
     visibility:hidden;
     display: none;
 }
+.img-responsiveness{
+    width: 100%;
+    height:fit-content;
+}
+.guideline-on-pc{
+    position: relative;
+}
 @media screen and (max-width:768px){
     .guideline-on-pc{
+        display: none;
+    }
+    .display-on-pc{
         display: none;
     }
     .guideline-mobile{
@@ -114,8 +127,9 @@
     .content{
         top:0;
     }
-    .img-responsive{
+    .img-responsiveness{
         height:600px!important;
+        width: 100%!important;
     }
 }
 .find-your-home  {
@@ -151,6 +165,37 @@ a.find-your-home-link:hover{
    
 
 }    
+.vission{
+    font-size: 25px;;
+}
+blockquote {
+    border:none;
+    font-family:Georgia, "Times New Roman", Times, serif;
 
+}
 
+blockquote {
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 3.5em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline-block;
+  }
+  .each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+  }
 /*  */
+@import "react-slideshow-image/dist/styles.css"
+

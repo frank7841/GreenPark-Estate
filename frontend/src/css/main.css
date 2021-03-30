@@ -11,6 +11,10 @@
 @import url(./components/about.css);
 @import url(./components/how.css);
 @import url(./components/contact.css);
+@import url(./components/listingdetail.css);
+@import url(./components/featured.css);
+@import url(./components/homebarner.css);
+@import url(./components/advertise.css);
 
 @import "https://fonts.googleapis.com/css?family=Sora&display=swap";
 *{
@@ -20,4 +24,7 @@
     padding: 0;
     min-width: auto!important; 
 
+}
+p{
+    font-size: 16px!important;
 }

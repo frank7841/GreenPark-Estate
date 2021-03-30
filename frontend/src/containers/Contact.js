@@ -1,51 +1,56 @@
 import React from 'react'
-import background from '../components/contact.png'
-import backgroundForm from '../components/show-contact.jpg'
-import {  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import background from '../components/asset/contact.jpg'
 import { Icon } from 'semantic-ui-react'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
  
 const contact=()=> {
     const styles= {
-        contact: {
+        barner: {
         backgroundImage: `url(${background})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         
-        
      },
      
-        csection:{ 
+        background:{ 
             maxWidth: '110%',
-    
-        },
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            
+        }
 
-            contactUs: {
-                backgroundImage: `url(${backgroundForm})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-               
-                
-                
-             },    
+
     }
+  
 
     return (
     
         <>
-            {/* <div className="container-fluid">
-                <div className="row">
-                    <div className="col-sm contact-mobile">
-                        <h1 className="contact-section">Contact Us About any of your Real Estate Needs. </h1>
-                    </div>
-                    <div className="col-sm contact-img">
-                        <div className="contact-img-section" style={styles.contact}>
+         <HelmetProvider>
+            <Helmet>
+                <title>Nibora Properties - Contact Us</title>
+                <meta
+                    name='description'
+                    content='Nibora Properties'
+                />
+            </Helmet>
+            </HelmetProvider>
+        <div className="container-fluid" style={styles.barner}>
+        <div className=" img-responsive" style={styles.background}>
+                    <div className=" top-barner-section">
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <section className="nibora-realtors-contact text-center"><p className="dont-settle-contact">CONTACT US</p>
+                                </section> 
+                                
+                            </div>
+                            
+                        </div>    
+                    </div> 
 
-                        </div>
-                    </div>
                 </div>
-            </div> */}
+        </div>  
+
             <div className="container-fluid get-in-touch">
                 <div className="row">
                     <div className="col-sm contact-border text-center">
@@ -67,12 +72,14 @@ const contact=()=> {
                     </div>
                 </div>
             </div>
+            <div className="height"></div>
+            <div className="height"></div>
             <div class="container">
                 <div className="row">
                     <div className="col-sm-12">
                         <div className="mobile-get-in-touch">
-                        <h3>Call us directly</h3><br/>
-                            <a href="tel:+254790943918"> <span className="link-height">+254790943918</span></a>
+                            <h3>Call us directly</h3><br/>
+                            <a href="tel:+254790943918"> <span className="link-height-mobile">+254790943918</span></a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +91,7 @@ const contact=()=> {
                         <a className="link-contact" href="#inquiry"> <span className="link-height-meeting">Submit your inquiries</span></a>    
                     </div>
                     </div>
-                </div>
+                </div> 
                 <div className="height"></div>
                 <div className="row">
                     <div className="col-sm-12">
@@ -147,8 +154,13 @@ const contact=()=> {
                 </div>
             </div>
             <hr/>
-            <div className="">
-                Quotes slide show
+            <div className="container-fluid">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.8103925618448!2d39.8518312147588!3d-3.630728797358066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x183fdd7f81853d75%3A0x378016a8fdf73a6c!2sNibora%20Realtors!5e0!3m2!1sen!2ske!4v1616676006316!5m2!1sen!2ske" 
+            width="100%" 
+            height="450"
+            style={{border:0}}
+            allowfullscreen="" 
+            loading="lazy"></iframe>
             </div>
 
              <hr/>                   
@@ -183,7 +195,7 @@ const contact=()=> {
                                 <li className="learn-link-list"> <a href="#"> Advantages of owning a home? &nbsp;»</a> </li>
                                 <li className="learn-link-list"> <a href="#"> Search our database for listings&nbsp;»</a> </li>
                                 <li className="learn-link-list"> <a href="#"> Our Pattners &nbsp;»</a> </li>
-                                <li className="learn-link-list"><a href="#">Advertise With us &nbsp;»</a></li>
+                                <li className="learn-link-list"><a href="/advertise">Advertise With us &nbsp;»</a></li>
         
                             </ul>
                         </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 
-function Listings({ listings}) {
+const listings =({ listings}) =>{
     const getListings=()=> {
         let listingsOnPage = [];
         let result= [];
@@ -11,7 +11,7 @@ function Listings({ listings}) {
                 <Card
                 title={listing.title}
                 address={listing.address}
-                city={listing.city}
+                town={listing.town}
                 county={listing.county}
                 price={listing.price}
                 sale_type={listing.sale_type}
@@ -22,11 +22,14 @@ function Listings({ listings}) {
                 photo_main={listing.photo_main}
                 slug={listing.slug} 
                 />
-            );
+
+                );
+
         });
+        console.log(listings)
         for(let i = 0; i < listings.length; i += 3){
             result.push(
-            <div className="container">    
+                
                 <div className="row">
                     <div className="col-sm">
                         {listingsOnPage[i]}
@@ -39,19 +42,21 @@ function Listings({ listings}) {
                     </div>
 
                 </div>
-            </div>    
+               
             );
         }
         return result;
 
-    }
+    };
     return (
         <div>
             {getListings()}
+         
+
             
         </div>
     )
 }
 
-export default Listings
+export default listings
 

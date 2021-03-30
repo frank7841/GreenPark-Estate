@@ -15,7 +15,7 @@ const Service=()=> {
         <>
             <HelmetProvider>
             <Helmet>
-                <title>Nibora Realest Estate - Services</title>
+                <title>Nibora Properties - Services</title>
                 <meta
                     name='description'
                     content='Nibora Realest Estate Services'
@@ -58,7 +58,7 @@ const Service=()=> {
                     </div>
                     </div>
                     <div className="height-service"></div>
-                    <hr className="horizontal"/>
+                  <hr className="horizontal"/>
                     {/* another sertvice-commercial */}
 
                     <div className="row">
@@ -123,7 +123,7 @@ const Service=()=> {
                     <div className="col-sm text-center">
                         <h4>Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
                             <div className="height"></div>
-                            <a className="find-your-home-link" href="#"><span className="find-your-home"> Start a conversation</span></a>
+                            <a className="find-your-home-link" href="/contact#inquiry"><span className="find-your-home"> Start a conversation</span></a>
 
                     </div>
 
@@ -134,6 +134,6 @@ const Service=()=> {
             <Footer/> 
             
         </>
-    )
+    ) 
 }
 export default Service

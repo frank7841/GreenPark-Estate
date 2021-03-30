@@ -6,7 +6,7 @@ function Pagination(props) {
         let numbers = [];
         let itemsPerPage = props.itemsPerPage
         let pageNumber= 1
-
+ 
         for(let i=0; i< props.count; i += itemsPerPage){
                 const page = pageNumber;
                 let style ="pagination-number";
@@ -21,7 +21,7 @@ function Pagination(props) {
                     );
                 }
                 else {
-                    style= "pagination-number pagination-number-active";
+                    style= "pagination-number";
                     content= (
                         <div key={i} onClick={()=> props.visitPage(page)} className={style}>
                             {pageNumber}
@@ -38,12 +38,12 @@ function Pagination(props) {
 
     return (
         <div className= "pagination">
-            <div conCLick={()=>props.previous()} className="pagination-number">
-                previous
+            <div onClick={()=>props.previous()} className="pagination-number">
+            «
             </div>
             {getNumbers()}
-            <div conCLick={()=>props.next()} className="pagination-number">
-                Next
+            <div onClick={()=>props.next()} className="pagination-number">
+            »
             </div>
         </div>
     )

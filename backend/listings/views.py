@@ -3,7 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import permissions
 from .models import Listing
-from .serializers import ListingSerializer, ListingDetailSerializer
+from .serializers import ListingSerializer, ListingDetailSerializer,FeaturedListingSerializer
 from datetime import datetime, timezone, timedelta
 
 class ListingsView(ListAPIView):
@@ -12,10 +12,17 @@ class ListingsView(ListAPIView):
     serializer_class = ListingSerializer
     lookup_field = 'slug'
     
+class FeaturedListingsView(ListAPIView):
+    queryset =Listing.objects.order_by('-list_date').filter(featured = True)
+    permission_classes = (permissions.AllowAny ,)
+    serializer_class = FeaturedListingSerializer
+    lookup_field = 'featured'
+      
+    
 class ListingView(RetrieveAPIView):
     queryset = Listing.objects.order_by('-list_date').filter(is_published=True)
     serializer_class = ListingDetailSerializer
-    lookup_field = 'slug'
+    lookup_field = 'slug' 
         
 class SearchView(APIView):
     permission_classes = (permissions.AllowAny ,)
@@ -89,56 +96,59 @@ class SearchView(APIView):
         property_type = data['property_type']
         queryset =queryset.filter(property_type__iexact=property_type)
         
+        town = data['town']
+        queryset =queryset.filter(town__iexact=town)
         
         
-        bathrooms= data['bathrooms']
-        if bathrooms == '0+':
-            bathrooms = 0.0
+        
+        # bathrooms= data['bathrooms']
+        # if bathrooms == '0+':
+        #     bathrooms = 0.0
             
-        if bathrooms == '1+':
-            bathrooms = 1.0
+        # if bathrooms == '1+':
+        #     bathrooms = 1.0
             
-        if bathrooms == '2+':
-            bathrooms = 2.0
+        # if bathrooms == '2+':
+        #     bathrooms = 2.0
             
-        if bathrooms == '3+':
-            bathrooms = 3.0
+        # if bathrooms == '3+':
+        #     bathrooms = 3.0
             
-        if bathrooms == '4+':
-            bathrooms = 4.0
+        # if bathrooms == '4+':
+        #     bathrooms = 4.0
             
-        if bathrooms == '5+':
-            bathrooms = 5.0
+        # if bathrooms == '5+':
+        #     bathrooms = 5.0
             
-        if bathrooms == '6+':
-            bathrooms = 6.0                    
+        # if bathrooms == '6+':
+        #     bathrooms = 6.0                    
             
-        queryset =queryset.filter(bathrooms__gte=bathrooms)
+        # queryset =queryset.filter(bathrooms__gte=bathrooms)
         
         
-        sqft = data['sqft']
-        if sqft =='400+':
-            sqft = 400
-        elif sqft =='1200+':
-            sqft = 1200
+        # sqft = data['sqft']
+        # if sqft =='400+':
+        #     sqft = 400
+        # elif sqft =='1200+':
+        #     sqft = 1200
             
-        elif sqft =='1400+':
-            sqft = 1400    
+        # elif sqft =='1400+':
+        #     sqft = 1400    
                        
-        elif sqft =='1600+':
-            sqft = 1600
+        # elif sqft =='1600+':
+        #     sqft = 1600
             
-        elif sqft =='1800+':
-            sqft = 1800
+        # elif sqft =='1800+':
+        #     sqft = 1800
             
-        elif sqft =='2000+':
-            sqft = 2000
+        # elif sqft =='2000+':
+        #     sqft = 2000
             
-        elif sqft =='Any':
-            sqft = 0
+        # elif sqft =='Any':
+        #     sqft = 0
             
-        if sqft !=0:
-            queryset =queryset.filter(sqft__gte=sqft)
+        # if sqft !=0:
+        #     queryset =queryset.filter(sqft__gte=sqft)
                     
             
                                         
@@ -172,71 +182,74 @@ class SearchView(APIView):
                     
                     
             
-        has_photos = data['has_photos']
-        if has_photos == '1+':
-            has_photos =1
-        elif has_photos == '3+':
-            has_photos = 3
+        # has_photos = data['has_photos']
+        # if has_photos == '1+':
+        #     has_photos =1
+        # elif has_photos == '3+':
+        #     has_photos = 3
             
-        elif has_photos == '5+':
-            has_photos = 5
+        # elif has_photos == '5+':
+        #     has_photos = 5
             
             
-        elif has_photos == '10+':
-            has_photos = 10
+        # elif has_photos == '10+':
+        #     has_photos = 10
             
-        elif has_photos == '15+':
-            has_photos = 15
+        # elif has_photos == '15+':
+        #     has_photos = 15
             
-        for query in queryset:
-            count = 0
-            if query.photo_1:
-                count +=1
-            if query.photo_2:
-                count +=1
-            if query.photo_3:
-                count +=1
-            if query.photo_4:
-                count +=1
-            if query.photo_5:
-                count +=1
-            if query.photo_6:
-                count +=1
-            if query.photo_7:
-                count +=1
-            if query.photo_8:
-                count +=1
-            if query.photo_9:
-                count +=1
-            if query.photo_10:
-                count +=1
-            if query.photo_11:
-                count +=1
-            if query.photo_12:
-                count +=1
-            if query.photo_13:
-                count +=1
-            if query.photo_14:
-                count +=1
-            if query.photo_15:
-                count +=1
-            if query.photo_16:
-                count +=1                
-            if query.photo_17:
-                count +=1
-            if query.photo_18:
-                count +=1
-            if query.photo_19:
-                count +=1
-            if query.photo_20:
-                count +=1
+        # for query in queryset:
+        #     count = 0
+        #     if query.photo_1:
+        #         count +=1
+        #     if query.photo_2:
+        #         count +=1
+        #     if query.photo_3:
+        #         count +=1
+        #     if query.photo_4:
+        #         count +=1
+        #     if query.photo_5:
+        #         count +=1
+        #     if query.photo_6:
+        #         count +=1
+        #     if query.photo_7:
+        #         count +=1
+        #     if query.photo_8:
+        #         count +=1
+        #     if query.photo_9:
+        #         count +=1
+        #     if query.photo_10:
+        #         count +=1
+        #     if query.photo_11:
+        #         count +=1
+        #     if query.photo_12:
+        #         count +=1
+        #     if query.photo_13:
+        #         count +=1
+        #     if query.photo_14:
+        #         count +=1
+        #     if query.photo_15:
+        #         count +=1
+        #     if query.photo_16:
+        #         count +=1                
+        #     if query.photo_17:
+        #         count +=1
+        #     if query.photo_18:
+        #         count +=1
+        #     if query.photo_19:
+        #         count +=1
+        #     if query.photo_20:
+        #         count +=1
                 
-            if count < has_photos:
-                slug = query.slug
-                queryset = queryset.exclude(slug__iexact=slug)
+        #     if count < has_photos:
+        #         slug = query.slug
+        #         queryset = queryset.exclude(slug__iexact=slug)
                     
-        property_availability = data['property_availability']
-        queryset=queryset.filter(property_availability__iexact=property_availability)
+        # property_availability = data['property_availability']
+        # queryset=queryset.filter(property_availability__iexact=property_availability)
+        # open_house = data['open_house']
+        # queryset = queryset.filter(open_house__iexact=open_house)
+
         
         keywords = data['keywords']
         queryset =queryset.filter(description__icontains=keywords)

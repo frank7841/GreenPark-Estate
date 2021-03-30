@@ -5,6 +5,9 @@ import Listings from '../components/Listings';
 import Pagination from '../components/Pagination';
 import HomeBanner from '../components/HomeBanner';
 import Footer from '../components/footer'
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+import Featured from './Featured'
 
 const Home = () => {
     const [listings, setListings] = useState([]);
@@ -41,15 +44,15 @@ const Home = () => {
         <main className='home container-fluid'>
              <HelmetProvider>
             <Helmet>
-                <title>Realest Estate - Home</title>
+                <title>Nibora Properties- Home</title>
                 <meta
                     name='description'
-                    content='Realest Estate Home Page'
+                    content='Nibora Properties '
                 />
             </Helmet>
             </HelmetProvider>
             <HomeBanner/>
-            <section className='home-form'>
+            <section className='home-form ' id="serach-form">
                 <ListingForm setListings={setListings} />
             </section>
             <section className='home-listings'>
@@ -57,7 +60,7 @@ const Home = () => {
             </section>
             <section className='home-pagination'>
                 <div className='row'>
-                    {
+                    { 
                         listings.length !== 0 ? (
                             <Pagination
                                 itemsPerPage={listingsPerPage}
@@ -72,11 +75,16 @@ const Home = () => {
                     }
                 </div>
             </section>
+            <section className='home-listings' id="featured">
+                    <h3>New Listings</h3> 
+                <Featured listings={currentListings} />
+            </section>
             
         
         
-        <Footer/>
+            <Footer/>            
         </main>
+        
       
     );
 };

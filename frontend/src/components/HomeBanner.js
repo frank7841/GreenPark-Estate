@@ -1,15 +1,51 @@
 import React from 'react'
 import { Carousel }  from 'react-bootstrap';
+import background from './asset/another.svg'
 
 
 const HomeBanner=()=> {
+    const styles= {
+        barner: {
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        
+     },
+     
+        background:{ 
+            maxWidth: '110%',
+            // backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            
+        }
+
+
+    }
     return (
         <>
-        <Carousel className="captioning" >
+            <div className="container-fluid img-responsive" style={styles.barner}>
+                <div className="container " style={styles.background}>
+                    <div className=" top-barner-section">
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <section className="nibora-realtors text-center"><p className="dont-settle">DON'T SETTLE FOR AVERAGE</p>
+                                <p className="pre-text">We at Nibora Properties are consistently recognized for having the scale and the wit to lead the real estate industry to the future. Our research based algorithms gets you closer to your deserving vacation, becoming a home owner, getting the best office space   <a className="link-awesome" href="/service">and many more</a>&nbsp;<a className="link-awesome" href="/contact" >Get in touch with us.</a></p>
+                                <p className="searchlink-location"><a href="#serach-form" className="nibora-search-link">Search Listings&nbsp;»</a></p>
+                                </section> 
+                                <div></div>   
+                               
+                            </div>
+                             </div>    
+                    </div> 
+
+                </div>
+            </div>
+
+
+        {/* <Carousel className="captioning" >
             <Carousel.Item >
                 <img
-                className="d-block w-100 image-height"
-                src={process.env.PUBLIC_URL + 'image/image6.jpg'}
+                className="d-block w-100 image-height img-responsive"
+                src={process.env.PUBLIC_URL + 'image/mnarani-greenpark.png'}
                 alt="First slide"
                 />
                 <Carousel.Caption>
@@ -20,7 +56,7 @@ const HomeBanner=()=> {
             <Carousel.Item >
                 <img
                 className="d-block w-100 image-height"
-                src={process.env.PUBLIC_URL + 'image/image2.jpg'}
+                src={process.env.PUBLIC_URL + 'image/new1.jpeg'}
                 alt="Third slide"
                 />
 
@@ -53,7 +89,7 @@ const HomeBanner=()=> {
                 </Carousel.Caption>
             </Carousel.Item>
         
-        </Carousel>
+        </Carousel> */}
         </>
     )
 }

@@ -13,7 +13,9 @@ const Nav = styled.nav`
 
 .logo{
   padding:15px 0;
+  width:50%
 }
+
 
 
 `  
@@ -22,7 +24,8 @@ function Navbar() {
   return (
     <Nav>
       <div className="logo">
-          NRE
+          Nibora 
+          <a className="top-number" href="tel:0790943918">+254 790 943918</a>
         </div>
         <Burger/>
     </Nav>

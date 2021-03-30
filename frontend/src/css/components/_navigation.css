@@ -8,9 +8,16 @@ color:#010101;
 .nav-item:active{
     color:green;
 }
+a.top-number{
+    margin-left: 5%;
+    color:rgb(66, 51, 24);
+}
 @media screen and (max-width:767px){
     .nav-item {
         color: #ffffff;
+    }
+    .logo{
+        width: 100%!important;
     }
     
     

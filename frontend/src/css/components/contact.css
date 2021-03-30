@@ -16,14 +16,15 @@ h1.contact-section{
 }
 .contact-border{
     height:250px;
-    background-color: #e5eee5;
+    background-color: rgba(8, 76, 92, 0.5);
     margin: 4px;
     padding-top:20px;
+    color:#ffffff;
 }
 
 .link-height{
     font-size: 20px;
-    color: #000;
+    color: #ffffff;
 }
 .contact-icon{
     height:70px;
@@ -70,9 +71,7 @@ a.link-contact:hover{
       padding-top: 5%;
       margin-top: 5%;
   }
-  .form-input{ 
-
-  }
+ 
   .contact-info{
       padding-left: 5%;
   }
@@ -129,6 +128,28 @@ a.link-contact:hover{
       .adrress-right{
           margin-right: 150px;
       }
+      .link-height-mobile{
+        font-size: 20px;
+        color: #080808;
+      } 
 
   }
-  
+  .nibora-realtors-contact{
+    margin-top: 10%!important;
+    width: 100%;
+    height:400px;
+    /* color:#ffffff;
+    font-weight: 900;
+    font-size: 30px; */
+    margin-left: 5%;;
+
+  }
+  p.dont-settle-contact{
+      
+    justify-content: center;
+    color:#ffffff;
+    font-weight: 900;
+    margin-top: 5%;
+    line-height: 60px;
+    font-size: 50px!important;
+  }

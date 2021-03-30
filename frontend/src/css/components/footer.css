@@ -61,6 +61,7 @@ hr.footer-links{
 .copyright{
     font-size: larger;
     color: #afaaaa;
+    padding-top: 10rem;
 }
 .item-link-footer:hover{
     text-decoration: underline;
@@ -68,4 +69,20 @@ hr.footer-links{
 }
 .sign-up-button{
     padding:5px;
+}
+.about-text a{
+    color: #ffffff;
+}
+.about-text a:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+.item-link-footer{
+    font-size: 1.2rem;
+    
+}
+
+
+.subscribe{
+    color: black!important;
 }

@@ -6,12 +6,11 @@ import NumberFormat from 'react-number-format';
 
 
 const Card = (props) => {
-    // function numberWithCommas(x) {
-    //     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    //   }
+  
  
     return (
-        <div className="card col-sm-4 card-property">
+        <>
+        <div className="card card-property">
                 <div className="card-body">
             <h3 className="card-titile">
                 {props.title}
@@ -21,7 +20,7 @@ const Card = (props) => {
             </div>
             <div className="card-body">
                 <div className="card-text">
-                    <p className="location">{props.address},{props.city}, {props.county}</p>
+                    <p className="location">{props.address},{props.town},{props.county}</p>
                     <div className="row">
                         <div className="col-sm">
                             <p className="card-infomation">Price: <NumberFormat value={props.price} displayType={'text'} thousandSeparator={true} prefix={'Ksh'}/> </p> 
@@ -35,20 +34,24 @@ const Card = (props) => {
                             <p className="card-sqft">Sqft:{props.sqft}</p> 
 
                         </div> 
- 
+                        <br/>
                     </div>
-                    <Link className="card-link" to={`/listings/${props.slug}`}>View Listings</Link>
+                    <div>
+                        <br/>
+                    <Link className="card-link" to={`/listings/${props.slug}`}>View Listing</Link>
+                    </div>
                 </div>
             </div>
             </div>
         </div>
+        </>    
     )
 };
 Card.propTypes = {
     title: PropTypes.string.isRequired,
     photo_main: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
+    town: PropTypes.string.isRequired,
     county: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     bedrooms: PropTypes.number.isRequired,

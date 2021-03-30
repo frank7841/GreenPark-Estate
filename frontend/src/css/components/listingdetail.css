@@ -1,0 +1,81 @@
+.title-header{
+    background-color:rgb(62, 94, 62)!important;
+    color:aliceblue;
+}
+.breadcrumb-item{
+    font-weight: 900!important;
+}
+.listingdetail-realtor{
+    font-weight: 900;
+    font-size: 30px;
+    color:rgb(62, 94, 62);
+}
+.listingdetail-list{
+    list-style-type: none;
+}
+.listingdetail-list-item{
+    line-height:30px;
+    font-size: 18px;
+    font-weight: 550;
+    color:#228B22;
+}
+.listing-details{
+    padding-top: 2rem;
+}
+.listing-description-detail{
+    background-color: #f9faf5;
+    border: 1px none;
+    border-radius: 4px;
+
+}
+.listingdetail-description{
+    padding:10px;
+    line-height: 30px;
+    font-size: 18px;
+}
+.realtor-pc{
+    display: none;
+}
+.contact-realtor{
+    
+    display: none!important;
+   
+}
+.back{
+    cursor: pointer;
+    color: rgb(31, 163, 199)!important;
+    font-weight: 700;
+}
+
+@media screen and (max-width:768px){
+    .realtor-mobile{
+        display: none;
+    }
+    .realtor-pc{
+        display:block
+    }
+    .contact-realtor{
+        display: flex!important;
+        position: fixed;
+        bottom: 0;
+        z-index: 9;
+        background-color: red;
+        
+
+    }
+.left a {
+    
+
+}
+.right a{
+ 
+    
+
+}
+        
+
+    .button-design{
+        padding: 10px;
+    }
+   
+}

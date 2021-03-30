@@ -4,7 +4,7 @@ from datetime import datetime
 class Realtor(models.Model):
     name = models.CharField( max_length=50)
     photo =models.ImageField(upload_to='photos/%Y/%m/%d/')
-    descritption = models.TextField(blank=True)
+    description = models.TextField(blank=True)
     phone =models.CharField( max_length=20)
     email = models.CharField( max_length=100)
     top_seller = models.BooleanField(default =False)
