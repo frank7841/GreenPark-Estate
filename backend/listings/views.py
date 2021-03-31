@@ -21,6 +21,7 @@ class FeaturedListingsView(ListAPIView):
     
 class ListingView(RetrieveAPIView):
     queryset = Listing.objects.order_by('-list_date').filter(is_published=True)
+    permission_classes = (permissions.AllowAny ,)
     serializer_class = ListingDetailSerializer
     lookup_field = 'slug' 
         

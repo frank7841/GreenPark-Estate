@@ -33,8 +33,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.apple',
     'corsheaders',
     'rest_framework',
-    'accounts',
+    # 'accounts',
     'realtors',
     'listings',
     'contacts'
@@ -103,6 +103,14 @@ DATABASES = {
         'HOST': 'localhost',
     }
 }
+AUTHENTICATION_BACKENDS = [
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -174,5 +182,5 @@ SIMPLE_JWT = {
 CORS_ORIGIN_ALLOW_ALL = True
 FILE_UPLOAD_PERMISSION =0o640
 
-AUTH_USER_MODEL= 'accounts.UserAccount'
+AUTH_USER_MODEL= 'auth.User'
 

@@ -19,8 +19,8 @@ const ListingDetail=(props)=> {
 
         const config={
             headers:{
-                "Authorization" : `Bearer ${localStorage.getItem('token')}`
-                // "Content-Type": "application/json"
+                // "Authorization" : `Bearer ${localStorage.getItem('token')}`
+                "Content-Type": "application/json"
             }
         };
         axios.get(`http://localhost:8000/api/listings/${slug}`, config)
@@ -37,8 +37,8 @@ const ListingDetail=(props)=> {
         const id = listing.realtor
         const config={
             headers:{
-                "Authorization" : `Bearer ${localStorage.getItem('token')}`
-                // "Content-Type": "application/json"
+                // "Authorization" : `Bearer ${localStorage.getItem('token')}`
+                "Content-Type": "application/json"
             }
         };
         if (id) {
