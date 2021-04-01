@@ -15,10 +15,14 @@ const Ul = styled.ul`
     padding: 18px 10px;
     cursor:pointer;
     }
+    .nav-item{
+        font-size:16px!important;
+    }  
+
 
     @media screen  and (max-width:768px){
         flex-flow:column nowrap;
-        background-color:#0d2538;
+        background-color:#0e373d;
         position:fixed;
         top:0;
         right:0;
@@ -33,8 +37,8 @@ const Ul = styled.ul`
         color:#ffffff;
         text-decoration:none;
 
-    }    
-
+    }  
+   
 
     }
 `;

@@ -36,10 +36,10 @@ const About=()=> {
         <div>
              <HelmetProvider>
             <Helmet>
-                <title>Nibora Properties - About Us</title>
+                <title>Nibora Properties - Who we are</title>
                 <meta
                     name='description'
-                    content='Nibora Realest Estate What We do'
+                    content='We handle our customers, clients, and patners with integrity, commitment and deligence + a 24/7 friendly customer service'
                 />
             </Helmet>
             </HelmetProvider>

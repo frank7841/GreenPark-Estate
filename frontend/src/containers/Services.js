@@ -15,10 +15,10 @@ const Service=()=> {
         <>
             <HelmetProvider>
             <Helmet>
-                <title>Nibora Properties - Services</title>
+                <title>Nibora Properties - Homes| Hotels| Mortgage| Off-Plan Property| Property Valuation</title>
                 <meta
                     name='description'
-                    content='Nibora Realest Estate Services'
+                    content='We represents the region’s finest real estate services including homes, hotels, valuation,  with exceptional skill using the most innovative technologies currently available.'
                 />
             </Helmet>
             </HelmetProvider>

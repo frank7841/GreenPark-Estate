@@ -264,7 +264,7 @@ const ListingDetail=(props)=> {
                 <title>{`${listing.title}`}</title>
                 <meta
                     name='description'
-                    content='listing detail'
+                    content={`${listing.title}`  }
                 />
             </Helmet>
             </HelmetProvider>

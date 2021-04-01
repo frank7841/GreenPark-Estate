@@ -44,10 +44,10 @@ const Home = () => {
         <main className='home container-fluid'>
              <HelmetProvider>
             <Helmet>
-                <title>Nibora Properties- Home</title>
+                <title>Nibora Properties- Search Homes| Hotels| Land| GuestHouses| Apartments| Shops| Office| Spaces| Plots</title>
                 <meta
                     name='description'
-                    content='Nibora Properties '
+                    content='The leading real estate marketplace. Search for rent and sale listings including fully furnished guesthouses for short stay. Connect with local professionals in the real estate industry'
                 />
             </Helmet>
             </HelmetProvider>

@@ -120,10 +120,10 @@ const Featured = () => {
         <main className='listings'>
             <HelmetProvider>    
                 <Helmet>
-                    <title>NIbora Properties - Listings</title>
+                    <title>Nibora Properties - Listings For Sale | Rent</title>
                     <meta
                         name='description'
-                        content='Listings page'
+                        content='Nibora properties has hundreds of listings for sale or rent. View listings details,  photos and property details'
                     />
                 </Helmet>
             </HelmetProvider>    
