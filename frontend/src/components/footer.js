@@ -75,7 +75,7 @@ const Footer=()=> {
 
             </div>
             <div className="copyright text-center">
-            <small>&copy; Copyright {new Date().getFullYear()}, Nibora Realtors</small>
+            <small>&copy; Copyright {new Date().getFullYear()}, Nibora Properties</small>
             </div>
             </div>
         </footer>

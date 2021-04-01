@@ -47,7 +47,7 @@ const RightNav = ({  open, auth:{isAuthenticated, loading}, logout} ) => {
     );
     const guestLinks = (
       <>
-          <li><NavLink className = "nav-item"exact to='/signup'>Sign Up</NavLink></li>
+          
           <li><NavLink className = "nav-btn nav-item"exact to = "/login">Login </NavLink></li>
     </>
     );
@@ -60,6 +60,7 @@ const RightNav = ({  open, auth:{isAuthenticated, loading}, logout} ) => {
           <li> <NavLink className = "nav-item" exact to ='/service'>Services</NavLink> </li>
           <li><NavLink className ="nav-item"exact to ='/about'>About</NavLink></li>
           <li><NavLink className = "nav-item"exact to= '/contact'>Contacts</NavLink></li>
+          <li><NavLink className = "nav-item"exact to='/advertise'>Advertise</NavLink></li>
           {/* <li><NavLink className = "nav-item"exact to='/signup'>Sign Up</NavLink></li>
           <NavBtn>
                <NavBtnLink to = "/login">Login</NavBtnLink>

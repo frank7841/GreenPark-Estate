@@ -3,6 +3,7 @@ import background from '../components/asset/guiding-principle.svg'
 import backgroundForm from '../components/asset/guiding-principle.svg'
 import Footer from '../components/footer'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Scroll from '../components/Scroll'
 
 const Adevertise=()=> {
     const styles= {
@@ -40,6 +41,7 @@ const Adevertise=()=> {
                 />
             </Helmet>
             </HelmetProvider>
+            <Scroll showBelow={250}/>
         <div className="container-fluid z-index" style={styles.adbackground}>
             <div className=" img-responsive" style={styles.addsection}>
                 <div className=" content-height">
@@ -114,6 +116,7 @@ const Adevertise=()=> {
                                     <select className="form-control" id="i_am" name="i_am">
                                         <option>Realtor or Agents</option>
                                         <option>Home owner</option>
+                                        <option>Hospitality industry</option>
                                         <option>Builder or New Construction Company</option>
                                         <option>Mortgage Lender or Mortgage Company</option>
                                         <option>Company with consumer products for Home buyers and sellers.</option>
@@ -131,6 +134,10 @@ const Adevertise=()=> {
                                 <div className="form-group">
                                     <lable for="phone">Phone</lable>
                                     <input type="tel" className="form-control" id="phone" name="phone"/>
+                                </div>
+                                <div className="form-group">
+                                    <lable for="Location">Location</lable>
+                                    <input type="text" className="form-control" id="location" name="location"/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="county">County</lable>

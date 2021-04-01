@@ -135,7 +135,7 @@ p.principles-text{
 .find-your-home  {
     padding: 10px;
     background-color: #884c34;
-    border: 1px solid #333;
+    border-radius: 4px;
     font-size: 20px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -188,6 +188,9 @@ blockquote {
   }
   blockquote p {
     display: inline-block;
+  }
+  .seek{
+      font-size:20px!important;
   }
   .each-slide > div {
     display: flex;

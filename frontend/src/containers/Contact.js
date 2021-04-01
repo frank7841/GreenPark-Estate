@@ -2,6 +2,8 @@ import React from 'react'
 import background from '../components/asset/contact.jpg'
 import { Icon } from 'semantic-ui-react'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Scroll from '../components/Scroll'
+import Footer from '../components/footer'
 
  
 const contact=()=> {
@@ -35,6 +37,7 @@ const contact=()=> {
                 />
             </Helmet>
             </HelmetProvider>
+            <Scroll showBelow={250}/>
         <div className="container-fluid" style={styles.barner}>
         <div className=" img-responsive" style={styles.background}>
                     <div className=" top-barner-section">
@@ -168,7 +171,7 @@ const contact=()=> {
                 <div className="row">
                     <div className="col-sm" id="call-request">
                     <h1 className="header"> Call Back Request Form</h1>
-                    <form>
+                    <form >
                             <div className="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" className="form-control" name="name" id="name"/>
@@ -202,6 +205,7 @@ const contact=()=> {
                 </div>
 
             </div>
+            <Footer/>
                   
         </>
 

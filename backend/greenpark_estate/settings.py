@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.apple',
     'corsheaders',
     'rest_framework',
-    # 'accounts',
     'realtors',
     'listings',
     'contacts'
@@ -97,7 +96,7 @@ WSGI_APPLICATION = 'greenpark_estate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'greenpark_estate',
+        'NAME': 'nibora_properties',
         'USER':  'postgres',
         'PASSWORD': '1234',
         'HOST': 'localhost',
@@ -105,10 +104,8 @@ DATABASES = {
 }
 AUTHENTICATION_BACKENDS = [
 
-    # Needed to login by username in Django admin, regardless of `allauth`
+    
     'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 

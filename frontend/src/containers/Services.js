@@ -30,7 +30,7 @@ const Service=()=> {
                 
                  <div className="text-block">
                         <h4 data-aos="slide-right">Searching For a Home, a Hotel, a Guest House, Office Spaces, Land,  with Nibora, You will find the difference is Night and Day. </h4>
-                        <p data-aos="fade-in">What is so different you ask? Well, Nibora Real Estate  is here to find you not <strong>JUST</strong> four walls and a roof. We are here and dedicated to connect you to a community, to things that inspires you, and to a space that also inspires you. We are focused to earning your trust rather than comision.    </p>
+                        <p data-aos="fade-in">What is so different you ask? Well, Nibora Properties is here to find you not <strong>JUST</strong> four walls and a roof. We are here and dedicated to connect you to a community, to things that inspire you, and to a space that also inspires you. We are focused to earning your trust rather than comision.    </p>
                  </div>
                  <div className="service-top-mobile">
                     <img data-aos="fade-in" src={process.env.PUBLIC_URL + 'image/assets/img/Service.png'} alt="Service"/>
@@ -49,7 +49,7 @@ const Service=()=> {
                         
                         <p className="service-text">Are you searching for a home, Townhouse, Bungalow for your family?  We have specialized in providing cost-concious buyers multiple options to buy or rent a home for your family regardless of your budget. We have the Keys to your Home.</p>
                         <br/>
-                        <p className="service-text">Nibora Realtors provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p>
+                        <p className="service-text">Nibora Properties provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p>
                         <br/>
                         <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/">Find a Home</a>
                     </div>

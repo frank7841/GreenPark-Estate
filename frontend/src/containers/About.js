@@ -62,20 +62,20 @@ const About=()=> {
                         <hr className="top-about"/>
                         <ul className="learn-link">
                         <li className="learn-padding">
-                                <a className="item-link"href="#">
-                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/bolt.svg'} alt="why choose us"/></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="icon-title">Why choose Us&nbsp;»</span></a>
+                                <a className="item-link"href="/service">
+                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/bolt.svg'} alt="What we do"/></span>
+                                <span class="icon-title">What we do&nbsp;»</span></a>
 
                            </li>
                            <li className="learn-padding">
                                 <a className="item-link"href="#">
-                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/users.svg'} alt="why choose us"/></span>
+                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/users.svg'} alt="Our patners"/></span>
                                 <span class="icon-title">Our Associates&nbsp;»</span></a>
 
                            </li>
                            <li  className="learn-padding" >
                                 <a className="item-link"href="/advertise">
-                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/user.svg'} alt="why choose us"/></span>
+                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/user.svg'} alt="get leads"/></span>
                                 <span class="icon-title">Advertise with us&nbsp;»</span></a>
 
                            </li>
@@ -114,9 +114,9 @@ const About=()=> {
             <div className="height"></div>
                 <div className="container">
                     <div className="col-sm text-center">
-                        <h4>Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
+                        <h4 className="seek">Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
                             <div className="height"></div>
-                            <a className="find-your-home-link" href="#"><span className="find-your-home"> Find Your Home</span></a>
+                            <a className="find-your-home-link" href="/contact#call-request"><span className="find-your-home"> Request a Call</span></a>
 
                 </div>
             </div>

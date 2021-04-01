@@ -52,7 +52,7 @@ const Home = () => {
             </Helmet>
             </HelmetProvider>
             <HomeBanner/>
-            <section className='home-form ' id="serach-form">
+            <section className='home-form ' id="search-form">
                 <ListingForm setListings={setListings} />
             </section>
             <section className='home-listings'>
