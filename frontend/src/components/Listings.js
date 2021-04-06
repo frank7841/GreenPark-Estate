@@ -27,6 +27,13 @@ const listings =({ listings}) =>{
 
         });
         console.log(listings)
+        if (listings.length=== 0) {
+            <div className="container">
+                <div className="row">
+                    <h2>No such listings available! Contact Us for property Request!</h2>
+                 </div>   
+            </div>
+        }
         for(let i = 0; i < listings.length; i += 3){
             result.push(
                 

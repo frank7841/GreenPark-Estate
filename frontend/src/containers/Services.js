@@ -69,7 +69,7 @@ const Service=()=> {
                             {/* <p className="residential-head ">Commercial</p> */}
                             <h3>Hotels</h3>
                             
-                            <p className="service-text">Looking for a hotel that is close to an express way , near a hospital or with a  pool? We have the answer. Nibora Realtors deliver timely information about the hotel that suits your prefference with a single click of a button. We help you make memories at pocket friendly rates.</p> 
+                            <p className="service-text">Looking for a hotel that is close to an express way , near a hospital or with a  pool? We have the answer. Nibora Properties deliver timely information about the hotel that suits your prefference with a single click of a button. We help you make memories at pocket friendly rates.</p> 
                             <br/>
                             {/* <p className="service-text">Nibora Realtors provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p> */}
                             <br/>
@@ -85,7 +85,7 @@ const Service=()=> {
                             {/* <p className="residential-head ">Commercial</p> */}
                             <h3>Office Spaces and Shops</h3>
                             
-                            <p className="service-text">Are you a business owner looking to expand your business with a well situated office space or a shop? Look no further! Here at Nibora Realtors we provide you with a personalised search on the office space or shop that will deffinately make your business accessible to the your potential customers.  </p> 
+                            <p className="service-text">Are you a business owner looking to expand your business with a well situated office space or a shop? Look no further! Here at Nibora Properties we provide you with a personalised search on the office space or shop that will deffinately make your business accessible to the your potential customers.  </p> 
                             <br/>
                             {/* <p className="service-text">Nibora Realtors provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p> */}
                             <br/>

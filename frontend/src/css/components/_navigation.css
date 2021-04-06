@@ -12,12 +12,24 @@ a.top-number{
     margin-left: 5%;
     color:rgb(66, 51, 24);
 }
+/* .logo-size{
+    width: 250px;
+    height:50px;
+} */
+.logo-brand{
+    font-size: 29px!important;
+    font-weight: 600;
+   
+}
 @media screen and (max-width:767px){
     .nav-item {
         color: #ffffff;
     }
     .logo{
         width: 100%!important;
+    }
+    .top-number{
+        display:none;
     }
     
     
@@ -61,5 +73,16 @@ text-decoration: none!important;
         justify-content:flex-start;
         
     }
+
+}
+
+
+.nibora-end{
+    color:#0e373d;
+    font-family: 'Kaushan Script', cursive!important;
+}
+.nibora-stat{
+    color:#0e373d;
+    font-family: 'Kaushan Script', cursive!important;
 
 }

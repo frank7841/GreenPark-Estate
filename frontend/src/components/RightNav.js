@@ -14,6 +14,7 @@ const Ul = styled.ul`
     li{
     padding: 18px 10px;
     cursor:pointer;
+    color:#ffffff!important;
     }
     .nav-item{
         font-size:16px!important;

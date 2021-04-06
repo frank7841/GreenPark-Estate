@@ -151,7 +151,7 @@ const Adevertise=()=> {
             </div>
         </div>
         <div className="container patner">
-            <h1 className="text-center top-top-add">Patner wit us</h1>
+            <h1 className="text-center top-top-add">Patner with us</h1>
             <hr className="horizontal " size="large"/>
             <p className="patner-text">Two things every real estate professional needs: more time and more leads. Your lead pipeline is your business and you don’t have time to waste on bad real estate leads. Our real estate agent, mortgage lender, new home builder and broker advertising services are designed to attract serious buyers and sellers so we can deliver quality leads so you can focus your time on leads that will convert. Get quality real estate leads in your local market, or create brand awareness for your business.<br/><br/><br/>With Nibora Properties  advertising, you’ll also get all the tools you need to nurture your leads from any source. The free CRM, monthly newsletter, drip email campaigns, and more are all available with your advertising partnership so you can leverage your leads for referrals before, during, and after the home sale. Nibora Properties solutions empower real estate agents to hone in on what matters—the lifelong relationships they build with their clients.</p>
         </div>
