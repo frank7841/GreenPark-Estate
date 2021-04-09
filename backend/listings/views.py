@@ -153,33 +153,33 @@ class SearchView(APIView):
                     
             
                                         
-        days_passed = data['days_listed']
-        if days_passed =='1 or less':
-            days_passed = 1
+        # days_passed = data['days_listed']
+        # if days_passed =='1 or less':
+        #     days_passed = 1
             
-        if days_passed == '2 or less':
-            days_passed =2
+        # if days_passed == '2 or less':
+        #     days_passed =2
         
-        if days_passed == '5 or less':
-            days_passed =5
+        # if days_passed == '5 or less':
+        #     days_passed =5
                 
-        if days_passed == '10 or less':
-            days_passed =10
+        # if days_passed == '10 or less':
+        #     days_passed =10
                                 
                                 
-        if days_passed == '20 or less':
-            days_passed =20
+        # if days_passed == '20 or less':
+        #     days_passed =20
             
-        if days_passed == 'Any':
-            days_passed =0
+        # if days_passed == 'Any':
+        #     days_passed =0
             
-        for query in queryset:
-            num_days = (datetime.now(timezone.utc)- query.list_date).days
+        # for query in queryset:
+        #     num_days = (datetime.now(timezone.utc)- query.list_date).days
             
-            if days_passed !=0:
-                if num_days > days_passed:
-                    slug = query.slug
-                    queryset =queryset.exclude(slug__iexact=slug)
+        #     if days_passed !=0:
+        #         if num_days > days_passed:
+        #             slug = query.slug
+        #             queryset =queryset.exclude(slug__iexact=slug)
                     
                     
             

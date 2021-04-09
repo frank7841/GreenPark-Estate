@@ -40,14 +40,16 @@ const Footer=()=> {
             <div className="row">
             <div className="height"></div>
                 <div className="col-sm-4 about-footer">
-                    <h4>About Us</h4>
-                    <p className="about-text">We take care of all your Real estate and  Hotel related needs. We provide for you realtime detailed information about Houses for rent or Sale, GuestHouses for Short Stay, Hotels, Offices for Rent or Sale and many more .All arround Kenya.  </p>
-                    <div className="row social ">
-                            < a className="social-links"  href="#"> <FontAwesomeIcon icon={faFacebookF} size="sm" /></a>
-                            < a className="social-links" href="#">  <FontAwesomeIcon icon={faTwitter} size="sm" /></a>
-                            < a className="social-links" href="#">  <FontAwesomeIcon icon={faInstagram} size="sm" /></a>
-                            < a className="social-links" href="#">  <FontAwesomeIcon icon={faYoutube} size="sm" /></a>
-                            < a className="social-links" href="#">  <FontAwesomeIcon icon={faLinkedinIn} size="sm" /></a>
+                    
+                    <img className="logo-size"src= {process.env.PUBLIC_URL + 'image/assets/img/Gazebo1G.png'}/> 
+                        <h4>Connect with Us</h4>    
+                      <div className="row social ">
+                      
+                            < a className="social-links"  href="#"> <FontAwesomeIcon icon={faFacebookF} size="2" /></a>
+                            < a className="social-links" href="#">  <FontAwesomeIcon icon={faTwitter} size="3" /></a>
+                            < a className="social-links" href="#">  <FontAwesomeIcon icon={faInstagram} size="" /></a>
+                            < a className="social-links" href="#">  <FontAwesomeIcon icon={faYoutube} size="" /></a>
+                            < a className="social-links" href="#">  <FontAwesomeIcon icon={faLinkedinIn} size="" /></a>
                     </div>
                 </div>
                 
@@ -68,7 +70,9 @@ const Footer=()=> {
                     <p className="about-text">1st floor</p>
                     <p className="about-text">Pwani House</p>
                     <p className="about-text">Ronald Ngala, Kilifi</p>
-                    <p className="about-text"> <a className="" href="tel:0790943918">+254 790 943918</a></p>
+                    <p className="about-text"> <a className="" href="tel:07111338357">+254 7111338357</a></p>
+                    <p className="about-text"> <a className="" href="tel:7115659271">+254 7115659271</a></p>
+                    <p className="about-text"> <a className="" href="mailto:info@niboraproperties.co.ke">info@niboraproperties.co.ke</a></p>
 
 
                 </div>

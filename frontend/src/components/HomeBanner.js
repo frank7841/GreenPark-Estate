@@ -1,6 +1,6 @@
 import React from 'react'
 import { Carousel }  from 'react-bootstrap';
-import background from './asset/another.png'
+import background from './asset/home-img.jpg'
 
 
 const HomeBanner=()=> {

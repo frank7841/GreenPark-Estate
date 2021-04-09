@@ -41,7 +41,7 @@ const Home = () => {
 
     return (
        
-        <main className='home container-fluid'>
+        <main>
              <HelmetProvider>
             <Helmet>
                 <title>Nibora Properties- Search Homes| Hotels| Land| GuestHouses| Apartments| Shops| Office| Spaces| Plots</title>
@@ -75,7 +75,7 @@ const Home = () => {
                     }
                 </div>
             </section>
-            <section className='home-listings' id="featured">
+            <section className='home-listings container-fluid' id="featured">
                     <h3>New Listings</h3> 
                 <Featured listings={currentListings} />
             </section>

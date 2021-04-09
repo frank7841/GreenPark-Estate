@@ -15,7 +15,7 @@ const Adevertise=()=> {
      
         addsection:{ 
             Width: '110%',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
         },
         fomrbackground:{
         backgroundImage: `url(${backgroundForm})`,
@@ -69,21 +69,21 @@ const Adevertise=()=> {
                     <div>
                     <h4 className="header-add">SELLERS</h4>
                     </div>
-                    <p className="text-padding">There is a lot to offer when you sign up with Nibora properties. <a href="#form-advert">Fill the enquiry form below</a> or <a href="/contact#call-request">Contact our business team today</a> for more information  </p>
+                    <p className="text-padding">Sign up with Us <a href="#form-advert">by filling the enquiry form below</a> or <a href="/contact#call-request">Contact our business team today</a> for more information  </p>
                 </div>
                 <div className="col-sm-3 add-content">
                     <img className="top-add-imag"  src={process.env.PUBLIC_URL + 'image/assets/img/find.png'}/>
                     <div>
                     <h4 className="header-add">MORTGAGE LENDERS</h4>
                     </div>
-                    <p className="text-padding">Find and receive new customers from Real Estate Street's mortgage leads, direct marketing and home buyer inquiries. You must provide excellence. </p>
+                    <p className="text-padding">< a href="#form-advert">Fill the enquiry form below </a>to get connected with new customers from Real Estate Street's mortgage leads and home buyers. <a href="/contact#call-request">Contact Us today</a> for more information  </p>
                 </div>
                 <div className="col-sm-3 add-content">
                     <img  className="top-add-imag" src={process.env.PUBLIC_URL + 'image/assets/img/money.png'}/>
                     <div>
                     <h4 className="header-add">NEW CONSTRUCTION</h4>
                     </div>
-                    <p className="text-padding">Capture intrested buyers with native add campaigns with customised landing pages that capture leads from buyers looking for newly constructed properties.   </p>
+                    <p className="text-padding">Capture intrested buyers using native add campaigns with customised landing pages that capture leads from buyers looking for newly constructed properties.< a href="#form-advert">Fill the form below </a> or <a href="/contact#call-request">contact us </a> for more information  </p>
                 </div>
                 
                 <div className="col-sm-3 add-content-last">
@@ -92,7 +92,7 @@ const Adevertise=()=> {
                     <div>
                     <h4 className="header-add">CONSUMER BRANDS</h4>
                     </div>
-                    <p className="text-padding">Banner ads, native content sponsorship and targeted social media adds are available. Advertising campaigns bring you the right audience and results.</p>
+                    <p className="text-padding">< a href="#form-advert">Fill the form below </a> to enjoy  banner ads, native content sponsorship and targeted social media adds for your consumer brand products<a href="/contact#call-request"> contact Us </a>for more information</p>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@ const Adevertise=()=> {
                         <div className="col-sm-6">
                             <h2 className="fill-the-form">Kindly Fill the Form for</h2><br/>
                             <p className="add-text-big">Advertising and Lead generation Opportunity</p>
-                            <p className="content ">Nibora Properties targets real and qualified home buyers and sellers that are commited to buying,selling, renting, or short stay home users. Our company operates with the highest level of integrity</p>
+                            <p className="content ">Nibora Properties targets real and qualified home buyers and sellers that are intrested in buying, selling and renting homes. We also provide short stay family homes. We operate with the highest level of integrity</p>
                         </div>
                         <div className="col-sm-6">
                             <form className="add-form" id="form-advert"> 
@@ -153,7 +153,13 @@ const Adevertise=()=> {
         <div className="container patner">
             <h1 className="text-center top-top-add">Patner with us</h1>
             <hr className="horizontal " size="large"/>
-            <p className="patner-text">Two things every real estate professional needs: more time and more leads. Your lead pipeline is your business and you don’t have time to waste on bad real estate leads. Our real estate agent, mortgage lender, new home builder and broker advertising services are designed to attract serious buyers and sellers so we can deliver quality leads so you can focus your time on leads that will convert. Get quality real estate leads in your local market, or create brand awareness for your business.<br/><br/><br/>With Nibora Properties  advertising, you’ll also get all the tools you need to nurture your leads from any source. The free CRM, monthly newsletter, drip email campaigns, and more are all available with your advertising partnership so you can leverage your leads for referrals before, during, and after the home sale. Nibora Properties solutions empower real estate agents to hone in on what matters—the lifelong relationships they build with their clients.</p>
+            <div className="col-sm text-center">
+                <h4 className="seek">Partnering with us offers you the opportunity to Boost your Real Estate Business to the next level .</h4>
+                <div className="height"></div>
+                <a className="find-your-home-link" href="/contact#call-request"><span className="find-your-home"> Request a Call</span></a>
+
+                </div>
+            <p className="patner-text">Two things every real estate professional needs: more time and more leads. Your lead pipeline should be your business priority. Our real estate agent, mortgage lender, new home builder and hotel advertising services are designed to attract commited buyers and sellers.  Get quality real estate leads in your local market, or create brand awareness for your business.<br/><br/><br/>With Nibora Properties  advertising, you’ll get all the tools you need to nurture your leads from any source. The free CRM, monthly newsletter, drip email campaigns, and more are available to leverage your leads for referrals before, during, and after the sale. Nibora Properties solutions empower real estate agents to focus on what matters—the lifelong relationships they build with their clients.</p>
         </div>
         
         <Footer/>

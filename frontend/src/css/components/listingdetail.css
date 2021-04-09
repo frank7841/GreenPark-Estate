@@ -63,19 +63,128 @@
         
 
     }
-.left a {
-    
-
-}
-.right a{
- 
-    
-
-}
-        
-
+  
     .button-design{
         padding: 10px;
     }
    
 }
+.listing-detail-image{
+    border-radius: 4px!important;
+}
+.max-height{
+    border-radius: 4px;
+}
+
+
+.list-detail-top-img {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    /* text-align: center; */
+    color: white;
+    border:1px solid;
+    
+  }
+  
+  /* Bottom left text */
+  .details-unparallel {
+    position: absolute;
+    bottom: 10rem;
+    left: 16px;
+  }
+  p.sale-sale{
+      font-weight: bolder;
+      color: #f9faf5;
+      font-weight:larger;
+      border:1px solid blue;
+      background-color:rgba(0, 0, 0, 0.7);
+  }
+  .sale-now{
+      border: 1.5px solid rgb(177, 103, 6);
+      padding: 0.5em;
+  }
+  .sale-title{
+    border: 1.5px solid rgb(177, 103, 6);
+    padding: 0.5em; 
+    background-color:rgba(0, 0, 0, 0.7);
+  }
+  h3.sale-title{
+      background-color:rgba(0, 0, 0, 0.7);
+  }
+  p.sale-address{
+      color:rgb(250, 250, 250);
+  }
+  p.sale-price{
+      font-size: 18px;
+      font-weight: bolder;
+      color: #f8f6f6;
+  }
+  /* Top left text */
+  .top-left-details {
+    position: absolute;
+    top:1px;  
+    background-color:rgba(0, 0, 0, 0.7);
+    height:fit-content;
+    width: 100%;
+    border:1px solid;
+  }
+
+  .listingdetail-name{
+      padding-left: 10px;
+      font-size: 20px!important;
+  }
+  .listingsdetail-phone{
+      padding-left: 10px;
+      font-size: 16px!important;
+      color: #f8f6f6!important;
+  }
+  .other details{
+    background-color:rgba(0, 0, 0, 0.7);  
+    border: 1.5px solid rgb(177, 103, 6);
+  }
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 20rem;
+    right: 16px;
+  }
+  
+  /* Centered text */
+
+  @media (max-width:572px){
+      .bottom-right{
+          clear: both;
+                }
+      /* .details-unparallel{
+          bottom: 20px;
+      } */
+  }
+  @media (max-width:442px){
+      .bottom-right{
+          display: none;
+      } 
+  }
+  p.listing-detail-desc{
+      
+      height:fit-content;
+      padding: 1.2em;
+      background-color:rgba(6, 65, 68, 0.7);
+      color:white;
+      line-height: 30px;
+      font-size: 22px!important;
+  }
+@media screen and (max-width:768px){
+  img.img-toppings{
+      width: 100%;
+      height: 400px;
+
+  }
+} 

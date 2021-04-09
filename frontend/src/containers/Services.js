@@ -25,15 +25,15 @@ const Service=()=> {
             <Scroll showBelow={250}/>
 
                 <div className="service-top">
-                  <img data-aos="fade-in" src={process.env.PUBLIC_URL + 'image/assets/img/servicebg.jpg'} alt="Service"/>
+                  <img data-aos="fade-in" src={process.env.PUBLIC_URL + 'image/assets/img/image6.jpg'} alt="Service" className="img-respon"/>
                 </div>  
                 
                  <div className="text-block">
-                        <h4 data-aos="slide-right">Searching For a Home, a Hotel, a Guest House, Office Spaces, Land,  with Nibora, You will find the difference is Night and Day. </h4>
+                        <h4 data-aos="slide-right">Searching For a Home, a Hotel, a Guest House, Office Spaces, Land, etc. You will find the difference is Night and Day. </h4>
                         <p data-aos="fade-in">What is so different you ask? Well, Nibora Properties is here to find you not <strong>JUST</strong> four walls and a roof. We are here and dedicated to connect you to a community, to things that inspire you, and to a space that also inspires you. We are focused to earning your trust rather than comision.    </p>
                  </div>
                  <div className="service-top-mobile">
-                    <img data-aos="fade-in" src={process.env.PUBLIC_URL + 'image/assets/img/Service.png'} alt="Service"/>
+                    <img data-aos="fade-in" src={process.env.PUBLIC_URL + 'image/assets/img/image6.jpg'} alt="Service"/>
                 </div>
                 <div className="height"></div> 
                 <div className="service-head">
@@ -47,7 +47,8 @@ const Service=()=> {
                         {/* <p className="residential-head ">Residential</p> */}
                         <h3>Homes</h3>
                         
-                        <p className="service-text">Are you searching for a home, Townhouse, Bungalow for your family?  We have specialized in providing cost-concious buyers multiple options to buy or rent a home for your family regardless of your budget. We have the Keys to your Home.</p>
+                        <p className="service-text">Are you searching for a family home?  
+                        </p>
                         <br/>
                         <p className="service-text">Nibora Properties provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p>
                         <br/>
@@ -69,7 +70,7 @@ const Service=()=> {
                             {/* <p className="residential-head ">Commercial</p> */}
                             <h3>Hotels</h3>
                             
-                            <p className="service-text">Looking for a hotel that is close to an express way , near a hospital or with a  pool? We have the answer. Nibora Properties deliver timely information about the hotel that suits your prefference with a single click of a button. We help you make memories at pocket friendly rates.</p> 
+                            <p className="service-text">Looking for a hotel that is close to an express way, near a hospital or with a  pool?  Nibora Properties deliver timely information about the hotel that suits your prefference with a single click.</p> 
                             <br/>
                             {/* <p className="service-text">Nibora Realtors provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p> */}
                             <br/>
@@ -83,9 +84,9 @@ const Service=()=> {
                        
                         <div className="residential col-sm" data-aos="fade-up">
                             {/* <p className="residential-head ">Commercial</p> */}
-                            <h3>Office Spaces and Shops</h3>
+                            <h3>Office Spaces</h3>
                             
-                            <p className="service-text">Are you a business owner looking to expand your business with a well situated office space or a shop? Look no further! Here at Nibora Properties we provide you with a personalised search on the office space or shop that will deffinately make your business accessible to the your potential customers.  </p> 
+                            <p className="service-text">Are you a business owner looking to expand your business?  Nibora Properties help you get your deseved office space.  </p> 
                             <br/>
                             {/* <p className="service-text">Nibora Realtors provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p> */}
                             <br/>
@@ -107,7 +108,7 @@ const Service=()=> {
                             {/* <p className="residential-head ">Commercial</p> */}
                             <h3>Property Valuation</h3>
                             
-                            <p className="service-text">How much is your property worth? We have the answer. Our experts use a comperative market analysis technique to help you place a monitory value on your property. Our valuation is based on <strong>location</strong>, <strong>Market trends</strong>, <strong>Condition of the Property</strong>, <strong>Age </strong>, <strong>size</strong>, <strong>construction</strong>, <strong>style</strong>. Among others.  </p> 
+                            <p className="service-text">How much is your property worth?  Our experts use a comperative market analysis technique to help you place a monitory value on your property  based on <strong>location</strong>, <strong>Market trends</strong>, <strong>Condition of the Property</strong>, <strong>Age </strong>, <strong>size</strong>, <strong>construction</strong>, <strong>style</strong>. Among others.  </p> 
                             <br/>
                             {/* <p className="service-text">Nibora Realtors provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p> */}
                             <br/>
@@ -121,7 +122,7 @@ const Service=()=> {
             <div className="call-to-acction">
                 <div className="container">
                     <div className="col-sm text-center">
-                        <h4>Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
+                        <h4 className="seek">Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
                             <div className="height"></div>
                             <a className="find-your-home-link" href="/contact#inquiry"><span className="find-your-home"> Start a conversation</span></a>
 

@@ -8,6 +8,7 @@ const Nav = styled.nav`
   border-bottom:2px solid #f1f1f1;
   padding:0 20px;
   display:flex;
+  background-color:rgb(105,105,105);
   justify-content:space-between;
   
   
@@ -25,10 +26,10 @@ function Navbar() {
     <Nav>
       <div className="logo">
         <div className="navbar-brand">
-          <p className="logo-brand"><span className="nibora-stat">Nibora</span> <span className="nibora-end">Properties</span></p>
-          {/* <img className="logo-size"src= {process.env.PUBLIC_URL + 'image/assets/img/Gazebo2.png'}/> Nibora  */}
+          <p className="logo-brand">< a href="/"><span className="nibora-stat">Nibora</span> <span className="nibora-end">Properties</span></a></p>
+          {/* <img className="logo-size"src= {process.env.PUBLIC_URL + 'image/assets/img/logo101.png'}/>   */}
       </div>
-          <a className="top-number" href="tel:0790943918">+254 790 943918</a>
+          <a className="top-number" href="tel:07111338357">+254 7111338357</a>
         </div>
         <Burger/>
     </Nav>

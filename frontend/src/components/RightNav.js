@@ -19,6 +19,7 @@ const Ul = styled.ul`
     .nav-item{
         font-size:16px!important;
     }  
+    
 
 
     @media screen  and (max-width:768px){
@@ -42,6 +43,9 @@ const Ul = styled.ul`
    
 
     }
+    li{
+        color:#ffffff!important;
+    }
 `;
 
 const RightNav = ({  open, auth:{isAuthenticated, loading}, logout} ) => {
@@ -60,12 +64,12 @@ const RightNav = ({  open, auth:{isAuthenticated, loading}, logout} ) => {
     return (
         <>
         <Ul open = {open}  >
-          <li><NavLink className="nav-item" exact to='/' >Home</NavLink></li>
-          <li><NavLink className ="nav-item" exact to ='/listings'>Listings</NavLink></li>
-          <li> <NavLink className = "nav-item" exact to ='/service'>Services</NavLink> </li>
-          <li><NavLink className ="nav-item"exact to ='/about'>About</NavLink></li>
-          <li><NavLink className = "nav-item"exact to= '/contact'>Contacts</NavLink></li>
-          <li><NavLink className = "nav-item"exact to='/advertise'>Advertise</NavLink></li>
+          <li><NavLink className="nav-item "activeClassName="current" exact to='/' >Home</NavLink></li>
+          <li><NavLink className ="nav-item" activeClassName="current" exact to ='/listings'>Listings</NavLink></li>
+          <li> <NavLink className = "nav-item" activeClassName="current"exact to ='/service'>Services</NavLink> </li>
+          <li><NavLink className ="nav-item"activeClassName="current"exact to ='/about'>About</NavLink></li>
+          <li><NavLink className = "nav-item"activeClassName="current"exact to= '/contact'>Contacts</NavLink></li>
+          <li><NavLink className = "nav-item"activeClassName="current"exact to='/advertise'>Advertise</NavLink></li>
           {/* <li><NavLink className = "nav-item"exact to='/signup'>Sign Up</NavLink></li>
           <NavBtn>
                <NavBtnLink to = "/login">Login</NavBtnLink>

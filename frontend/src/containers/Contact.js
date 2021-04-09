@@ -59,7 +59,7 @@ const contact=()=> {
                     <div className="col-sm contact-border text-center">
                         <img src= {process.env.PUBLIC_URL + 'image/assets/img/Calling.png'} alt="call-us" className="contact-icon"/><br/>
                         <h3>Call us directly</h3><br/>
-                        <a href="tel:+254790943918"> <span className="link-height">+254790943918</span></a>
+                        <a href="tel:+2547111338357"> <span className="link-height">+2547111338357</span></a>
 
                     </div>
                     <div className="col-sm contact-border text-center">
@@ -82,7 +82,7 @@ const contact=()=> {
                     <div className="col-sm-12">
                         <div className="mobile-get-in-touch">
                             <h3>Call us directly</h3><br/>
-                            <a href="tel:+254790943918"> <span className="link-height-mobile">+254790943918</span></a>
+                            <a href="tel:07111338357"> <span className="link-height-mobile">+254 7111338357</span></a>
                         </div>
                     </div>
                 </div>
@@ -146,8 +146,8 @@ const contact=()=> {
                                 </div>
                                 </div>
                                 </li> */}
-                                <li><a  href="tel:+254790943918"><Icon circular inverted color="teal" name="phone" size="large"/> 0707070707 </a></li>
-                                <li><a href="https://api.whatsapp.com/send?phone=254790943918"><Icon circular inverted color="teal" name="whatsapp" size="large"/>0707070707</a></li>
+                                <li><a  href="tel:+2547111338357"><Icon circular inverted color="teal" name="phone" size="large"/>+254 7111338357 </a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=+2547115659271"><Icon circular inverted color="teal" name="whatsapp" size="large"/>+254 7115659271</a></li>
                                 <li><a href="mailto:info@niborarealtors.co.ke"> <Icon circular inverted color="teal" name="mail" size="large"/>info@niborarealtors.co.ke</a></li>
                                </section> 
                             </ul>

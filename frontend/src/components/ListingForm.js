@@ -13,7 +13,6 @@ const  Listingform= (props)=>{
     bedrooms: '0+',
     property_type: 'Home',
     town: 'Kilifi',
-    days_listed: '1 or less',
     keywords: ''
 });
 
@@ -22,8 +21,7 @@ const  Listingform= (props)=>{
       price,
       bedrooms, 
       property_type, 
-      town, 
-      days_listed, 
+      town,  
       keywords  
     } = formData;
 
@@ -45,8 +43,7 @@ const  Listingform= (props)=>{
           price,
           bedrooms, 
           property_type, 
-          town, 
-          days_listed,  
+          town,  
           keywords 
         } )
         .then(res =>{
@@ -106,20 +103,7 @@ const  Listingform= (props)=>{
               <option>For Rent</option>
             </select>
           </div>
-          <div className="form-group col-sm">
-            <label htmlFor ="price" className="label">Min Price</label>
-            <select className="form-control input-design" name="price" value={price} onChange={e=>onChange(e)}>
-              <option>ksh 0+</option>
-              <option>Ksh 2,000,000+</option>
-              <option>Ksh 4,000,000+</option>
-              <option>Ksh 6,000,000+</option>
-              <option>Ksh 8,000,000+</option>
-              <option>Ksh 12,000,000+</option>
-              <option>Ksh 24,000,000+</option>
-              <option>Any</option>
-            </select>
-          </div>
-          
+             
 
 
        
@@ -161,7 +145,21 @@ const  Listingform= (props)=>{
             </select>
           </div>
           
+          
           <div className="form-group col-sm">
+            <label htmlFor ="price" className="label">Min Price</label>
+            <select className="form-control input-design" name="price" value={price} onChange={e=>onChange(e)}>
+              <option>ksh 0+</option>
+              <option>Ksh 2,000,000+</option>
+              <option>Ksh 4,000,000+</option>
+              <option>Ksh 6,000,000+</option>
+              <option>Ksh 8,000,000+</option>
+              <option>Ksh 12,000,000+</option>
+              <option>Ksh 24,000,000+</option>
+              <option>Any</option>
+            </select>
+          </div>
+          {/* <div className="form-group col-sm">
             <label htmlFor ="days_listed" className="label">Days listed</label>
             <select className="form-control input-design" name="days_listed" value={days_listed} onChange={e=>onChange(e)}>
               <option>1 or less</option>
@@ -171,7 +169,7 @@ const  Listingform= (props)=>{
               <option>20 or less</option>
               <option>Any</option>
             </select>
-          </div>
+          </div> */}
           {/* <div className="form-group col-sm">
             <label htmlFor ="has_photos">Has Photos</label>
             <select className="form-control" name="has_photos" value={has_photos} onChange={e=>onChange(e)}>

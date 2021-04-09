@@ -7,9 +7,10 @@ class RealtorListView(ListAPIView):
     permission_classes = (permissions.AllowAny, )
     queryset = Realtor.objects.all()
     serializer_class = RealtorSerializer
-    pagination_class = None
+    pagination_class = None 
 
 class RealtorView(RetrieveAPIView):
+    permission_classes = (permissions.AllowAny, )
     queryset = Realtor.objects.all()
     serializer_class = RealtorSerializer 
 
