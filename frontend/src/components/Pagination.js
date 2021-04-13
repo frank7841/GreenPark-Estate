@@ -2,6 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Pagination(props) {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
+ 
     const getNumbers=()=>{
         let numbers = [];
         let itemsPerPage = props.itemsPerPage
@@ -25,6 +29,7 @@ function Pagination(props) {
                     content= (
                         <div key={i} onClick={()=> props.visitPage(page)} className={style}>
                             {pageNumber}
+                            
                         </div>
                     );    
                 }
@@ -38,7 +43,7 @@ function Pagination(props) {
 
     return (
         <div className= "pagination">
-            <div onClick={()=>props.previous()} className="pagination-number">
+            <div onClick={()=>props.previous(), scrollToTop()} className="pagination-number">
             «
             </div>
             {getNumbers()}

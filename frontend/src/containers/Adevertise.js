@@ -4,8 +4,25 @@ import backgroundForm from '../components/asset/guiding-principle.svg'
 import Footer from '../components/footer'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Scroll from '../components/Scroll'
+import emailjs from 'emailjs-com'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Adevertise=()=> {
+    const notify = () => toast.success("Thank you! one of our representative will get in touch with you within a day", );
+
+    function sendEmail(e) {
+        e.preventDefault();
+        
+    
+        emailjs.sendForm('service_aj333on', 'template_6prr6qq', e.target, 'user_uQWg7zODPbiG7Ij3VpuAS')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset();
+      }
     const styles= {
         adbackground: {
         backgroundImage: `url(${background})`,
@@ -62,7 +79,18 @@ const Adevertise=()=> {
         </div>
         <div className="height"></div>
         <div className="height"></div>
+        <div className="container-fluid">
+        <div className="row">
+                <div className="col-sm">
+                    <img className="logo-size"src= {process.env.PUBLIC_URL + 'image/assets/img/Gazebo1G.png'}/> 
+                </div>
+                <div className="col-sm">
+                    <img className="logo-size-add"src= {process.env.PUBLIC_URL + 'image/assets/img/free.png'}/> 
+                </div>
+            </div>
+        </div>
         <div className="container">
+            
             <div className="row align-centre text-center">
                 <div className="col-sm-3 add-content">
                     <img className="top-add-imag " src={process.env.PUBLIC_URL + 'image/assets/img/garden.png'}/>
@@ -110,7 +138,7 @@ const Adevertise=()=> {
                             <p className="content ">Nibora Properties targets real and qualified home buyers and sellers that are intrested in buying, selling and renting homes. We also provide short stay family homes. We operate with the highest level of integrity</p>
                         </div>
                         <div className="col-sm-6">
-                            <form className="add-form" id="form-advert"> 
+                            <form className="add-form" id="form-advert" onSubmit={sendEmail}> 
                                 <div className="form-group">
                                     <lable for="I-am">I am</lable>
                                     <select className="form-control" id="i_am" name="i_am">
@@ -125,7 +153,7 @@ const Adevertise=()=> {
 
                                 <div className="form-group">
                                     <lable for="name">Name</lable>
-                                    <input type="text" className="form-control" id="name" name="name"/>
+                                    <input type="text" className="form-control" id="name" name="from_name"/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="email">Email</lable>
@@ -136,14 +164,15 @@ const Adevertise=()=> {
                                     <input type="tel" className="form-control" id="phone" name="phone"/>
                                 </div>
                                 <div className="form-group">
-                                    <lable for="Location">Location</lable>
-                                    <input type="text" className="form-control" id="location" name="location"/>
+                                    <lable for="Address">Address/Location</lable>
+                                    <input type="text" className="form-control" id="address" name="address"/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="county">County</lable>
-                                    <input type="text" className="form-control" id="county" name="county"/>
+                                    <input type="text" className="form-control" id="county" name="county" required/>
                                 </div>
-                                <button className=" btn-success form-control">Send</button>
+                                <button className=" btn-success form-control" onClick={notify}>Send</button>
+                                <ToastContainer/>
                             </form>
                         </div>
                     </div>
@@ -154,12 +183,12 @@ const Adevertise=()=> {
             <h1 className="text-center top-top-add">Patner with us</h1>
             <hr className="horizontal " size="large"/>
             <div className="col-sm text-center">
-                <h4 className="seek">Partnering with us offers you the opportunity to Boost your Real Estate Business to the next level .</h4>
+                <h4 className="seek">Partnering with us offers you the opportunity to Boost your Real Estate Business to the highest level .</h4>
                 <div className="height"></div>
                 <a className="find-your-home-link" href="/contact#call-request"><span className="find-your-home"> Request a Call</span></a>
 
                 </div>
-            <p className="patner-text">Two things every real estate professional needs: more time and more leads. Your lead pipeline should be your business priority. Our real estate agent, mortgage lender, new home builder and hotel advertising services are designed to attract commited buyers and sellers.  Get quality real estate leads in your local market, or create brand awareness for your business.<br/><br/><br/>With Nibora Properties  advertising, you’ll get all the tools you need to nurture your leads from any source. The free CRM, monthly newsletter, drip email campaigns, and more are available to leverage your leads for referrals before, during, and after the sale. Nibora Properties solutions empower real estate agents to focus on what matters—the lifelong relationships they build with their clients.</p>
+            {/* <p className="patner-text">Two things every real estate professional needs: more time and more leads. Your lead pipeline should be your business priority. Our real estate agent, mortgage lender, new home builder and hotel advertising services are designed to attract commited buyers and sellers.  Get quality real estate leads in your local market, or create brand awareness for your business.<br/><br/><br/>With Nibora Properties  advertising, you’ll get all the tools you need to nurture your leads from any source. The free CRM, monthly newsletter, drip email campaigns, and more are available to leverage your leads for referrals before, during, and after the sale. Nibora Properties solutions empower real estate agents to focus on what matters—the lifelong relationships they build with their clients.</p> */}
         </div>
         
         <Footer/>

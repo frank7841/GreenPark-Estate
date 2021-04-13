@@ -143,6 +143,8 @@ const Featured = () => {
                     />
                 </div>
             </div>
+            
+            
         </main>
     );
 };

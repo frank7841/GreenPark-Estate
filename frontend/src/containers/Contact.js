@@ -1,12 +1,38 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import background from '../components/asset/contact.jpg'
 import { Icon } from 'semantic-ui-react'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Alert from 'react-popup-alert'
 import Scroll from '../components/Scroll'
 import Footer from '../components/footer'
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { setAlert } from '../actions/alert';
+import Loader from 'react-loader-spinner';
+import PropTypes from 'prop-types';
+import { useAlert } from 'react-alert'
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
  
-const contact=()=> {
+const Contact=()=> {
+    const notify = () => toast.success("Message Sent Successfully" );
+
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_d8n3yx4', 'template_3futx09', e.target, 'user_uQWg7zODPbiG7Ij3VpuAS')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset();
+      }
+    
     const styles= {
         barner: {
         backgroundImage: `url(${background})`,
@@ -23,6 +49,52 @@ const contact=()=> {
 
 
     }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    const { name, email, subject, message } = formData;
+
+    const [loading, setLoading] = useState(false);
+
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    const onSubmit = e => {
+        e.preventDefault();
+
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+
+        setLoading(true);
+        axios.post(`http://localhost:8000/api/contacts/`, { name, email, subject, message }, config)
+        .then(res => {
+            setAlert('Message Sent', 'success');
+            setLoading(false);
+            window.scrollTo(0, 800);
+            e.target.name.value="";
+            e.target.email.value="";
+            e.target.subject.value="";
+            e.target.message.value="";
+        })
+        .catch(err => {
+            setAlert('Error with Sending Message', 'error');
+            setLoading(false);
+            window.scrollTo(0, 0);
+        })
+        
+    };
+
   
 
     return (
@@ -59,7 +131,7 @@ const contact=()=> {
                     <div className="col-sm contact-border text-center">
                         <img src= {process.env.PUBLIC_URL + 'image/assets/img/Calling.png'} alt="call-us" className="contact-icon"/><br/>
                         <h3>Call us directly</h3><br/>
-                        <a href="tel:+2547111338357"> <span className="link-height">+2547111338357</span></a>
+                        <a href="tel:+254111338357"> <span className="link-height">+254 111338357</span></a>
 
                     </div>
                     <div className="col-sm contact-border text-center">
@@ -82,7 +154,7 @@ const contact=()=> {
                     <div className="col-sm-12">
                         <div className="mobile-get-in-touch">
                             <h3>Call us directly</h3><br/>
-                            <a href="tel:07111338357"> <span className="link-height-mobile">+254 7111338357</span></a>
+                            <a href="tel:0111338357"> <span className="link-height-mobile">+254 111338357</span></a>
                         </div>
                     </div>
                 </div>
@@ -111,20 +183,37 @@ const contact=()=> {
                 <div className="row">
                     <div className="col-sm-6 form-input" id="inquiry">
                         <h1>Start a conversation</h1>
-                        <form>
+                        <form onSubmit={e => onSubmit(e)}>
                             <div className="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" className="form-control" name="name" id="name"/>
+                                <input type="text" className="form-control" name="name" id="name" onChange={e => onChange(e)}value={name}required />
                             </div>
                             <div className="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" className="form-control" name="email" id="email"/>
+                                <input type="email" className="form-control" name="email" id="email"onChange={e => onChange(e)}value={email}required />
                             </div>
                             <div className="form-group">
-                                <label for="name">Name</label>
-                                <textarea type="text" className="form-control" name="name" id="name" rows="4" cols="50"/>
+                                <label for="Subject">Subject</label>
+                                <input type="text" className="form-control" name="subject" id="subject" onChange={e => onChange(e)}value={subject}required />
                             </div>
-                           <button className="btn btn-success">Send Message</button>
+                            <div className="form-group">
+                                <label for="message">Message</label>
+                                <textarea type="text" className="form-control" name="message" id="message" rows="4" cols="50"onChange={e => onChange(e)}value={message}required />
+                            </div>
+                             {loading ?
+                    <div className='contact__form__loader'>
+                        <Loader
+                            type="Oval"
+                            color="#424242"
+                            height={50}
+                            width={50}
+                        />
+                    </div> :
+                           <button className="btn btn-success" onClick={notify}>Send Message
+                           <ToastContainer/></button>
+                           
+                             }
+
                          </form>
                     </div>     
                     
@@ -146,8 +235,8 @@ const contact=()=> {
                                 </div>
                                 </div>
                                 </li> */}
-                                <li><a  href="tel:+2547111338357"><Icon circular inverted color="teal" name="phone" size="large"/>+254 7111338357 </a></li>
-                                <li><a href="https://api.whatsapp.com/send?phone=+2547115659271"><Icon circular inverted color="teal" name="whatsapp" size="large"/>+254 7115659271</a></li>
+                                <li><a  href="tel:+254111338357"><Icon circular inverted color="teal" name="phone" size="large"/>+254 111338357 </a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=+254115659271"><Icon circular inverted color="teal" name="whatsapp" size="large"/>+254 115659271</a></li>
                                 <li><a href="mailto:info@niborarealtors.co.ke"> <Icon circular inverted color="teal" name="mail" size="large"/>info@niborarealtors.co.ke</a></li>
                                </section> 
                             </ul>
@@ -171,10 +260,10 @@ const contact=()=> {
                 <div className="row">
                     <div className="col-sm" id="call-request">
                     <h1 className="header"> Call Back Request Form</h1>
-                    <form >
+                    <form onSubmit={sendEmail} >
                             <div className="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" className="form-control" name="name" id="name"/>
+                                <input type="text" className="form-control" name="from_name" id="name"/>
                             </div>
                             <div className="form-group">
                                 <label for="phone">Phone</label>
@@ -182,13 +271,23 @@ const contact=()=> {
                             </div>
                             <div className="form-group">
                                 <label for="date-time-pick">Preffered Date & Time</label>
-                                <input type="datetime-local" id="date-time-pick" className="form-control" name="date-time-pick"/>
+                                <input type="datetime-local" id="date-time-pick" className="form-control" name="date"/>
                             </div>
                             <div className="form-group">
                                 <label for="reason">What would you wish to achieve from the call?</label>
-                                <input type="text" className="form-control" name="phone" id="phone"/>
+                                <input type="text" className="form-control" name="reason" id="reason"/>
                             </div>
-                           <button className="btn btn-success">Request Call</button>
+                            {loading ?
+                            <div className='contact__form__loader'>
+                        <Loader
+                            type="Oval"
+                            color="#424242"
+                            height={50}
+                            width={50}
+                        />
+                    </div> :
+                           <button className="btn btn-success" onClick={notify}>Request Call<ToastContainer/></button>
+                            }
                          </form>
                         </div> 
                         <div className="col-sm call-back-details ">
@@ -211,4 +310,7 @@ const contact=()=> {
 
     );
 }
-export default contact
+Contact.propTypes = {
+    setAlert: PropTypes.func.isRequired
+};
+export default connect(null, { setAlert })(Contact);

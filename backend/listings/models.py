@@ -28,6 +28,10 @@ class Listing(models.Model):
         MTWAPA ='Mtwapa'
         NANYUKI ='Nanyuki'
         KISUMU ='kisumu'
+        
+    class Rates(models.TextChoices):
+        PER_NIGHT='Per Night'
+        PER_MONTH ='Per Month'   
             
     realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
     slug = models.CharField(max_length=200, unique=True)
@@ -36,10 +40,23 @@ class Listing(models.Model):
     town = models.CharField(max_length= 50, choices =LocationTown.choices, default=LocationTown.KILIFI)
     county = models.CharField(max_length=100)
     description = models.TextField(blank=True)
+    feature_1= models.CharField(max_length=100, blank=True)
+    feature_2= models.CharField(max_length=100, blank=True)
+    feature_3= models.CharField(max_length=100, blank=True)
+    feature_4= models.CharField(max_length=100, blank=True)
+    feature_5= models.CharField(max_length=100, blank=True)
+    feature_6= models.CharField(max_length=100, blank=True)
+    feature_7= models.CharField(max_length=100, blank=True)
+    feature_8= models.CharField(max_length=100, blank=True)
+    feature_9= models.CharField(max_length=100, blank=True)
+    feature_10= models.CharField(max_length=100, blank=True)
+    feature_11= models.CharField(max_length=100, blank=True)
+    feature_12= models.CharField(max_length=100, blank=True)
+    rate = models.CharField(max_length=50, choices=Rates.choices,blank=True)
     sale_type = models.CharField(max_length=50, choices=SaleType.choices, default=SaleType.FOR_SALE)
     price = models.IntegerField() 
     bedrooms = models.IntegerField()
-    bathrooms =models.DecimalField(max_digits=2, decimal_places =1)
+    bathrooms =models.IntegerField()
     property_type = models.CharField(max_length= 50, choices =PropertyType.choices, default=PropertyType.HOME)
     sqft = models.IntegerField()
     featured = models.BooleanField(default =False)

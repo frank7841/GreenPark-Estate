@@ -11,6 +11,9 @@ import Footer from '../components/footer'
 const ListingDetail=(props)=> {
 
     let history = useHistory();
+    const goToPreviousPath = () => {
+        history.goBack()
+    }
 
     const[listing, setListing]=useState({});
     const[realtor, setRealtor]= useState({})
@@ -84,7 +87,7 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
-            </div>
+            </div> 
         );
         images.push(
             <div key={2} className="row">
@@ -271,76 +274,87 @@ const ListingDetail=(props)=> {
             </Helmet>
             </HelmetProvider>
             <Scroll showBelow={250}/>
+            <div >
+               
+                 <div className="container-fluid">
+                     <div className="row list-detail-top-img ">
+                    <img src={listing.photo_main} alt="House photo" className="img-toppings img-responsive" />
+                    <div className="details-unparallel text-center">
+                        <h1 className="title-list-detail">{listing.title}</h1>
+                        <hr className="horizontal-list-detail " size="large"/>
+                        <h2 className="details-location">{listing.town} - {listing.address}</h2>
 
-                <div className="list-detail-top-img">
-                    <img src={listing.photo_main} alt="Snow" className="img-toppings img-responsive"/>
-                    <div className="details-unparallel">
-                        <div classname="row">
-                            <div className="col-sm">
-                                <div className="row row-sale">
-                                    <div className="sale-now">
-                                        <p className="sale-sale">{listing.sale_type}</p>
-                                    </div>
-                                </div>
-                                <div className="row row-sale">
-                                    <div className="sale-title">
-                                        <h3 className="sale-title-title">{listing.title}</h3>
-                                        <p className="sale-address">{listing.address}</p>
-                                    </div>
-                                </div>
-                                <div className="row row-sale">
-                                    <div className="sale-title">
-                                        <p className="sale-price"><NumberFormat value={listing.price} displayType={'text'} thousandSeparator={true} prefix={'Ksh'}/></p>
-                                    </div>
-                                </div>
-                                <div className="row row-sale">
-                                    <div className="sale-title">
-                                        <p className="sale-address">{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft</p>
-                                    </div>
-                                </div>        
-                            </div>
-                            <div className="col-sm">
-                                <div className="row other details">
-                                    {/* Bath:{listing.bathrooms} */}
-                                </div>
-                            </div>
+                        <h2 className="details-location">{listing.sale_type} - <NumberFormat value={listing.price} displayType={'text'} thousandSeparator={true} prefix={'Ksh'}/>-{listing.rate}</h2>
+                        <div className="sale-title">
+                                <p className="sale-address">{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft</p>
                         </div>
+                     
                     </div>
-                    <div className="top-left-details"><h3 className="listingdetail-name">{realtor.name}</h3>
-                    <a className="listingsdetail-phone" href={`tel:${realtor.phone}`}>{realtor.phone}</a></div>
-                    
-                    <div className="bottom-right">
-                    <div className="sale-title">
-                        {/* <h3 className="sale-title-title">Beds:{listing.bedrooms}</h3> */}
-                        {/* <p className="sale-address">{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft</p> */}
-                  </div>
+                    <div className="top-left-details">
+                        <h3 className="listingdetail-name">{realtor.name}
+                        <a className="listingsdetail-phone" href={`tel:${realtor.phone}`}>{realtor.phone}</a></h3>
+                        
                     </div>
+                      
+                 </div>
                 </div>
 
-
-
-            <div className="jumbotron text-center title-header">
+            {/* <div className="container-fluid">               
+            <div className="jumbotron text-center title-header row">
                 <h1 className="display-4">{listing.title}</h1>
                 <h3 className='listingdetail__location'>{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft </h3>
                 <h3 className='listingdetail__location'>{listing.town}, {listing.county}</h3>
             </div>
-            {/* <div className="container">
-                <nav aria-label="breadcrumb top-title-font">
-                    <ol className="breadcrumb">
-                        <li className="breadcrumb-item"> <Link className='listingdetail__breadcrumb__link' to='/'>Home</Link></li>
-                        <li className="breadcrumb-item active" aria-current="page">{listing.title}</li>
-                        <li clasName="breadcrumb-item"> &nbsp; <span>&#47;</span> <a className="back"  onClick={() => history.goBack()}>Back</a></li>
-                    </ol>
-                </nav>
             </div> */}
+       
             <div clasName="container-fluid description-naming">
                 <p className="listing-detail-desc">{listing.description}</p>
+                <h1 className="text-center top-top-add">Features</h1>
+                <hr className="horizontal " size="large"/>
+
+                <div className="row features">
+                    
+                   
+                    <div className="col-sm">
+                        <ul className="featured_display">
+
+                        <li>{listing.feature_1}</li>
+                        <li>{listing.feature_2}</li>
+                        <li>{listing.feature_3}</li>
+                        </ul>
+                    </div>
+                    <div className="col-sm">
+                        <ul className="featured_display">
+
+                        <li>{listing.feature_4}</li>
+                        <li>{listing.feature_5}</li>
+                        <li>{listing.feature_6}</li>
+                        </ul>
+                    </div>
+                    <div className="col-sm">
+                        <ul className="featured_display">
+
+                        <li>{listing.feature_7}</li>
+                        <li>{listing.feature_8}</li>
+                        <li>{listing.feature_9}</li>
+                        </ul>
+                    </div>
+                    <div className="col-sm">
+                        <ul className="featured_display">
+
+                        <li>{listing.feature_10}</li>
+                        <li>{listing.feature_11}</li>
+                        <li>{listing.feature_12}</li>
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
             <div className="height"></div>
             <div className="container">
                 <div className="row">
                 <div className="col-sm-4 realtor-pc">
-                            <img className="img-responsive" src={realtor.photo} alt={realtor.name} />
+                            <img className=" realtor-photo" src={realtor.photo} alt={realtor.name} />
                         <h3 className="listingdetail-realtor">{realtor.name}</h3>
                         <p className="listingdetail-contact"><a href={`tel:${realtor.phone}`}> <Icon  inverted color="black" name="phone" size="large"/>{realtor.phone}</a></p>
                         <p className="listingdetail-contact"><a href={`https://api.whatsapp.com/send?phone=${realtor.phone}`}><Icon  color="teal" name="whatsapp" size="large"/>{realtor.phone}</a></p>
@@ -351,7 +365,7 @@ const ListingDetail=(props)=> {
                         <img className="img-responsive max-height" src={listing.photo_main} alt={listing.title} />
                     </div>
                     <div className="col-sm-4 realtor-mobile">
-                            <img className="img-responsive" src={realtor.photo} alt={realtor.name} />
+                            <img className="realtor-photo" src={realtor.photo} alt={realtor.name} />
                         <h3 className="listingdetail-realtor">{realtor.name}</h3>
                         <p className="listingdetail-contact"><a href={`tel:${realtor.phone}`}> <Icon  inverted color="black" name="phone" size="large"/>{realtor.phone}</a></p>
                         <p className="listingdetail-contact"><a href={`https://api.whatsapp.com/send?phone=${realtor.phone}`}><Icon  color="teal" name="whatsapp" size="large"/>{realtor.phone}</a></p>
@@ -394,7 +408,8 @@ const ListingDetail=(props)=> {
 
             <div className="height"></div>
             <Footer/>
-            </>
+        </div>    
+    </>        
         
 
     )            

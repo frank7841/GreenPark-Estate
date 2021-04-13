@@ -45,7 +45,7 @@ p.grow-business{
 .header-add{
     color: #1b1d4d;
     padding-top: 1.2rem;
-}
+} 
 p.text-padding{
     padding-top:20px;
     color: #282944;
@@ -86,4 +86,9 @@ p.content{
 p.patner-text{
     font-size: 15px!important;
     color: #faf9f9;
+}
+.logo-size-add{
+    justify-content:flex-end;
+    height:150px;
+    float:right;
 }

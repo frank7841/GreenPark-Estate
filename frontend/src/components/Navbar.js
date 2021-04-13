@@ -29,7 +29,7 @@ function Navbar() {
           <p className="logo-brand">< a href="/"><span className="nibora-stat">Nibora</span> <span className="nibora-end">Properties</span></a></p>
           {/* <img className="logo-size"src= {process.env.PUBLIC_URL + 'image/assets/img/logo101.png'}/>   */}
       </div>
-          <a className="top-number" href="tel:07111338357">+254 7111338357</a>
+          <a className="top-number" href="tel:+254111338357">+254 111338357</a>
         </div>
         <Burger/>
     </Nav>

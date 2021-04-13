@@ -10,6 +10,7 @@ import ReadMoreReact from 'read-more-react';
 import{makeStyles} from '@material-ui/core/styles'
 
 
+
 const About=()=> {
     useEffect(()=>{
         Aos.init({duration:4000})
@@ -39,10 +40,11 @@ const About=()=> {
                 <title>Nibora Properties - Who we are</title>
                 <meta
                     name='description'
-                    content='We handle our customers, clients, and patners with integrity, commitment and deligence + a 24/7 friendly customer service'
+                    content='We handle our customers, clients, and patners with integrity, commitment and deligence + a 24/7 friendly customer service. We make life better by offering globally excellent and timely real estate services'
                 />
             </Helmet>
             </HelmetProvider>
+            <Scroll showBelow={250}/>
             {/* <div className="height"></div> */}
            <div className="about-header container">
                <div className="row">
@@ -128,16 +130,17 @@ const About=()=> {
                 <div className="container">
                     <div className="col-sm-12">
                     <Slide easing="ease"
-                    arrows={false}>    
+                    arrows={false}>   
+                    <div className="vission text-center each-slide">
+                            <h1>Our Vission</h1>
+                            <blockquote><p>To make life better by offering excellent and timely real estate services </p></blockquote>
+                        </div> 
                         <div className="vission text-center each-slide">
                             <h1>Our Mision</h1>
-                            <blockquote><p>To be the best full-service Real Estate Company in Kenya, and to provdie excellent services to our clients</p></blockquote>
+                            <blockquote><p>To offer a globally excellent and timely connection in real estate service and needs</p></blockquote>
                         </div>
                     
-                        <div className="vission text-center each-slide">
-                            <h1>Our Vission</h1>
-                            <blockquote><p>To achieve the highest possible standards of the Real Estate Industry while establishing our Agency as the preffered Real Estate Company within our market area. </p></blockquote>
-                        </div>
+                        
                     </Slide>    
                     </div>
                     

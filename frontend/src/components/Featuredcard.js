@@ -7,11 +7,14 @@ import NumberFormat from 'react-number-format';
 
 const Featuredcard = (props) => {
   
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
  
     return ( 
         <>
         <div className="card  card-property">
-        <span className="new-listings">New!</span>
+        {/* <span className="new-listings">New!</span> */}
 
             <h3 className="card-titile-featured">
             {props.title}
@@ -39,7 +42,7 @@ const Featuredcard = (props) => {
                     </div>
                     <div>
                         <br/>
-                    <Link className="card-link" to={`/listings/${props.slug}`}>View Listing</Link>
+                    <Link  onClick={scrollToTop} className="card-link" to={`/listings/${props.slug}`}>View Listing</Link>
                     </div>
                 </div>
             </div>

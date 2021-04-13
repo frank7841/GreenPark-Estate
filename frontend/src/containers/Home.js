@@ -76,7 +76,8 @@ const Home = () => {
                 </div>
             </section>
             <section className='home-listings container-fluid' id="featured">
-                    <h3>New Listings</h3> 
+            <h1 className="text-center top-top-add">Featured Listings</h1>
+            <hr className="horizontal " size="large"/>
                 <Featured listings={currentListings} />
             </section>
             

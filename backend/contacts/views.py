@@ -19,8 +19,8 @@ class ContactCreateView(APIView):
                 + data['email']
                 + '\n\nMessage:\n'
                 + data['message'],
-                'franklinewaxx@gmail.com',
-                ['franklinewaxx@gmail.com'],
+                'info@niboraproperties.co.ke',
+                ['info@niboraproperties.co.ke'],
                 fail_silently=False
             )
 

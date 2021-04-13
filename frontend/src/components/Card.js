@@ -6,6 +6,9 @@ import NumberFormat from 'react-number-format';
 
 
 const Card = (props) => {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
   
  
     return (
@@ -38,7 +41,7 @@ const Card = (props) => {
                     </div>
                     <div>
                         <br/>
-                    <Link className="card-link" to={`/listings/${props.slug}`}>View Listing</Link>
+                    <Link onClick={scrollToTop}className="card-link" to={`/listings/${props.slug}`}>View Listing</Link>
                     </div>
                 </div>
             </div>
