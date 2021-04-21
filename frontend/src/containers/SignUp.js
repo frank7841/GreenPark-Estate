@@ -43,7 +43,7 @@ const SignUp=({setAlert, isAuthenticated, signup})=> {
             <div className="row main-content bg-success text-center">
                 <div className="col-md-4 text-center company__info">
                 <span className="company__logo"><h2><span className="fa fa-android" /></h2></span>
-                <h4 className="company_title"><img className="img-responsive"src= {process.env.PUBLIC_URL + 'image/assets/img/Gazebo1G.png'}/></h4>
+                <h4 className="company_title"><img className="img-responsive"src= {process.env.PUBLIC_URL + 'image/assets/img/Gazebo1G.png'} alt="logo"/></h4>
                 </div>
                 <div className="col-md-8 col-xs-12 col-sm-12 login_form ">
                 <div className="container-fluid">

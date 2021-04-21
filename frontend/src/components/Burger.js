@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import styled from 'styled-components'
 import RightNav from './RightNav'
-import onClickOutside from 'react-onclickoutside'
+// import onClickOutside from 'react-onclickoutside'
 
 
 const StyledBurger = styled.div`
@@ -54,23 +54,23 @@ const StyledBurger = styled.div`
 
 function  Burger() {
     const[open ,setOpen] = useState(false);
-    Burger.handleClickOutside=() =>setOpen(false);
+    // RightNav.handleClickOutside=() =>setOpen(false);
     
  
     
     return (
-        <>
+        <div open = {open} onClick={() =>setOpen(!open)}>
             <StyledBurger open = {open} onClick={() =>setOpen(!open)}>
                 <div/>
                 <div/>
                 <div/>
             </StyledBurger>
             <RightNav open = {open}  />
-        </>
+        </div>
     )
 }
-const clickOutsideConfig={
-    handleClickOutside: () => Burger.handleClickOutside
-};
+// const clickOutsideConfig={
+//     handleClickOutside: () => Burger.handleClickOutside
+// };
 
-export default onClickOutside(Burger, clickOutsideConfig)
+export default Burger

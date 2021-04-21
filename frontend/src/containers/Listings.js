@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import axios from 'axios';
 import Card from '../components/Card';
 import Pagination from '../components/Pagination';
+import Footer from '../components/footer'
 
 const Featured = () => {
     const [listings, setListings] = useState([]);
@@ -115,7 +116,7 @@ const Featured = () => {
 
         });
     };
-
+ 
     return (
         <main className='listings'>
             <HelmetProvider>    
@@ -143,6 +144,9 @@ const Featured = () => {
                     />
                 </div>
             </div>
+            <div className="height"></div>
+            <div className="height"></div>
+            <Footer/>
             
             
         </main>

@@ -6,8 +6,7 @@ import { Slide } from 'react-slideshow-image';
 import Footer from '../components/footer'
 import background from'../components/asset/guiding-principle.svg'
 import Scroll from '../components/Scroll'
-import ReadMoreReact from 'read-more-react';
-import{makeStyles} from '@material-ui/core/styles'
+
 
 
 
@@ -30,7 +29,109 @@ const About=()=> {
         }
 
 
-    } 
+    }
+    // const [topSeller, setTopSeller] = useState([]);
+    // const [realtors, setRealtors] = useState([]);
+
+    // useEffect(() => {
+    //     const config = {
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     };
+
+    //     const getTopSeller = async () => {
+    //         try {
+    //             const res = await axios.get(`http://localhost:8000/api/realtors/topseller`, config);
+    //             setTopSeller(res.data);
+    //         }
+    //         catch (err) {
+
+    //         }
+    //     };
+
+    //     getTopSeller();
+    // }, []);
+
+    // useEffect(() => {
+    //     const config = {
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     };
+
+    //     const getRealtors = async () => {
+    //         try {
+    //             const res = await axios.get(`http://localhost:8000/api/realtors/`, config);
+    //             setRealtors(res.data);
+    //         }
+    //         catch (err) {
+
+    //         }
+    //     };
+
+    //     getRealtors();
+    // }, []);
+    // const getAllRealtors = () => {
+    //     let allRealtors = [];
+    //     let results = [];
+
+    //     realtors.map(realtor => {
+    //         return allRealtors.push(
+    //             <Fragment key={realtor.id}>
+    //                 <div className='about-display'>
+    //                     <img className='about-display-image' src={realtor.photo} alt='' />
+    //                 </div>
+    //                 <h3 className='about-realtor'>{realtor.name}</h3>
+    //                 <p className='about-contact'><a href={`tel:${realtor.phone}`}>{realtor.phone}</a></p>
+    //                 <p className='about-contact'><a href={`mailto:${realtor.email}`}>{realtor.email}</a></p>
+    //                 <p className='about-about'>{realtor.description}</p>
+    //             </Fragment>
+    //         );
+    //     });
+
+    //     for (let i = 0; i < realtors.length; i += 3) {
+    //         results.push(
+    //             <div key={i} className='row'>
+    //                 <div className='col-sm'>
+    //                     {allRealtors[i]}
+    //                 </div>
+    //                 <div className='col-sm'>
+    //                     {allRealtors[i+1] ? allRealtors[i+1] : null}
+    //                 </div>
+    //                 <div className='col-sm'>
+    //                     {allRealtors[i+2] ? allRealtors[i+2] : null}
+    //                 </div>
+    //             </div>
+    //         );
+    //     }
+
+    //     return results;
+    // };  
+    // const getTopSeller = () => {
+    //     let result = [];
+
+    //     topSeller.map(seller => {
+    //         return result.push(
+    //             <Fragment key={seller.id}>
+    //                 <div className='about-display'>
+    //                     <img className='about-display-image' src={seller.photo} alt='' />
+    //                 </div>
+    //                 <h3 className='about-topseller'>Top Seller:</h3>
+    //                 <p className='about-realtor'>{seller.name}</p>
+    //                 <p className='about-contact'>{seller.phone}</p>
+    //                 <p className='about-contact'>{seller.email}</p>
+    //                 <p className='about-about'>{seller.description}</p>
+    //             </Fragment>
+    //         );
+    //     });
+        
+
+    //     return result;
+    // };
+
+
+ 
   
     return(
     
@@ -53,7 +154,7 @@ const About=()=> {
                         <h3 className="hola-Nibora" data-aos="slide-up"> Hola! We are Nibora Realtors.</h3>
                         <div className="row">
                             <div className="col-sm-10">
-                                <p className="service-text" data-aos="fade-in">We work to ensure all your real estate needs are met. Do You have a property that you want listed? <strong>Call us today.</strong> Are you looking for a real estate property to buy or rent  any where in kenya? visit <strong>Nibora Home</strong> today for exclusive deals in holiday inns, hotels, and many more or <strong>Call us Now</strong> and get sorted. </p>
+                                <p className="service-text" data-aos="fade-in">We work to ensure all your real estate needs are met. Do You have a property that you want listed? <strong>< a href="tel:+25411133837">Call us today.</a></strong> Are you looking for a real estate property to buy or rent  any where in kenya? visit <strong>< a href="/">Nibora Home</a></strong> today for exclusive deals in holiday inns, hotels, and many more or <strong>Call us Now</strong> and get sorted. </p>
                             </div>
                             <div className="col-sm-2"></div>
                         </div>
@@ -70,7 +171,7 @@ const About=()=> {
 
                            </li>
                            <li className="learn-padding">
-                                <a className="item-link"href="#">
+                                <a className="item-link"href="/">
                                 <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/users.svg'} alt="Our patners"/></span>
                                 <span class="icon-title">Our Associates&nbsp;»</span></a>
 
@@ -114,6 +215,14 @@ const About=()=> {
             </div> 
             <div className="height"></div>
             <div className="height"></div>
+
+                        <div className="container">
+                        {/* {getTopSeller()} */}
+                        </div>
+                        <div className="height"></div>
+            <div className="height"></div>
+            
+                  
                 <div className="container">
                     <div className="col-sm text-center">
                         <h4 className="seek">Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
@@ -147,7 +256,12 @@ const About=()=> {
                 </div>
                 <div className="height"></div>
             </div>
-
+            {/* <h1 className="text-center top-top-add">Meet Our awesome Team</h1>
+            <hr className="horizontal " size="large"/>
+            <div className="container-fluid">
+            {getAllRealtors()}
+            </div> */}
+            <div className="height"></div>
             <Footer/>
         </div>
     );

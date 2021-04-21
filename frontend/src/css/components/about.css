@@ -199,6 +199,11 @@ blockquote {
     background-size: cover;
     height: 350px;
   }
+  .about-display-image{
+      height:220px;
+      align-items: center;
+      border-radius: 6px;
+  }
 /*  */
 @import "react-slideshow-image/dist/styles.css"
 

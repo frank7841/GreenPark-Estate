@@ -24,16 +24,20 @@ const listings =({ listings}) =>{
                 />
 
                 );
+            
 
         });
-        console.log(listings)
-        if (listings.length=== 0) {
+        if (listingsOnPage.length=== 0) {
+            return(
             <div className="container">
                 <div className="row">
-                    <h2>No such listings available! Contact Us for property Request!</h2>
+                    <h2>Contact Us for property Request < a href="tel:+254111338357"> 0111338357</a></h2>
                  </div>   
             </div>
+            )
         }
+        console.log(listings)
+        
         for(let i = 0; i < listings.length; i += 3){
             result.push(
                 
@@ -52,6 +56,8 @@ const listings =({ listings}) =>{
                
             );
         }
+       
+
         return result;
 
     };

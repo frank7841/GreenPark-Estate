@@ -4,11 +4,12 @@
 	top: 50%;
 	width: 50%;
 	transform: translate(-50%, -50%);
-	border-radius: 20px;
+	border-radius: 20px; 
 	box-shadow: 0 5px 5px rgba(0,0,0,.4);
 	margin: 5em auto;
 	display: flex;
 	align-items: center;
+	text-align: center;
 }
 .company__info{
 	background-color: #228B22;
@@ -27,7 +28,8 @@
 	font-size:3em;
 }
 @media screen and (max-width: 640px) {
-	.main-content{width: 90%;}
+	.main-content{width: 90%;
+	align-items: center!important;}
 	.company__info{
 		display: none;
 	}

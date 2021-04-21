@@ -82,10 +82,10 @@ const Adevertise=()=> {
         <div className="container-fluid">
         <div className="row">
                 <div className="col-sm">
-                    <img className="logo-size"src= {process.env.PUBLIC_URL + 'image/assets/img/Gazebo1G.png'}/> 
+                    <img className="logo-size"src= {process.env.PUBLIC_URL + 'image/assets/img/Gazebo1G.png'} alt="logo"/> 
                 </div>
                 <div className="col-sm">
-                    <img className="logo-size-add"src= {process.env.PUBLIC_URL + 'image/assets/img/free.png'}/> 
+                    <img className="logo-size-add"src= {process.env.PUBLIC_URL + 'image/assets/img/free.png'} alt="itys-for free"/> 
                 </div>
             </div>
         </div>
@@ -93,21 +93,21 @@ const Adevertise=()=> {
             
             <div className="row align-centre text-center">
                 <div className="col-sm-3 add-content">
-                    <img className="top-add-imag " src={process.env.PUBLIC_URL + 'image/assets/img/garden.png'}/>
+                    <img className="top-add-imag " src={process.env.PUBLIC_URL + 'image/assets/img/garden.png'} alt="sellers"/>
                     <div>
                     <h4 className="header-add">SELLERS</h4>
                     </div>
                     <p className="text-padding">Sign up with Us <a href="#form-advert">by filling the enquiry form below</a> or <a href="/contact#call-request">Contact our business team today</a> for more information  </p>
                 </div>
                 <div className="col-sm-3 add-content">
-                    <img className="top-add-imag"  src={process.env.PUBLIC_URL + 'image/assets/img/find.png'}/>
+                    <img className="top-add-imag"  src={process.env.PUBLIC_URL + 'image/assets/img/find.png'} alt="mortgage"/>
                     <div>
                     <h4 className="header-add">MORTGAGE LENDERS</h4>
                     </div>
                     <p className="text-padding">< a href="#form-advert">Fill the enquiry form below </a>to get connected with new customers from Real Estate Street's mortgage leads and home buyers. <a href="/contact#call-request">Contact Us today</a> for more information  </p>
                 </div>
                 <div className="col-sm-3 add-content">
-                    <img  className="top-add-imag" src={process.env.PUBLIC_URL + 'image/assets/img/money.png'}/>
+                    <img  className="top-add-imag" src={process.env.PUBLIC_URL + 'image/assets/img/money.png'} alt="new construction companies"/>
                     <div>
                     <h4 className="header-add">NEW CONSTRUCTION</h4>
                     </div>
@@ -115,7 +115,7 @@ const Adevertise=()=> {
                 </div>
                 
                 <div className="col-sm-3 add-content-last">
-                    <img  className="top-add-imag" src={process.env.PUBLIC_URL + 'image/assets/img/brands.svg'}/>
+                    <img  className="top-add-imag" src={process.env.PUBLIC_URL + 'image/assets/img/brands.svg'} alt="Consumer brands products"/>
                     <br/>
                     <div>
                     <h4 className="header-add">CONSUMER BRANDS</h4>
@@ -153,23 +153,23 @@ const Adevertise=()=> {
 
                                 <div className="form-group">
                                     <lable for="name">Name</lable>
-                                    <input type="text" className="form-control" id="name" name="from_name"/>
+                                    <input type="text" className="form-control" id="name" name="from_name" placeholder="Your Name"/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="email">Email</lable>
-                                    <input type="email" className="form-control" id="email" name="email"/>
+                                    <input type="email" className="form-control" id="email" name="email"placeholder="yourmail@gmail.com"/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="phone">Phone</lable>
-                                    <input type="tel" className="form-control" id="phone" name="phone"/>
+                                    <input type="tel" className="form-control" id="phone" name="phone"placeholder="0790943918"/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="Address">Address/Location</lable>
-                                    <input type="text" className="form-control" id="address" name="address"/>
+                                    <input type="text" className="form-control" id="address" name="address"placeholder="Your Address"/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="county">County</lable>
-                                    <input type="text" className="form-control" id="county" name="county" required/>
+                                    <input type="text" className="form-control" id="county" name="county" placeholder="Kilifi"required/>
                                 </div>
                                 <button className=" btn-success form-control" onClick={notify}>Send</button>
                                 <ToastContainer/>

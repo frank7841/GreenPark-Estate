@@ -40,6 +40,7 @@ class Listing(models.Model):
     town = models.CharField(max_length= 50, choices =LocationTown.choices, default=LocationTown.KILIFI)
     county = models.CharField(max_length=100)
     description = models.TextField(blank=True)
+    payment_plan=models.CharField(max_length=100, blank=True)
     feature_1= models.CharField(max_length=100, blank=True)
     feature_2= models.CharField(max_length=100, blank=True)
     feature_3= models.CharField(max_length=100, blank=True)

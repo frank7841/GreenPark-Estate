@@ -43,7 +43,7 @@ function Pagination(props) {
 
     return (
         <div className= "pagination">
-            <div onClick={()=>props.previous(), scrollToTop()} className="pagination-number">
+            <div onClick={()=>{props.previous(); scrollToTop()}} className="pagination-number">
             «
             </div>
             {getNumbers()}

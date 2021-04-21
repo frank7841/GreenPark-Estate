@@ -1,5 +1,11 @@
+#home-image{
+    padding-left:none !important;
+    padding-right: none !important;
+    
+}
+
 .nibora-realtors{
-    margin-top: 30%!important;
+    margin-top: 20%!important;
     background-color:rgba(15, 6, 6, 0.4);
     width: 90%;
     /* color:#ffffff;
@@ -7,7 +13,7 @@
     font-size: 30px; */
     margin-left: 5%;;
 }
-a.nibora-search-link{
+a.nibora-search-link{ 
     padding-top: 10%;
     font-size: 20px;
     color:rgb(252, 248, 248);

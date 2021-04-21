@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {Helmet, HelmetProvider} from 'react-helmet-async';
-import {Link} from 'react-router-dom'
 import NumberFormat from 'react-number-format';
 import { Icon } from 'semantic-ui-react'
+import background from'../components/asset/Logo.png'
 import { useHistory } from "react-router-dom";
 import Scroll from '../components/Scroll'
 import Footer from '../components/footer'
+import { Accordion, Card } from 'react-bootstrap';
 
 const ListingDetail=(props)=> {
 
@@ -16,8 +17,8 @@ const ListingDetail=(props)=> {
     }
 
     const[listing, setListing]=useState({});
-    const[realtor, setRealtor]= useState({})
-    const[price, setPrice]= useState(0);
+    // const[realtor, setRealtor]= useState({})
+   
 
     useEffect(()=>{
         const slug= props.match.params.id
@@ -31,31 +32,31 @@ const ListingDetail=(props)=> {
         axios.get(`http://localhost:8000/api/listings/${slug}`, config)
         .then(res =>{
             setListing(res.data);
-            setPrice(NumberFormat(res.data.price))
+            // setPrice(NumberFormat(res.data.price))
         })
         .catch (err=> {
 
         });
     }, [props.match.params.id])
 
-    useEffect(()=>{
-        const id = listing.realtor
-        const config={
-            headers:{
-                // "Authorization" : `Bearer ${localStorage.getItem('token')}`
-                "Content-Type": "application/json"
-            }
-        };
-        if (id) {
-            axios.get(`http://localhost:8000/api/realtors/${id}`, config)
-            .then(res=>{
-                setRealtor(res.data)
-            })
-            .catch(err =>{
+    // useEffect(()=>{
+    //     const id = listing.realtor
+    //     const config={
+    //         headers:{
+    //             // "Authorization" : `Bearer ${localStorage.getItem('token')}`
+    //             "Content-Type": "application/json"
+    //         }
+    //     };
+    //     if (id) {
+    //         axios.get(`http://localhost:8000/api/realtors/${id}`, config)
+    //         .then(res=>{
+    //             setRealtor(res.data)
+    //         })
+    //         .catch(err =>{
 
-            });
-        }
-    }, [listing.realtor]);
+    //         });
+    //     }
+    // }, [listing.realtor]);
 
     const displayInteriorImages=()=>{
 
@@ -65,7 +66,9 @@ const ListingDetail=(props)=> {
                 <div className="col-sm">
                     {listing.photo_1 ?(
                         <div className="listing-details">
+                            < a href={listing.photo_1}>
                             <img className="img-responsive listing-detail-image" src= {listing.photo_1} alt=""/>
+                            </a>
                         </div>    
                     ): null
                     }
@@ -87,10 +90,6 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
-            </div> 
-        );
-        images.push(
-            <div key={2} className="row">
                 <div className="col-sm">
                     {listing.photo_4 ?(
                         <div className="listing-details">
@@ -99,7 +98,10 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
-
+            </div> 
+        );
+        images.push(
+            <div key={2} className="row">
                 <div className="col-sm">
                     {listing.photo_5 ?(
                         <div className="listing-details">
@@ -108,10 +110,19 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
+
                 <div className="col-sm">
                     {listing.photo_6 ?(
                         <div className="listing-details">
                             <img className="img-responsive  listing-detail-image" src= {listing.photo_6} alt=""/>
+                        </div>    
+                    ): null
+                    }
+                </div>
+                <div className="col-sm">
+                    {listing.photo_7 ?(
+                        <div className="listing-details">
+                            <img className="img-responsive  listing-detail-image" src= {listing.photo_7} alt=""/>
                         </div>    
                     ): null
                     }
@@ -121,15 +132,6 @@ const ListingDetail=(props)=> {
         images.push(
             <div key={3} className="row">
                 <div className="col-sm">
-                    {listing.photo_7 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_7} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-
-                <div className="col-sm">
                     {listing.photo_8 ?(
                         <div className="listing-details">
                             <img className="img-responsive  listing-detail-image" src= {listing.photo_8} alt=""/>
@@ -137,6 +139,7 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
+
                 <div className="col-sm">
                     {listing.photo_9 ?(
                         <div className="listing-details">
@@ -145,10 +148,6 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
-            </div>
-        );
-        images.push(
-            <div key={4} className="row">
                 <div className="col-sm">
                     {listing.photo_10 ?(
                         <div className="listing-details">
@@ -157,15 +156,19 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
+                 <div className="col-sm">
+                     {listing.photo_11 ?(
+                          <div className="listing-details">
+                               <img className="img-responsive  listing-detail-image" src= {listing.photo_11} alt=""/>
+                           </div>    
+                   ): null
+                     }
+                 </div>
 
-                <div className="col-sm">
-                    {listing.photo_11 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_11} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
+            </div>
+        );
+        images.push(
+            <div key={4} className="row">
                 <div className="col-sm">
                     {listing.photo_12 ?(
                         <div className="listing-details">
@@ -174,10 +177,6 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
-            </div>
-        );
-        images.push(
-            <div key={5} className="row">
                 <div className="col-sm">
                     {listing.photo_13 ?(
                         <div className="listing-details">
@@ -186,7 +185,6 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
-
                 <div className="col-sm">
                     {listing.photo_14 ?(
                         <div className="listing-details">
@@ -195,69 +193,76 @@ const ListingDetail=(props)=> {
                     ): null
                     }
                 </div>
-                <div className="col-sm">
-                    {listing.photo_15 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_15} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
+
             </div>
         );
-        images.push(
-            <div key={6} className="row">
-                <div className="col-sm">
-                    {listing.photo_16 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_16} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
+        // images.push(
+        //     <div key={5} className="row">
+                
+      
+        //         <div className="col-sm">
+        //             {listing.photo_15 ?(
+        //                 <div className="listing-details">
+        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_15} alt=""/>
+        //                 </div>    
+        //             ): null
+        //             }
+        //         </div>
+        //     </div>
+        // );
+        // images.push(
+        //     <div key={6} className="row">
+        //         <div className="col-sm">
+        //             {listing.photo_16 ?(
+        //                 <div className="listing-details">
+        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_16} alt=""/>
+        //                 </div>    
+        //             ): null
+        //             }
+        //         </div>
 
-                <div className="col-sm">
-                    {listing.photo_17 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_17} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                <div className="col-sm">
-                    {listing.photo_18 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_18} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-            </div>
-        );
-        images.push(
-            <div key={7} className="row">
-                <div className="col-sm">
-                    {listing.photo_19 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_19} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
+        //         <div className="col-sm">
+        //             {listing.photo_17 ?(
+        //                 <div className="listing-details">
+        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_17} alt=""/>
+        //                 </div>    
+        //             ): null
+        //             }
+        //         </div>
+        //         <div className="col-sm">
+        //             {listing.photo_18 ?(
+        //                 <div className="listing-details">
+        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_18} alt=""/>
+        //                 </div>    
+        //             ): null
+        //             }
+        //         </div>
+        //     </div>
+        // );
+        // images.push(
+        //     <div key={7} className="row">
+        //         <div className="col-sm">
+        //             {listing.photo_19 ?(
+        //                 <div className="listing-details">
+        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_19} alt=""/>
+        //                 </div>    
+        //             ): null
+        //             }
+        //         </div>
 
-                <div className="col-sm">
-                    {listing.photo_20 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_20} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                <div className="col-sm">
+        //         <div className="col-sm">
+        //             {listing.photo_20 ?(
+        //                 <div className="listing-details">
+        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_20} alt=""/>
+        //                 </div>    
+        //             ): null
+        //             }
+        //         </div>
+        //         <div className="col-sm">
 
-                </div>
-            </div>
-        );
+        //         </div>
+        //     </div>
+        // );
         return images;
     }
 
@@ -274,47 +279,42 @@ const ListingDetail=(props)=> {
             </Helmet>
             </HelmetProvider>
             <Scroll showBelow={250}/>
-            <div >
+           
                
                  <div className="container-fluid">
                      <div className="row list-detail-top-img ">
-                    <img src={listing.photo_main} alt="House photo" className="img-toppings img-responsive" />
-                    <div className="details-unparallel text-center">
-                        <h1 className="title-list-detail">{listing.title}</h1>
-                        <hr className="horizontal-list-detail " size="large"/>
-                        <h2 className="details-location">{listing.town} - {listing.address}</h2>
+                        <img src={listing.photo_main} alt="House main" className="img-toppings img-responsive" />
+                        <div className="details-unparallel text-center">
+                            <h1 className="title-list-detail">{listing.title}</h1>
+                            <hr className="horizontal-list-detail " size="large"/>
+                            <h2 className="details-location">{listing.town} - {listing.address}</h2>
 
-                        <h2 className="details-location">{listing.sale_type} - <NumberFormat value={listing.price} displayType={'text'} thousandSeparator={true} prefix={'Ksh'}/>-{listing.rate}</h2>
-                        <div className="sale-title">
+                            <h2 className="details-location">{listing.sale_type} - <NumberFormat value={listing.price} displayType={'text'} thousandSeparator={true} prefix={'Ksh'}/>-{listing.rate}</h2>
+                            <div className="sale-title">
                                 <p className="sale-address">{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft</p>
-                        </div>
+                            </div>
                      
+                        </div>
+                        <div className="top-left-details">
+                            <h3 className="listingdetail-name">
+                            <img className="logo-size-detail"src= {background} alt="Nibora Properties "/> 
+                            <a className="listingsdetail-phone" href="tel:+254 111338357">0111338357</a>&nbsp;&nbsp; <span className="pointers" onClick={goToPreviousPath}> «</span> </h3> 
+                        </div>  
                     </div>
-                    <div className="top-left-details">
-                        <h3 className="listingdetail-name">{realtor.name}
-                        <a className="listingsdetail-phone" href={`tel:${realtor.phone}`}>{realtor.phone}</a></h3>
-                        
-                    </div>
-                      
-                 </div>
                 </div>
 
-            {/* <div className="container-fluid">               
-            <div className="jumbotron text-center title-header row">
-                <h1 className="display-4">{listing.title}</h1>
-                <h3 className='listingdetail__location'>{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft </h3>
-                <h3 className='listingdetail__location'>{listing.town}, {listing.county}</h3>
-            </div>
-            </div> */}
        
-            <div clasName="container-fluid description-naming">
-                <p className="listing-detail-desc">{listing.description}</p>
-                <h1 className="text-center top-top-add">Features</h1>
-                <hr className="horizontal " size="large"/>
-
-                <div className="row features">
-                    
-                   
+                <div clasName="container-fluid description-naming">
+                    <div className="row">
+                        <p className="listing-detail-desc">Property Desription:<br/><br/>{listing.description}</p>
+                    </div>
+                </div>
+                <div className="container-fluid ">    
+                    <div className="row ">
+                        <h1 className="align-center top-top-add">Features</h1>
+                         {/* <hr className="horizontal " size="large"/> */}
+                    </div>
+                    <div className="row features">
                     <div className="col-sm">
                         <ul className="featured_display">
 
@@ -350,65 +350,61 @@ const ListingDetail=(props)=> {
                     
                 </div>
             </div>
+               
             <div className="height"></div>
             <div className="container">
                 <div className="row">
-                <div className="col-sm-4 realtor-pc">
-                            <img className=" realtor-photo" src={realtor.photo} alt={realtor.name} />
-                        <h3 className="listingdetail-realtor">{realtor.name}</h3>
-                        <p className="listingdetail-contact"><a href={`tel:${realtor.phone}`}> <Icon  inverted color="black" name="phone" size="large"/>{realtor.phone}</a></p>
-                        <p className="listingdetail-contact"><a href={`https://api.whatsapp.com/send?phone=${realtor.phone}`}><Icon  color="teal" name="whatsapp" size="large"/>{realtor.phone}</a></p>
-                        <p className="listingdetail-contact"><a href={`mailto:${realtor.email}`}> <Icon  color="teal" name="mail" size="large"/>{realtor.email}</a></p>
-                        {/* <p className="listingdetail-about">{realtor.description}</p> */}
-                </div>
-                <div className="col-sm-8">
+               
+                <div className="col-sm-12">
                         <img className="img-responsive max-height" src={listing.photo_main} alt={listing.title} />
                     </div>
-                    <div className="col-sm-4 realtor-mobile">
-                            <img className="realtor-photo" src={realtor.photo} alt={realtor.name} />
-                        <h3 className="listingdetail-realtor">{realtor.name}</h3>
-                        <p className="listingdetail-contact"><a href={`tel:${realtor.phone}`}> <Icon  inverted color="black" name="phone" size="large"/>{realtor.phone}</a></p>
-                        <p className="listingdetail-contact"><a href={`https://api.whatsapp.com/send?phone=${realtor.phone}`}><Icon  color="teal" name="whatsapp" size="large"/>{realtor.phone}</a></p>
-                        <p className="listingdetail-contact"><a href={`mailto:${realtor.email}`}> <Icon  color="teal" name="mail" size="large"/>{realtor.email}</a></p>
-                        {/* <p className="listingdetail-about">{realtor.description}</p> */}
-                    </div>
+               
                 </div>
-                           
-                {/* <div className="row">
-                    <div className="col-sm">
-                        <ul className="listingdetail-list">
-                            <li className="listingdetail-list-item">Property Type: {listing.property_type}</li>
-                            <li className="listingdetail-list-item">Price: <NumberFormat value={listing.price} displayType={'text'} thousandSeparator={true} prefix={'Ksh'}/></li>
-                            <li className="listingdetail-list-item">Bedrooms: {listing.bedrooms}</li>
-                            <li className="listingdetail-list-item">Bathrooms: {listing.bathrooms}</li>
-                            <li className="listingdetail-list-item">Square Feet: {listing.sqft}</li>
-                        </ul>
-                    </div>
-                    <div className="col-sm">
-                        <ul className="listingdetail-list">
-                            <li className="listingdetail-list-item">Sale Type: {listing.sale_type}</li>
-                            <li className="listingdetail-list-item">Address: {listing.address}</li>
-                            <li className="listingdetail-list-item">Town: {listing.town}</li>
-                            <li className="listingdetail-list-item">County: {listing.county}</li>
-                            
-                        </ul>
-                    </div>
-                </div> */}
+                          
         </div>
-
-        
-            {/* <div className="container">
-                <div className="row listing-description-detail">
-                    <p className="listingdetail-description">{listing.description}</p>
-                </div>    
-            </div> */}
             <div className="container">
                 {displayInteriorImages()}
-            </div>    
-
+            </div>   
+            <div className="height"></div> 
+            
+            <Accordion className="container">
+                <Card>
+                    <Card.Header>
+                        <Accordion.Toggle className="accordion-border" eventKey="0" >
+                            <h1 className=" top-top-add">Payment:</h1>
+                        </Accordion.Toggle>
+                    </Card.Header>
+                    <Accordion.Collapse eventKey="0">
+                        <Card.Body>  <p className="listing-detail-desc">{listing.payment_plan}</p></Card.Body>
+                    </Accordion.Collapse>
+                </Card>
+            </Accordion>
             <div className="height"></div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm">
+                        <a className="fixedButton" href ="tel:+254 111338357">
+                            <div className="roundedFixedBtn"><Icon> <i class=" large phone square icon"></i></Icon></div>
+                        </a>
+                    </div>
+                    <div className="col-sm">
+                        <a className="fixedButton-left" href="mailto:sales@niboraproperties.co.ke">
+                            <div className="roundedFixedBtn"><Icon> <i class=" large envelope square icon"></i></Icon></div>
+                        </a>
+                    </div>
+                </div>
+                <div className="row position-bottom">
+                    <div className="col-sm-12">
+                        < a className="fixed-bottom-mobile" href="tel:+254 111338357"> Get in touch now</a>
+                    </div>    
+                   
+                </div>
+            </div>
+
+    
+            
             <Footer/>
-        </div>    
+
     </>        
         
 

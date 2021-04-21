@@ -30,7 +30,7 @@ const Service=()=> {
                 
                  <div className="text-block">
                         <h4 data-aos="slide-right">Searching For a Home, a Hotel, a Guest House, Office Spaces, Land, etc. You will find the difference is Night and Day. </h4>
-                        <p data-aos="fade-in">What is so different you ask? Well, Nibora Properties is here to find you not <strong>JUST</strong> four walls and a roof. We are here and dedicated to connect you to a community, to things that inspire you, and to a space that also inspires you. We are focused to earning your trust rather than comision.    </p>
+                        <p data-aos="fade-in">What is so different you ask?  Nibora Properties is here to find you not <strong>JUST</strong> four walls and a roof. We are dedicated to connecting you to a community, and  space that  inspires you. We are focused to earning your trust.    </p>
                  </div>
                  <div className="service-top-mobile">
                     <img data-aos="fade-in" src={process.env.PUBLIC_URL + 'image/assets/img/image6.jpg'} alt="Service"/>
@@ -38,7 +38,7 @@ const Service=()=> {
                 <div className="height"></div> 
                 <div className="service-head">
                   
-                  <h3 className="text-center">What we do</h3>
+                  <h3 className="text-center">What we do</h3> 
                 </div>
                 <br/>
                 <div className="service-details container">
@@ -52,7 +52,7 @@ const Service=()=> {
                         <br/>
                         <p className="service-text">Nibora Properties provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p>
                         <br/>
-                        <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/">Find a Home</a>
+                        <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/#search-form">Find a Home</a>
                     </div>
                     <div className="service-image col-sm" data-aos="fade-up">
                         <img  src={process.env.PUBLIC_URL + 'image/assets/img/service-find.jpg'} alt="Find a Home"/>
@@ -122,7 +122,7 @@ const Service=()=> {
             <div className="call-to-acction">
                 <div className="container">
                     <div className="col-sm text-center">
-                        <h4 className="seek">Seek the assisatnce of the best real estate team. We are here to help you through every step.</h4>
+                        <h4 className="seek">Seek the assistance of the best real estate team. We are here to help you through every step.</h4>
                             <div className="height"></div>
                             <a className="find-your-home-link" href="/contact#inquiry"><span className="find-your-home"> Start a conversation</span></a>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faFacebookF , faTwitter, faInstagram, faYoutube,faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import background from './asset/contact-beach.svg'
+import {  faFacebookF , faTwitter, faInstagram,faLinkedinIn  } from '@fortawesome/free-brands-svg-icons';
+import background from './asset/footer-bg.jpeg'
 import emailjs from 'emailjs-com'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -50,7 +50,7 @@ const Footer=()=> {
                             <form onSubmit={sendEmail}>
                                 <div className="input-group mb-3 subscribe">
                                 <input type="email" name="email" id="email" className="form-control" placeholder="example@gmail.com" aria-label="Recipient's username" aria-describedby="button-addon2"  />
-                                <button className=" btn-success "id="button-addon2"onClick={notify}><span className="sign-up-button">Sign Up</span></button>
+                                <button className=" btn-success "id="button-addon2"onClick={notify}><span className="sign-up-button">Subscribe</span></button>
                                 <ToastContainer />
                              </div>
                             </form>
@@ -66,11 +66,11 @@ const Footer=()=> {
                         <h4>Connect with Us</h4>    
                       <div className="row social ">
                       
-                            < a className="social-links"   target="_blank"href="#"> <FontAwesomeIcon icon={faFacebookF} size="2" /></a>
-                            < a className="social-links"  target="_blank"href="https://twitter.com/nib_properties">  <FontAwesomeIcon icon={faTwitter} size="3" /></a>
-                            < a className="social-links" target="_blank" href="https://www.instagram.com/niboraproperties/">  <FontAwesomeIcon icon={faInstagram} size="" /></a>
-                            < a className="social-links"  target="_blank"href="#">  <FontAwesomeIcon icon={faYoutube} size="" /></a>
-                            < a className="social-links" target="_blank" href="https://www.linkedin.com/in/nibora-properties-0b292420b/">  <FontAwesomeIcon icon={faLinkedinIn} size="" /></a>
+                            < a className="social-links"   target="_blank" rel="noreferrer" href="https://www.facebook.com/Nibora-Properties-101018138802077"> <FontAwesomeIcon icon={faFacebookF} size="2" /></a>
+                            < a className="social-links"  target="_blank" rel="noreferrer"href="https://twitter.com/nib_properties">  <FontAwesomeIcon icon={faTwitter} size="3" /></a>
+                            < a className="social-links" target="_blank" rel="noreferrer"href="https://www.instagram.com/niboraproperties/">  <FontAwesomeIcon icon={faInstagram} size="" /></a>
+                            {/* < a className="social-links"  target="_blank"href="#">  <FontAwesomeIcon icon={faYoutube} size="" /></a> */}
+                            < a className="social-links" target="_blank" rel="noreferrer"href="https://www.linkedin.com/in/nibora-properties-0b292420b/">  <FontAwesomeIcon icon={faLinkedinIn} size="" /></a>
                     </div>
                 </div>
                 
@@ -78,7 +78,7 @@ const Footer=()=> {
                     <h4 className="footer-border"> Links</h4>
                     <ul className="learn-link">
                         <li className="color-white"><a className="item-link-footer" href="/contact">Contact us&nbsp;»</a> </li>
-                        <li className="color-white"><a  className="item-link-footer"href="#">Our Associates&nbsp;»</a> </li>
+                        <li className="color-white"><a  className="item-link-footer"href="/">Our Associates&nbsp;»</a> </li>
                         <li className="color-white"><a className="item-link-footer" href="/advertise">Advertise with us&nbsp;»</a> </li>
                         <li className="color-white"><a className="item-link-footer" href="/about">Why choose us&nbsp;»</a> </li>
                         <li className="color-white"><a className="item-link-footer" href="/service">What we do &nbsp;»</a> </li>

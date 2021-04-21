@@ -70,16 +70,13 @@ const RightNav = ({  open, auth:{isAuthenticated, loading}, logout} ) => {
           <li><NavLink className ="nav-item"activeClassName="current"exact to ='/about'>About</NavLink></li>
           <li><NavLink className = "nav-item"activeClassName="current"exact to= '/contact'>Contacts</NavLink></li>
           <li><NavLink className = "nav-item"activeClassName="current"exact to='/advertise'>Advertise</NavLink></li>
-          {/* <li><NavLink className = "nav-item"exact to='/signup'>Sign Up</NavLink></li>
-          <NavBtn>
-               <NavBtnLink to = "/login">Login</NavBtnLink>
-           </NavBtn> */}
+         
            <> { !loading && (<>{ isAuthenticated ? authLinks : guestLinks }</>) }</>
         </Ul>
        
         <Alert/>   
         </>  
-    )
+    ) 
 }
 
 RightNav.propTypes= {
