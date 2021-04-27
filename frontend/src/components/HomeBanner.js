@@ -1,5 +1,5 @@
 import React from 'react'
-import background from './asset/barner-home.jpg'
+import background from './asset/nairobi_background.jpg'
 
 
 const HomeBanner=()=> {

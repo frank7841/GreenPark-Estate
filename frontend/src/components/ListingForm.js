@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 import axios from 'axios'
 import Loader from 'react-loader-spinner'
 import PropTypes from 'prop-types'
+import { Icon } from 'semantic-ui-react'
 
 
 const  Listingform= (props)=>{
@@ -205,7 +206,7 @@ const  Listingform= (props)=>{
             weight={50}
              />
              </div> :
-             <button className="btn btn-success">Save </button>
+             <button className="btn btn-success"><Icon><i class="search icon"></i></Icon>Search </button>
 
             }
 
