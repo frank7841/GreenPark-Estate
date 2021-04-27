@@ -29,7 +29,7 @@ const ListingDetail=(props)=> {
                 "Content-Type": "application/json"
             }
         };
-        axios.get(`http://localhost:8000/api/listings/${slug}`, config)
+        axios.get(`http://159.65.39.106/api/listings/${slug}`, config)
         .then(res =>{
             setListing(res.data);
             // setPrice(NumberFormat(res.data.price))

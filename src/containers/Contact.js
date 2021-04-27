@@ -74,7 +74,7 @@ function Contact(){
         };
 
         setLoading(true);
-        axios.post(`http://localhost:8000/api/contacts/`, { name, email, subject, message }, config)
+        axios.post(`http://159.65.39.106/api/contacts/`, { name, email, subject, message }, config)
         .then(res => {
             setAlert('Message Sent', 'success');
             setLoading(false);

@@ -16,7 +16,7 @@ const Listings = () => {
 
         const fetchData = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/listings/featured?page=1`);
+                const res = await axios.get(`http://159.65.39.106/api/listings/featured?page=1`);
 
                 setListings(res.data.results);
                 setCount(res.data.count);
@@ -76,7 +76,7 @@ const Listings = () => {
     };
 
     const visitPage = (page) => {
-        axios.get(`http://localhost:8000/api/listings/featured?page=${page}`)
+        axios.get(`http://159.65.39.106/api/listings/featured?page=${page}`)
         .then(res => {
             setListings(res.data.results);
             setPrevious(res.data.previous);

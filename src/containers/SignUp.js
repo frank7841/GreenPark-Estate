@@ -35,8 +35,8 @@ const SignUp=({setAlert, isAuthenticated, signup})=> {
             <Helmet>
                 <title>Nibora Real Estate| Sign Up</title>
                 <meta
-                    name='description'
-                    content= 'login page'
+                    name='Nibora Real Estate- best real estate agency in kenya'
+                    content= 'Signup with us today and enjoy top real estate service '
                     />
             </Helmet>
             <div className="container-fluid">
