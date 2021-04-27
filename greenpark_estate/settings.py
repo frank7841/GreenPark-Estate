@@ -22,12 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'riija57jm0whjho*7ib5bpevwl(o^p+g*)f=z7!!9#d5%xno$k'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -93,31 +87,14 @@ WSGI_APPLICATION = 'greenpark_estate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nibora_properties',
-        'USER':  'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
-    }
-}
+
+
 AUTHENTICATION_BACKENDS = [
 
     
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.niboraproperties.co.ke'
-EMAIL_PORT = 587
-EMAIL_HOST_USER ='info@niboraproperties.co.ke'
-EMAIL_HOST_PASSWORD ='.Ov}bo&]UMI;'
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-# Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -181,3 +158,7 @@ FILE_UPLOAD_PERMISSION =0o640
 
 AUTH_USER_MODEL= 'auth.User'
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
