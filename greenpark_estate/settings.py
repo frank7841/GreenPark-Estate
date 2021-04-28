@@ -22,6 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '8767367nflkpod%^%@##i+h8pcs5sx6kb9$^z_z$ruu4x^z7-m*by$ed-=h#9pefx@m_%'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -85,6 +91,24 @@ WSGI_APPLICATION = 'greenpark_estate.wsgi.application'
 
 
 # Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nibora_properties',
+        'USER': 'postgres',
+        'PASSWORD': 'p@ssw0rd',
+        'HOST': 'localhost'
+    }
+}
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.niboraproperties.co.ke'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'info@niboraproperties.co.ke'
+EMAIL_HOST_PASSWORD = '.Ov}bo&]UMI;'
+EMAIL_USE_TLS = True
+
+
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
