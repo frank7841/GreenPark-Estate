@@ -13,7 +13,7 @@ const Adevertise=()=> {
 
     function sendEmail(e) {
         e.preventDefault();
-        
+         
     
         emailjs.sendForm('service_aj333on', 'template_6prr6qq', e.target, 'user_uQWg7zODPbiG7Ij3VpuAS')
           .then((result) => {
@@ -82,10 +82,10 @@ const Adevertise=()=> {
         <div className="container-fluid">
         <div className="row">
                 <div className="col-sm">
-                    <img className="logo-size"src= {process.env.PUBLIC_URL + 'image/assets/img/Gazebo1G.png'} alt="logo"/> 
+                    <img className="logo-size"src= {require('../components/asset/Gazibo1G.png')} alt="logo"/> 
                 </div>
                 <div className="col-sm">
-                    <img className="logo-size-add"src= {process.env.PUBLIC_URL + 'image/assets/img/free.png'} alt="itys-for free"/> 
+                    <img className="logo-size-add"src= {require('../components/asset/free.png')} alt="its-for free"/> 
                 </div>
             </div>
         </div>
@@ -93,21 +93,21 @@ const Adevertise=()=> {
             
             <div className="row align-centre text-center">
                 <div className="col-sm-3 add-content">
-                    <img className="top-add-imag " src={process.env.PUBLIC_URL + 'image/assets/img/garden.png'} alt="sellers"/>
+                    <img className="top-add-imag " src={require('../components/asset/garden.png')} alt="sellers"/>
                     <div>
                     <h4 className="header-add">SELLERS</h4>
                     </div>
                     <p className="text-padding">Sign up with Us <a href="#form-advert">by filling the enquiry form below</a> or <a href="/contact#call-request">Contact our business team today</a> for more information  </p>
                 </div>
                 <div className="col-sm-3 add-content">
-                    <img className="top-add-imag"  src={process.env.PUBLIC_URL + 'image/assets/img/find.png'} alt="mortgage"/>
+                    <img className="top-add-imag"  src={require('../components/asset/find.png')} alt="mortgage"/>
                     <div>
                     <h4 className="header-add">MORTGAGE LENDERS</h4>
                     </div>
                     <p className="text-padding">< a href="#form-advert">Fill the enquiry form below </a>to get connected with new customers from Real Estate Street's mortgage leads and home buyers. <a href="/contact#call-request">Contact Us today</a> for more information  </p>
                 </div>
                 <div className="col-sm-3 add-content">
-                    <img  className="top-add-imag" src={process.env.PUBLIC_URL + 'image/assets/img/money.png'} alt="new construction companies"/>
+                    <img  className="top-add-imag" src={require('../components/asset/money.png')} alt="new construction companies"/>
                     <div>
                     <h4 className="header-add">NEW CONSTRUCTION</h4>
                     </div>
@@ -115,7 +115,7 @@ const Adevertise=()=> {
                 </div>
                 
                 <div className="col-sm-3 add-content-last">
-                    <img  className="top-add-imag" src={process.env.PUBLIC_URL + 'image/assets/img/brands.svg'} alt="Consumer brands products"/>
+                    <img  className="top-add-imag" src={require('../components/asset/brands.svg')} alt="Consumer brands products"/>
                     <br/>
                     <div>
                     <h4 className="header-add">CONSUMER BRANDS</h4>
