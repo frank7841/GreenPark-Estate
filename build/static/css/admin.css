@@ -1,5 +1,5 @@
 *{
-    padding-top: 2em;
+    padding-top: 0.5em;
 }
 #header {
     height: 50px;
@@ -22,7 +22,7 @@ div.breadcrumbs {
 }
 
 div.breadcrumbs a {
-    color: #333;
+    color: rgb(214, 212, 212);
 }
 
 .module h2, .module caption, .inline-group h2 {
