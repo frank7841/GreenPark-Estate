@@ -126,18 +126,18 @@ function Contact(){
             <div className="container-fluid get-in-touch">
                 <div className="row">
                     <div className="col-sm contact-border text-center">
-                        <img src= {process.env.PUBLIC_URL + 'image/assets/img/Calling.png'} alt="call-us" className="contact-icon"/><br/>
+                        <img src= {require('../components/asset/Calling.png')} alt="call-us" className="contact-icon"/><br/>
                         <h3>Call us directly</h3><br/>
                         <a href="tel:+254111338357"> <span className="link-height">+254 111338357</span></a>
 
                     </div>
                     <div className="col-sm contact-border text-center">
-                    <img src= {process.env.PUBLIC_URL + 'image/assets/img/Messages.png'} alt="call-us"  className="contact-icon"/><br/>
+                    <img src= {require('../components/asset/Messages.png')} alt="call-us"  className="contact-icon"/><br/>
                         <h3>Get in touch</h3><br/>
                         <a className="link-contact" href="#inquiry"> <span className="link-height-meeting">Submit your inquiries</span></a>
                     </div>
                     <div className="col-sm contact-border text-center">
-                    <img src= {process.env.PUBLIC_URL + 'image/assets/img/Date.png'} alt="call-us"  className="contact-icon"/><br/>
+                    <img src= {require('../components/asset/Date.png')} alt="call-us"  className="contact-icon"/><br/>
                         <h3>Request a call</h3><br/>
                         <a className="link-contact" href="#call-request"> <span className="link-height-meeting">Choose a date & time</span></a>
 
