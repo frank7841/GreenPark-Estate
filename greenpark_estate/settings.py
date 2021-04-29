@@ -89,22 +89,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'greenpark_estate.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nibora_properties',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost'
-    }
-}
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.niboraproperties.co.ke'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'info@niboraproperties.co.ke'
-EMAIL_HOST_PASSWORD = '.Ov}bo&]UMI;'
-EMAIL_USE_TLS = True
 
 
 
