@@ -39,7 +39,7 @@ const  Listingform= (props)=>{
             "Content-Type": "application/json"
         };
         setLoading(true);
-        axios.post('http://159.65.39.106/api/listings/search',
+        axios.post('http://46.101.231.28/api/listings/search',
          {sale_type,
           price,
           bedrooms, 
