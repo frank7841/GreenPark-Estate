@@ -82,7 +82,7 @@ const Adevertise=()=> {
         <div className="container-fluid">
         <div className="row">
                 <div className="col-sm">
-                    <img className="logo-size"src= {require('../components/asset/Gazibo1G.png')} alt="logo"/> 
+                    <img className="logo-size"src= {require('../components/asset/Gazebo1G.png')} alt="logo"/> 
                 </div>
                 <div className="col-sm">
                     <img className="logo-size-add"src= {require('../components/asset/free.png')} alt="its-for free"/> 
