@@ -17,7 +17,7 @@ const Featured = () => {
 
         const fetchData = async () => {
             try {
-                const res = await axios.get(`http://46.101.231.28/api/listings/?page=1`);
+                const res = await axios.get(`https://46.101.231.28/api/listings/?page=1`);
 
                 setListings(res.data.results);
                 setCount(res.data.count);
@@ -77,7 +77,7 @@ const Featured = () => {
     };
 
     const visitPage = (page) => {
-        axios.get(`http://46.101.231.28/api/listings/?page=${page}`)
+        axios.get(`https://46.101.231.28/api/listings/?page=${page}`)
         .then(res => {
             setListings(res.data.results);
             setPrevious(res.data.previous);
