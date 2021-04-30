@@ -64,7 +64,7 @@ const Footer=()=> {
             <div className="height"></div>
                 <div className="col-sm-4 about-footer">
                     
-                    <img className="logo-size"src= {require('./asset/Gazebo1G.png')} alt="Nibora Properties "/> 
+                    <img className="logo-size"src= {require('./asset/Gazebo1G.png').default} alt="Nibora Properties "/> 
                         <h4>Connect with Us</h4>    
                       <div className="row social ">
                       
