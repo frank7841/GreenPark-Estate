@@ -25,7 +25,7 @@ const Service=()=> {
             <Scroll showBelow={250}/>
 
                 <div className="service-top">
-                  <img data-aos="fade-in" src={require('../components/asset/image6.jpg')} alt="Service" className="img-respon"/>
+                  <img data-aos="fade-in" src={require('../components/asset/image6.jpg').default} alt="Service" className="img-respon"/>
                 </div>  
                 
                  <div className="text-block">
@@ -33,7 +33,7 @@ const Service=()=> {
                         <p data-aos="fade-in">What is so different you ask?  Nibora Properties is here to find you not <strong>JUST</strong> four walls and a roof. We are dedicated to connecting you to a community, and  space that  inspires you. We are focused to earning your trust.    </p>
                  </div>
                  <div className="service-top-mobile">
-                    <img data-aos="fade-in" src={require('../components/asset/image6.jpg')} alt="Service"/>
+                    <img data-aos="fade-in" src={require('../components/asset/image6.jpg').default} alt="Service"/>
                 </div>
                 <div className="height"></div> 
                 <div className="service-head">
@@ -55,7 +55,7 @@ const Service=()=> {
                         <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/#search-form">Find a Home</a>
                     </div>
                     <div className="service-image col-sm" data-aos="fade-up">
-                        <img  src={require('../components/asset/service-find.jpg')} alt="Find a Home"/>
+                        <img  src={require('../components/asset/service-find.jpg').default} alt="Find a Home"/>
                     </div>
                     </div>
                     <div className="height-service"></div>
@@ -64,7 +64,7 @@ const Service=()=> {
 
                     <div className="row">
                         <div className="service-image col-sm"  data-aos="fade-up">
-                            <img  src={require('../components/asset/hotel-rooms.jpg')} alt="Find a Home"/>
+                            <img  src={require('../components/asset/hotel-rooms.jpg').default} alt="Find a Home"/>
                         </div>
                         <div className="residential col-sm" data-aos="fade-up">
                             {/* <p className="residential-head ">Commercial</p> */}
@@ -93,7 +93,7 @@ const Service=()=> {
                             <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/">Find an Office </a>
                         </div>
                         <div className="service-image col-sm" data-aos="fade-up" data-aos-delay="100">
-                            <img  src={require('../components/asset/service-domore.jpg')} alt="Find a Shop"/>
+                            <img  src={require('../components/asset/service-domore.jpg').default} alt="Find a Shop"/>
                         </div>
                     </div>
                      {/* serive  commercial */}
@@ -101,7 +101,7 @@ const Service=()=> {
                      <hr className="horizontal"/>
                     <div className="row">
                     <div className="service-image col-sm" data-aos="fade-up">
-                            <img  src={require('../components/asset/property-valuation.jpg')} alt="Property valuation"/>
+                            <img  src={require('../components/asset/property-valuation.jpg').default} alt="Property valuation"/>
                         </div>
                        
                         <div data-aos="fade-up" className="residential col-sm">

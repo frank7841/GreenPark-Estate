@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="40px" viewBox="0 0 44 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>users</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="11.0344828" cy="11.0344828" r="11.0344828"></circle>
+        <circle id="path-3" cx="7.5862069" cy="7.5862069" r="7.5862069"></circle>
+        <circle id="path-5" cx="6.20689655" cy="6.20689655" r="6.20689655"></circle>
+        <circle id="path-7" cx="11.0344828" cy="11.0344828" r="11.0344828"></circle>
+        <circle id="path-9" cx="7.5862069" cy="7.5862069" r="7.5862069"></circle>
+        <circle id="path-11" cx="6.20689655" cy="6.20689655" r="6.20689655"></circle>
+        <circle id="path-13" cx="11.0344828" cy="11.0344828" r="11.0344828"></circle>
+        <circle id="path-15" cx="7.5862069" cy="7.5862069" r="7.5862069"></circle>
+        <circle id="path-17" cx="6.20689655" cy="6.20689655" r="6.20689655"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="New-Contact" transform="translate(-468.000000, -988.000000)">
+            <g id="Services" transform="translate(130.000000, 597.000000)">
+                <g id="View-job-openings" transform="translate(340.000000, 345.000000)">
+                    <g id="users" transform="translate(0.000000, 48.000000)">
+                        <g id="person" transform="translate(0.000000, 13.793103)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <circle stroke="#183746" stroke-width="1.37931034" cx="11.0344828" cy="11.0344828" r="11.7241379"></circle>
+                            <circle id="Mask" stroke="#183746" stroke-width="1.37931034" fill="#429798" mask="url(#mask-2)" cx="11.0344828" cy="11.0344828" r="11.7241379"></circle>
+                            <g id="Oval-Copy-3" mask="url(#mask-2)">
+                                <g transform="translate(3.448276, 15.172414)">
+                                    <mask id="mask-4" fill="white">
+                                        <use xlink:href="#path-3"></use>
+                                    </mask>
+                                    <use id="Oval-Copy" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                    <circle id="Oval-Copy" stroke="none" fill="#DCDDDE" fill-rule="evenodd" mask="url(#mask-4)" cx="12.4137931" cy="7.5862069" r="7.5862069"></circle>
+                                </g>
+                            </g>
+                            <circle id="Oval-Copy" stroke="#183746" stroke-width="1.37931034" mask="url(#mask-2)" cx="11.0344828" cy="22.7586207" r="6.89655172"></circle>
+                            <g id="Oval-2" mask="url(#mask-2)">
+                                <g transform="translate(4.827586, 4.137931)">
+                                    <mask id="mask-6" fill="white">
+                                        <use xlink:href="#path-5"></use>
+                                    </mask>
+                                    <use id="Oval" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                    <circle id="Oval" stroke="none" fill="#DCDDDE" fill-rule="evenodd" mask="url(#mask-6)" cx="10.3448276" cy="6.20689655" r="6.20689655"></circle>
+                                </g>
+                            </g>
+                            <circle id="Oval" stroke="#183746" stroke-width="1.37931034" mask="url(#mask-2)" cx="11.0344828" cy="10.3448276" r="5.51724138"></circle>
+                        </g>
+                        <g id="person-copy-2" transform="translate(17.931034, 13.793103)">
+                            <mask id="mask-8" fill="white">
+                                <use xlink:href="#path-7"></use>
+                            </mask>
+                            <circle stroke="#183746" stroke-width="1.37931034" cx="11.0344828" cy="11.0344828" r="11.7241379"></circle>
+                            <circle id="Mask" stroke="#183746" stroke-width="1.37931034" fill="#F4C069" mask="url(#mask-8)" cx="11.0344828" cy="11.0344828" r="11.7241379"></circle>
+                            <g id="Oval-Copy-3" mask="url(#mask-8)">
+                                <g transform="translate(3.448276, 15.172414)">
+                                    <mask id="mask-10" fill="white">
+                                        <use xlink:href="#path-9"></use>
+                                    </mask>
+                                    <use id="Oval-Copy" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+                                    <circle id="Oval-Copy" stroke="none" fill="#DCDDDE" fill-rule="evenodd" mask="url(#mask-10)" cx="12.4137931" cy="7.5862069" r="7.5862069"></circle>
+                                </g>
+                            </g>
+                            <circle id="Oval-Copy" stroke="#183746" stroke-width="1.37931034" mask="url(#mask-8)" cx="11.0344828" cy="22.7586207" r="6.89655172"></circle>
+                            <g id="Oval-2" mask="url(#mask-8)">
+                                <g transform="translate(4.827586, 4.137931)">
+                                    <mask id="mask-12" fill="white">
+                                        <use xlink:href="#path-11"></use>
+                                    </mask>
+                                    <use id="Oval" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+                                    <circle id="Oval" stroke="none" fill="#DCDDDE" fill-rule="evenodd" mask="url(#mask-12)" cx="10.3448276" cy="6.20689655" r="6.20689655"></circle>
+                                </g>
+                            </g>
+                            <circle id="Oval" stroke="#183746" stroke-width="1.37931034" mask="url(#mask-8)" cx="11.0344828" cy="10.3448276" r="5.51724138"></circle>
+                        </g>
+                        <g id="person-copy" transform="translate(8.965517, 0.000000)">
+                            <mask id="mask-14" fill="white">
+                                <use xlink:href="#path-13"></use>
+                            </mask>
+                            <circle stroke="#183746" stroke-width="1.37931034" cx="11.0344828" cy="11.0344828" r="11.7241379"></circle>
+                            <circle id="Mask" stroke="#183746" stroke-width="1.37931034" fill="#8DD7FF" mask="url(#mask-14)" cx="11.0344828" cy="11.0344828" r="11.7241379"></circle>
+                            <g id="Oval-Copy-3" mask="url(#mask-14)">
+                                <g transform="translate(3.448276, 15.172414)">
+                                    <mask id="mask-16" fill="white">
+                                        <use xlink:href="#path-15"></use>
+                                    </mask>
+                                    <use id="Oval-Copy" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-15"></use>
+                                    <circle id="Oval-Copy" stroke="none" fill="#DCDDDE" fill-rule="evenodd" mask="url(#mask-16)" cx="12.4137931" cy="7.5862069" r="7.5862069"></circle>
+                                </g>
+                            </g>
+                            <circle id="Oval-Copy" stroke="#183746" stroke-width="1.37931034" mask="url(#mask-14)" cx="11.0344828" cy="22.7586207" r="6.89655172"></circle>
+                            <g id="Oval-2" mask="url(#mask-14)">
+                                <g transform="translate(4.827586, 4.137931)">
+                                    <mask id="mask-18" fill="white">
+                                        <use xlink:href="#path-17"></use>
+                                    </mask>
+                                    <use id="Oval" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-17"></use>
+                                    <circle id="Oval" stroke="none" fill="#DCDDDE" fill-rule="evenodd" mask="url(#mask-18)" cx="10.3448276" cy="6.20689655" r="6.20689655"></circle>
+                                </g>
+                            </g>
+                            <circle id="Oval" stroke="#183746" stroke-width="1.37931034" mask="url(#mask-14)" cx="11.0344828" cy="10.3448276" r="5.51724138"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

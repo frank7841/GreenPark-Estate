@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.74430f10.chunk.css",
-    "main.js": "/static/js/main.bd67408f.chunk.js",
-    "main.js.map": "/static/js/main.bd67408f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.58668269.js",
-    "runtime-main.js.map": "/static/js/runtime-main.58668269.js.map",
+    "main.js": "/static/js/main.2f72874b.chunk.js",
+    "main.js.map": "/static/js/main.2f72874b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6a3f03d8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6a3f03d8.js.map",
     "static/css/2.bb6cda33.chunk.css": "/static/css/2.bb6cda33.chunk.css",
-    "static/js/2.7aba5f60.chunk.js": "/static/js/2.7aba5f60.chunk.js",
-    "static/js/2.7aba5f60.chunk.js.map": "/static/js/2.7aba5f60.chunk.js.map",
-    "static/js/3.1ade2753.chunk.js": "/static/js/3.1ade2753.chunk.js",
-    "static/js/3.1ade2753.chunk.js.map": "/static/js/3.1ade2753.chunk.js.map",
+    "static/js/2.ccc2e89c.chunk.js": "/static/js/2.ccc2e89c.chunk.js",
+    "static/js/2.ccc2e89c.chunk.js.map": "/static/js/2.ccc2e89c.chunk.js.map",
+    "static/js/3.945350c4.chunk.js": "/static/js/3.945350c4.chunk.js",
+    "static/js/3.945350c4.chunk.js.map": "/static/js/3.945350c4.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.bb6cda33.chunk.css.map": "/static/css/2.bb6cda33.chunk.css.map",
     "static/css/main.74430f10.chunk.css.map": "/static/css/main.74430f10.chunk.css.map",
-    "static/js/2.7aba5f60.chunk.js.LICENSE.txt": "/static/js/2.7aba5f60.chunk.js.LICENSE.txt",
+    "static/js/2.ccc2e89c.chunk.js.LICENSE.txt": "/static/js/2.ccc2e89c.chunk.js.LICENSE.txt",
     "static/media/Gazebo1G.png": "/static/media/Gazebo1G.08398e6e.png",
     "static/media/Logo.08398e6e.png": "/static/media/Logo.08398e6e.png",
+    "static/media/bolt.svg": "/static/media/bolt.08383902.svg",
     "static/media/semantic.min.css": "/static/media/outline-icons.ddae9b1b.woff",
     "static/media/brands.svg": "/static/media/brands.95ed554f.svg",
     "static/media/contact.c53cfbe0.jpg": "/static/media/contact.c53cfbe0.jpg",
@@ -27,13 +28,15 @@
     "static/media/nairobi_background.94aca98a.jpg": "/static/media/nairobi_background.94aca98a.jpg",
     "static/media/property-valuation.jpg": "/static/media/property-valuation.cdc3fb7b.jpg",
     "static/media/service-domore.jpg": "/static/media/service-domore.991e2b6e.jpg",
-    "static/media/service-find.jpg": "/static/media/service-find.02a4aa5c.jpg"
+    "static/media/service-find.jpg": "/static/media/service-find.02a4aa5c.jpg",
+    "static/media/user.svg": "/static/media/user.6014290c.svg",
+    "static/media/users.svg": "/static/media/users.7b7fbc74.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.58668269.js",
+    "static/js/runtime-main.6a3f03d8.js",
     "static/css/2.bb6cda33.chunk.css",
-    "static/js/2.7aba5f60.chunk.js",
+    "static/js/2.ccc2e89c.chunk.js",
     "static/css/main.74430f10.chunk.css",
-    "static/js/main.bd67408f.chunk.js"
+    "static/js/main.2f72874b.chunk.js"
   ]
 }

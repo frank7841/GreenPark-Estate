@@ -166,19 +166,19 @@ const About=()=> {
                         <ul className="learn-link">
                         <li className="learn-padding">
                                 <a className="item-link"href="/service">
-                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/bolt.svg'} alt="What we do"/></span>
+                                <span className="icon"><img src= {require('../components/asset/bolt.svg').default} alt="What we do"/></span>
                                 <span class="icon-title">What we do&nbsp;»</span></a>
 
                            </li>
                            <li className="learn-padding">
                                 <a className="item-link"href="/">
-                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/users.svg'} alt="Our patners"/></span>
+                                <span className="icon"><img src= {require('../components/asset/users.svg').default} alt="Our patners"/></span>
                                 <span class="icon-title">Our Associates&nbsp;»</span></a>
 
                            </li>
                            <li  className="learn-padding" >
                                 <a className="item-link"href="/advertise">
-                                <span className="icon"><img src= {process.env.PUBLIC_URL + 'image/assets/img/user.svg'} alt="get leads"/></span>
+                                <span className="icon"><img src= {require('../components/asset/user.svg').default} alt="get leads"/></span>
                                 <span class="icon-title">Advertise with us&nbsp;»</span></a>
 
                            </li>

@@ -82,10 +82,10 @@ const Adevertise=()=> {
         <div className="container-fluid">
         <div className="row">
                 <div className="col-sm">
-                    <img className="logo-size"src= {require('../components/asset/Gazebo1G.png')} alt="logo"/> 
+                    <img className="logo-size"src= {require('../components/asset/Gazebo1G.png').default} alt="logo"/> 
                 </div>
                 <div className="col-sm">
-                    <img className="logo-size-add"src= {require('../components/asset/free.png')} alt="its-for free"/> 
+                    <img className="logo-size-add"src= {require('../components/asset/free.png').default} alt="its-for free"/> 
                 </div>
             </div>
         </div>
@@ -93,21 +93,21 @@ const Adevertise=()=> {
             
             <div className="row align-centre text-center">
                 <div className="col-sm-3 add-content">
-                    <img className="top-add-imag " src={require('../components/asset/garden.png')} alt="sellers"/>
+                    <img className="top-add-imag " src={require('../components/asset/garden.png').default} alt="sellers"/>
                     <div>
                     <h4 className="header-add">SELLERS</h4>
                     </div>
                     <p className="text-padding">Sign up with Us <a href="#form-advert">by filling the enquiry form below</a> or <a href="/contact#call-request">Contact our business team today</a> for more information  </p>
                 </div>
                 <div className="col-sm-3 add-content">
-                    <img className="top-add-imag"  src={require('../components/asset/find.png')} alt="mortgage"/>
+                    <img className="top-add-imag"  src={require('../components/asset/find.png').default} alt="mortgage"/>
                     <div>
                     <h4 className="header-add">MORTGAGE LENDERS</h4>
                     </div>
                     <p className="text-padding">< a href="#form-advert">Fill the enquiry form below </a>to get connected with new customers from Real Estate Street's mortgage leads and home buyers. <a href="/contact#call-request">Contact Us today</a> for more information  </p>
                 </div>
                 <div className="col-sm-3 add-content">
-                    <img  className="top-add-imag" src={require('../components/asset/money.png')} alt="new construction companies"/>
+                    <img  className="top-add-imag" src={require('../components/asset/money.png').default} alt="new construction companies"/>
                     <div>
                     <h4 className="header-add">NEW CONSTRUCTION</h4>
                     </div>
@@ -115,7 +115,7 @@ const Adevertise=()=> {
                 </div>
                 
                 <div className="col-sm-3 add-content-last">
-                    <img  className="top-add-imag" src={require('../components/asset/brands.svg')} alt="Consumer brands products"/>
+                    <img  className="top-add-imag" src={require('../components/asset/brands.svg').default} alt="Consumer brands products"/>
                     <br/>
                     <div>
                     <h4 className="header-add">CONSUMER BRANDS</h4>
