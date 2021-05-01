@@ -39,7 +39,7 @@ const  Listingform= (props)=>{
             "Content-Type": "application/json"
         };
         setLoading(true);
-        axios.post('https://46.101.231.28/api/listings/search',
+        axios.post('http://46.101.231.28/api/listings/search',
          {sale_type,
           price,
           bedrooms, 
@@ -68,7 +68,7 @@ const  Listingform= (props)=>{
       <div className="row">  
         <div className="col-sm-10">
         <div className="row">
-          {/* sale or rent */}
+  
 
           <div className="form-group col-sm">
             <label htmlFor ="town" className="label">Town</label>
@@ -104,33 +104,11 @@ const  Listingform= (props)=>{
               <option>For Rent</option>
             </select>
           </div>
-             
-
-
-       
-          
-          
-          
-
-          </div> 
-          {/* close row 1 */}
+          </div>      
 
           <div className="row">
 
-          {/* sqft */}
-          {/* <div className="form-group col-sm">
-            <label htmlFor ="sqft">sqft</label>
-            <select className="form-control" name="sqft" value={sqft} onChange={e=>onChange(e)}>
-              <option>400+</option>
-              <option>1200+</option>
-              <option>1400+</option>
-              <option>1600+</option>
-              <option>1800+</option>
-              <option>2000+</option>
-              <option>Any</option>
-            </select>
-          </div> */}
-          {/* price */}
+         
 
           <div className="form-group col-sm">
             <label htmlFor ="bedrooms" className="label">Bedrooms</label>
@@ -160,36 +138,12 @@ const  Listingform= (props)=>{
               <option>Any</option>
             </select>
           </div>
-          {/* <div className="form-group col-sm">
-            <label htmlFor ="days_listed" className="label">Days listed</label>
-            <select className="form-control input-design" name="days_listed" value={days_listed} onChange={e=>onChange(e)}>
-              <option>1 or less</option>
-              <option>2 or less</option>
-              <option>5 or less</option>
-              <option>10 or less</option>
-              <option>20 or less</option>
-              <option>Any</option>
-            </select>
-          </div> */}
-          {/* <div className="form-group col-sm">
-            <label htmlFor ="has_photos">Has Photos</label>
-            <select className="form-control" name="has_photos" value={has_photos} onChange={e=>onChange(e)}>
-              <option>1+</option>
-              <option>3+</option>
-              <option>5+</option>
-              <option>10+</option>
-              <option>15+</option>
-              
-            </select>
-          </div> */}
+      
           <div className="form-group col-sm">
             <label htmlFor ="keywords" className="label">Keywords</label>
             <input type="text" className="form-control input-design" name="keywords" value={keywords} onChange={e=>onChange(e)}/>
           </div>
-          {/* <div className="form-check col-sm">
-            <input type="checkbox"  className="form-check-input" name="open_house" value={open_house} onChange={e=>onChange(e)}/>
-            <label htmlFor ="open_house">open_house</label>
-          </div> */}
+          
 
         </div>
 

@@ -29,7 +29,7 @@ const ListingDetail=(props)=> {
                 "Content-Type": "application/json"
             }
         };
-        axios.get(`https://46.101.231.28/api/listings/${slug}`, config)
+        axios.get(`http://46.101.231.28/api/listings/${slug}`, config)
         .then(res =>{
             setListing(res.data);
             // setPrice(NumberFormat(res.data.price))
@@ -196,73 +196,7 @@ const ListingDetail=(props)=> {
 
             </div>
         );
-        // images.push(
-        //     <div key={5} className="row">
-                
-      
-        //         <div className="col-sm">
-        //             {listing.photo_15 ?(
-        //                 <div className="listing-details">
-        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_15} alt=""/>
-        //                 </div>    
-        //             ): null
-        //             }
-        //         </div>
-        //     </div>
-        // );
-        // images.push(
-        //     <div key={6} className="row">
-        //         <div className="col-sm">
-        //             {listing.photo_16 ?(
-        //                 <div className="listing-details">
-        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_16} alt=""/>
-        //                 </div>    
-        //             ): null
-        //             }
-        //         </div>
-
-        //         <div className="col-sm">
-        //             {listing.photo_17 ?(
-        //                 <div className="listing-details">
-        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_17} alt=""/>
-        //                 </div>    
-        //             ): null
-        //             }
-        //         </div>
-        //         <div className="col-sm">
-        //             {listing.photo_18 ?(
-        //                 <div className="listing-details">
-        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_18} alt=""/>
-        //                 </div>    
-        //             ): null
-        //             }
-        //         </div>
-        //     </div>
-        // );
-        // images.push(
-        //     <div key={7} className="row">
-        //         <div className="col-sm">
-        //             {listing.photo_19 ?(
-        //                 <div className="listing-details">
-        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_19} alt=""/>
-        //                 </div>    
-        //             ): null
-        //             }
-        //         </div>
-
-        //         <div className="col-sm">
-        //             {listing.photo_20 ?(
-        //                 <div className="listing-details">
-        //                     <img className="img-responsive  listing-detail-image" src= {listing.photo_20} alt=""/>
-        //                 </div>    
-        //             ): null
-        //             }
-        //         </div>
-        //         <div className="col-sm">
-
-        //         </div>
-        //     </div>
-        // );
+        
         return images;
     }
 
