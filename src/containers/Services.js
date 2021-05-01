@@ -112,7 +112,7 @@ const Service=()=> {
                             <br/>
                             {/* <p className="service-text">Nibora Realtors provide affordable fully furnished  houses for individuals and families looking for short-stay holidays.  </p> */}
                             <br/>
-                            <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/">Property Valuers </a>
+                            <a className="call-us" href="tel:0790943918">Call Us Now</a> &nbsp;&nbsp; or&nbsp;&nbsp; <a className="call-us" href="/">Get Valuers </a>
                         </div>
                       
                     </div>
