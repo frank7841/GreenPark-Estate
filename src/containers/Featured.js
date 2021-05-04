@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet, HelmetProvider} from 'react-helmet-async';
 import axios from 'axios';
 import FeaturedCard from '../components/Featuredcard';
 import Pagination from '../components/Pagination';
@@ -119,15 +118,7 @@ const Listings = () => {
 
     return (
         <main className='listings'>
-            <HelmetProvider>
-                <Helmet>
-                    <title>Nibora Properties- Home|Featured </title>
-                    <meta
-                        name='description'
-                        content='Listings page'
-                    /> 
-                </Helmet>
-            </HelmetProvider>
+        
             <div className='container-fluid'>
                 {displayListings()}
             </div>
