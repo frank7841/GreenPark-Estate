@@ -302,6 +302,7 @@ img.img-toppings{
         display: none
     }
     .roundedFixedBtn{
+        display: block;
         height: 50px;
         line-height: 60px;  
         width: 100%!important;  
@@ -314,6 +315,7 @@ img.img-toppings{
         padding-left:1em ;
     }
     .position-bottom{
+        display:block;
         position: fixed;
         bottom: 0px;
         left: 0px; 
@@ -333,6 +335,7 @@ img.img-toppings{
         cursor: pointer;
         padding-left:1em;
         padding-right:1em;
+        z-index: 99;
         
 
     }
