@@ -29,7 +29,7 @@ const ListingDetail=(props)=> {
                 "Content-Type": "application/json"
             }
         };
-        axios.get(`http://niboraproperties.co.ke/api/listings/${slug}`, config)
+        axios.get(`https://niboraproperties.co.ke/api/listings/${slug}`, config)
         .then(res =>{
             setListing(res.data);
             // setPrice(NumberFormat(res.data.price))

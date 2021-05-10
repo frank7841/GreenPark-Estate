@@ -39,7 +39,7 @@ const  Listingform= (props)=>{
             "Content-Type": "application/json"
         };
         setLoading(true);
-        axios.post('http://niboraproperties.co.ke/api/listings/search',
+        axios.post('https://niboraproperties.co.ke/api/listings/search',
          {sale_type,
           price,
           bedrooms, 

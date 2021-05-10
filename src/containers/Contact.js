@@ -74,7 +74,7 @@ function Contact(){
         };
 
         setLoading(true);
-        axios.post(`http://niboraproperties.co.ke/api/contacts/`, { name, email, subject, message }, config)
+        axios.post(`https://niboraproperties.co.ke/api/contacts/`, { name, email, subject, message }, config)
         .then(res => {
             setAlert('Message Sent', 'success');
             setLoading(false);
