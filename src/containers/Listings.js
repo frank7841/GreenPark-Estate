@@ -17,7 +17,7 @@ const Featured = () => {
 
         const fetchData = async () => {
             try {
-                const res = await axios.get(`https://46.101.231.28/api/listings/?page=1`);
+                const res = await axios.get(`https://niboraproperties.co.ke/api/listings/?page=1`);
 
                 setListings(res.data.results);
                 setCount(res.data.count);
