@@ -39,7 +39,7 @@ const  Listingform= (props)=>{
             "Content-Type": "application/json"
         };
         setLoading(true);
-        axios.post('http://46.101.231.28/api/listings/search',
+        axios.post('http://niboraproperties.co.ke/api/listings/search',
          {sale_type,
           price,
           bedrooms, 
@@ -91,6 +91,7 @@ const  Listingform= (props)=>{
               <option>Townhouse</option>
               <option>Hotel</option>
               <option>Plots</option>
+              <option>Warehouse</option>
               <option>Land</option>
               <option>Shops</option>
               <option>Office</option>

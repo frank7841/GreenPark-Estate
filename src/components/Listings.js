@@ -36,11 +36,9 @@ const listings =({ listings}) =>{
             </div>
             )
         }
-        console.log(listings)
-        
+        console.log(listings) 
         for(let i = 0; i < listings.length; i += 3){
-            result.push(
-                
+            result.push(                                                                                                                                                                                                                                                    
                 <div className="row">
                     <div className="col-sm">
                         {listingsOnPage[i]}
@@ -57,16 +55,13 @@ const listings =({ listings}) =>{
             );
         }
        
-
         return result;
 
     };
     return (
         <div>
             {getListings()}
-         
-
-            
+                     
         </div>
     )
 }

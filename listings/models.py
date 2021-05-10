@@ -12,6 +12,7 @@ class Listing(models.Model):
         HOTEL='Hotel'
         TOWNHOUSE ='Townhouse' 
         PLOTS ='Plots'
+        WAREHOUSE= 'Warehouse'
         LAND ='Land'
         SHOPS ='Shops'
         OFFICE ='Office'

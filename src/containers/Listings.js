@@ -77,7 +77,7 @@ const Featured = () => {
     };
 
     const visitPage = (page) => {
-        axios.get(`http://46.101.231.28/api/listings/?page=${page}`)
+        axios.get(`http://niboraproperties.co.ke/api/listings/?page=${page}`)
         .then(res => {
             setListings(res.data.results);
             setPrevious(res.data.previous);
