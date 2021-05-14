@@ -6,6 +6,7 @@ class Listing(models.Model):
     class SaleType(models.TextChoices):
         FOR_SALE = 'For sale'
         FOR_RENT = 'For rent'
+        ACCOMODATION ='Accomodation'
     class PropertyType(models.TextChoices):
         HOME ='Home'
         GUESTHOUSE ='Guesthouse'
