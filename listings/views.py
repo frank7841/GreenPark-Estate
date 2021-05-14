@@ -94,7 +94,7 @@ class SearchView(APIView):
             bedrooms =8        
             
             
-        queryset = queryset.filter(bedrooms__iexact= bedrooms)        
+        queryset = queryset.filter(bedrooms__iexact=bedrooms)        
         
         
         property_type = data['property_type']

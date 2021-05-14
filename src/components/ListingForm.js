@@ -11,8 +11,8 @@ const  Listingform= (props)=>{
   const [formData, setFormData] = useState({
     sale_type: 'For Sale',
     price: 'ksh 0+',
-    bedrooms: '',
-    property_type: 'Hotel',
+    bedrooms: '0',
+    property_type: 'Home',
     town: 'Kilifi',
     keywords: ''
 });
@@ -103,6 +103,7 @@ const  Listingform= (props)=>{
             <select className="form-control input-design" name="sale_type" value={sale_type} onChange={e=>onChange(e)}>
               <option>For Sale</option>
               <option>For Rent</option>
+              <option>Accomodation</option>
             </select>
           </div>
           </div>      
@@ -114,7 +115,8 @@ const  Listingform= (props)=>{
           <div className="form-group col-sm">
             <label htmlFor ="bedrooms" className="label">Bedrooms/ Rooms</label>
             <select className="form-control input-design" name="bedrooms" value={bedrooms} onChange={e=>onChange(e)}>
-              <option> </option>
+              <option disabled>Bedrooms/rooms</option>
+              <option>0</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -122,6 +124,7 @@ const  Listingform= (props)=>{
               <option>5</option>
               <option>6</option>
               <option>7</option>
+              <option>8</option>
             </select>
           </div>
           
