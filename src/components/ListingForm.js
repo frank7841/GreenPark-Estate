@@ -86,10 +86,10 @@ const  Listingform= (props)=>{
           <div className="form-group col-sm">
             <label htmlFor ="property_type" className="label">Property Type</label>
             <select className="form-control input-design" name="property_type" value={property_type} onChange={e=>onChange(e)}>
-              <option>Guesthouse</option>
-              <option>Hotel</option>
-              <option>Townhouse</option>
               <option>Home</option>
+              <option>Guesthouse</option>
+              {/* <option>Hotel</option> */}
+              <option>Townhouse</option>
               <option>Plots</option>
               <option>Warehouse</option>
               <option>Land</option>
