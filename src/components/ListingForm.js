@@ -115,7 +115,7 @@ const  Listingform= (props)=>{
           <div className="form-group col-sm">
             <label htmlFor ="bedrooms" className="label">Bedrooms/ Rooms</label>
             <select className="form-control input-design" name="bedrooms" value={bedrooms} onChange={e=>onChange(e)}>
-              <option disabled>Bedrooms/rooms</option>
+              <option disabled>o</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
