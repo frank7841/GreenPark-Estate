@@ -88,7 +88,6 @@ const  Listingform= (props)=>{
             <select className="form-control input-design" name="property_type" value={property_type} onChange={e=>onChange(e)}>
               <option>Home</option>
               <option>Guesthouse</option>
-              {/* <option>Hotel</option> */}
               <option>Townhouse</option>
               <option>Plots</option>
               <option>Warehouse</option>
