@@ -69,32 +69,32 @@ class SearchView(APIView):
         bedrooms = data['bedrooms']
         if bedrooms == '0':
             bedrooms = 0
-        if bedrooms=='1':
+        elif bedrooms=='1+':
             bedrooms =1
                         
-        if bedrooms=='2':
+        elif bedrooms=='2+':
             bedrooms =2
             
-        if bedrooms=='3':
+        elif bedrooms=='3+':
             bedrooms =3    
 
-        if bedrooms=='4':
+        elif bedrooms=='4+':
             bedrooms =4
         
-        if bedrooms=='5':
+        elif bedrooms=='5+':
             bedrooms =5    
             
-        if bedrooms=='6':
+        elif bedrooms=='6+':
             bedrooms =6
             
-        if bedrooms=='7':
+        elif bedrooms=='7+':
             bedrooms =7  
         
-        if bedrooms=='8':
+        elif bedrooms=='8+':
             bedrooms =8        
             
             
-        queryset = queryset.filter(bedrooms__iexact=bedrooms)        
+        queryset = queryset.filter(bedrooms__gte=bedrooms)        
         
         
         property_type = data['property_type']
