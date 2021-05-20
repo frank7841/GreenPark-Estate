@@ -128,7 +128,7 @@ const Featured = () => {
                     />
                 </Helmet>
             </HelmetProvider>    
-            <div className='container-fluid'>
+            <div className='container-fluid' id="listings">
                 {displayListings()}
             </div>
             <div className='container'>

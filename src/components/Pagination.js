@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function Pagination(props) {
     const scrollToTop = () => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0,0)
     }
  
     const getNumbers=()=>{
@@ -27,7 +27,7 @@ function Pagination(props) {
                 else {
                     style= "pagination-number";
                     content= (
-                        <div key={i} onClick={()=> props.visitPage(page)} className={style}>
+                        <div key={i} onClick={()=> {props.visitPage(page);scrollToTop()}} className={style}>
                             {pageNumber}
                             
                         </div>
@@ -47,7 +47,7 @@ function Pagination(props) {
             «
             </div>
             {getNumbers()}
-            <div onClick={()=>props.next()} className="pagination-number">
+            <div onClick={()=>{props.next(); scrollToTop()}} className="pagination-number">
             »
             </div>
         </div>

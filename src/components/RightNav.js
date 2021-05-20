@@ -57,7 +57,7 @@ const RightNav = ({  open, auth:{isAuthenticated, loading}, logout} ) => {
     const guestLinks = (
       <>
           
-          <li><NavLink className = "nav-btn nav-item"exact to = "/login">Login </NavLink></li>
+          <li><a className = "nav-btn nav-item" href= "https://niboraproperties.co.ke/admin/">Post Add </a></li>
     </>
     );
     
