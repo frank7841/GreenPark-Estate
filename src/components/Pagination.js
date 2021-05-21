@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 
 function Pagination(props) {
     const scrollToTop = () => {
-        window.scrollTo(0,0)
+        document.querySelector(".home-featured-listings").scrollIntoView({
+            behavior: "smooth"
+        });
     }
  
     const getNumbers=()=>{

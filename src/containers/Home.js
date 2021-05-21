@@ -54,7 +54,7 @@ const Home = () => {
             <section className='home-form container-fluid' id="search-form">
                 <ListingForm setListings={setListings} />
             </section>
-            <section className='home-listings container-fluid'>
+            <section className='home-listings home-featured-listings container-fluid'>
                 <Listings listings={currentListings} />
             </section>
             <section className='home-pagination container'>
@@ -74,7 +74,7 @@ const Home = () => {
                     }
                 </div>
             </section>
-            <section className='home-listings container-fluid' id="featured">
+            <section className='home-featured-listings container-fluid' id="featured listings">
             <h1 className="text-center top-top-add">Featured Listings</h1>
             <hr className="horizontal " size="large"/>
                 <Featured listings={currentListings} />
