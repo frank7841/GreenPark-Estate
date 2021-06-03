@@ -45,7 +45,26 @@ const Footer=()=> {
             <footer style= {styles.footer}>
             <div className="container-fluid fsection" style ={styles.fsection}>
             <div className="mail-height"></div>
-                    <div className=" card card-background col-sm-6">
+            <div className="container">
+                <div className= "row">
+                    <div className="col-sm-3"></div>
+                  
+                    <div className="parent-wrapper col-sm-6">
+                        <div className="subscribe-wrapper">
+                            <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                            <form onSubmit={sendEmail}>
+                                <input type="email" name="email" className="subscribe-input" placeholder="youremail@gmail.com" />
+                                <button className="submit-btn" onClick={notify}>Subscribe</button>
+                                <ToastContainer />
+                            </form>
+                        </div>
+                    </div>
+                    <div className="col-sm-3"></div>
+                </div>
+            </div>  
+
+
+                    {/* <div className=" card card-background col-sm-6">
                         <div className="card-body subscribe ">
                             <h2 className="text-center">Sign up now!</h2>
                             <p className="text-center">Get the best prices, latest news, new listings notification, and exclusive promotions conveniently in your inbox!  </p>
@@ -57,7 +76,7 @@ const Footer=()=> {
                              </div>
                             </form>
                         </div>
-                    </div>
+                    </div>    */}
               
             <div className="height"></div>
             <div className="row">
@@ -79,13 +98,13 @@ const Footer=()=> {
                 <div className="col-sm address-footer">
                     <h4 className="footer-border"> Links</h4>
                     <ul className="learn-link">
-                        <li className="color-white"><a className="item-link-footer" href="/contact">Contact us&nbsp;»</a> </li>
-                        <li className="color-white"><a  className="item-link-footer"href="/">Our Associates&nbsp;»</a> </li>
-                        <li className="color-white"><a className="item-link-footer" href="/advertise">Advertise with us&nbsp;»</a> </li>
-                        <li className="color-white"><a className="item-link-footer" href="/about">Why choose us&nbsp;»</a> </li>
-                        <li className="color-white"><a className="item-link-footer" href="/service">What we do &nbsp;»</a> </li>
-                        <li className="color-white"><a className="item-link-footer" href="/listings">Listings&nbsp;»</a> </li>
-                        <li className="color-white"><a className="item-link-footer" href="/#featured">Featured Listings&nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link-footer" href="/contact">Contact us&nbsp;»</a> </li><br/>
+                        <li className="color-white"><a  className="item-link-footer"href="/">Our Associates&nbsp;»</a> </li><br/>
+                        <li className="color-white"><a className="item-link-footer" href="/advertise">Advertise with us&nbsp;»</a> </li><br/>
+                        <li className="color-white"><a className="item-link-footer" href="/about">Why choose us&nbsp;»</a> </li><br/>
+                        <li className="color-white"><a className="item-link-footer" href="/service">What we do &nbsp;»</a> </li><br/>
+                        <li className="color-white"><a className="item-link-footer" href="/listings">Listings&nbsp;»</a> </li><br/>
+                        <li className="color-white"><a className="item-link-footer" href="/">Featured Listings&nbsp;»</a> </li><br/>
                     </ul>
                 </div>
                 <div className="col-sm address-footer">
