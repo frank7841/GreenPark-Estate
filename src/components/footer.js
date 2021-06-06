@@ -45,9 +45,9 @@ const Footer=()=> {
             <footer style= {styles.footer}>
             <div className="container-fluid fsection" style ={styles.fsection}>
             <div className="mail-height"></div>
-            <div className="container">
+            {/* <div className="container"> */}
                 <div className= "row">
-                    <div className="col-sm-3"></div>
+                    <div className="col-sm"></div>
                   
                     <div className="parent-wrapper col-sm-6">
                         <div className="subscribe-wrapper">
@@ -59,9 +59,9 @@ const Footer=()=> {
                             </form>
                         </div>
                     </div>
-                    <div className="col-sm-3"></div>
+                    <div className="col-sm"></div>
                 </div>
-            </div>  
+            {/* </div>   */}
 
 
                     {/* <div className=" card card-background col-sm-6">
