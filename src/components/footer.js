@@ -49,7 +49,7 @@ const Footer=()=> {
                 <div className= "row">
                     <div className="col-sm"></div>
                   
-                    <div className="parent-wrapper col-sm-6">
+                    <div className="parent-wrapper col-sm">
                         <div className="subscribe-wrapper">
                             <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
                             <form onSubmit={sendEmail}>
@@ -96,15 +96,15 @@ const Footer=()=> {
                 </div>
                 
                 <div className="col-sm address-footer">
-                    <h4 className="footer-border"> Links</h4>
-                    <ul className="learn-link">
-                        <li className="color-white"><a className="item-link-footer" href="/contact">Contact us&nbsp;»</a> </li><br/>
-                        <li className="color-white"><a  className="item-link-footer"href="/">Our Associates&nbsp;»</a> </li><br/>
-                        <li className="color-white"><a className="item-link-footer" href="/advertise">Advertise with us&nbsp;»</a> </li><br/>
-                        <li className="color-white"><a className="item-link-footer" href="/about">Why choose us&nbsp;»</a> </li><br/>
-                        <li className="color-white"><a className="item-link-footer" href="/service">What we do &nbsp;»</a> </li><br/>
-                        <li className="color-white"><a className="item-link-footer" href="/listings">Listings&nbsp;»</a> </li><br/>
-                        <li className="color-white"><a className="item-link-footer" href="/">Featured Listings&nbsp;»</a> </li><br/>
+                    <h4 className="footer-border"> Quick Links</h4>
+                    <ul className="learn-link learn-link-footer">
+                        <li className="color-white"><a className="item-link-footer" href="/contact">Contact us&nbsp;»</a> </li>
+                        <li className="color-white"><a  className="item-link-footer"href="/">Our Associates&nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link-footer" href="/advertise">Advertise with us&nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link-footer" href="/about">Why choose us&nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link-footer" href="/service">What we do &nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link-footer" href="/listings">Listings&nbsp;»</a> </li>
+                        <li className="color-white"><a className="item-link-footer" href="/">Featured Listings&nbsp;»</a> </li>
                     </ul>
                 </div>
                 <div className="col-sm address-footer">

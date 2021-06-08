@@ -5,15 +5,16 @@ color:#f8f7f7;
 .nav-item:hover{
     
     padding: 8px;
-    color: #ffffff;
-    background: #000000;
+    color: #228B22;
+    /* background: #000000; */
 }
 .current{
     /* color:green;
     padding: 8px;
-    color: #ffffff;
+ 
     background: #000000; */
-    border-bottom: 4px solid maroon;
+    /* border-bottom: 4px solid rgb(247, 244, 244); */
+    color: orange;
 }
 a.top-number{
     margin-left: 5%;
@@ -21,11 +22,11 @@ a.top-number{
     font-size: 17px!important;
 }
 .top-number:hover{
-    color: maroon !important;
+    color: rgb(247, 243, 243) !important;
 }
 /* .logo-size{
     width: 250px;
-    height:50px;
+    height:50px; 
 } */
 .logo-brand{
     font-size: 29px!important;
@@ -89,11 +90,11 @@ text-decoration: none!important;
 
 
 .nibora-end{
-    color:maroon;
+    color:orange;
     font-family: 'Kaushan Script', cursive!important;
 }
 .nibora-stat{
-    color:#f2f7f8;
+    color:#fff2df;
     font-family: 'Kaushan Script', cursive!important;
 
 }
