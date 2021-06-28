@@ -22,6 +22,7 @@
     "react": "^17.0.1",
     "react-alert": "^7.0.2",
     "react-alert-template-basic": "^1.0.0",
+    "react-alice-carousel": "^2.5.1",
     "react-animations": "^1.0.0",
     "react-awesome-reveal": "^3.7.0",
     "react-bootstrap": "^1.4.3",
@@ -29,11 +30,15 @@
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^1.0.7",
     "react-icons": "^4.1.0",
+    "react-image-gallery": "^1.1.1",
+    "react-images": "^1.2.0-beta.7",
+    "react-images-viewer": "^1.6.7",
     "react-loader-spinner": "^3.1.14",
     "react-number-format": "^4.4.4",
     "react-onclickoutside": "^6.9.0",
     "react-popup-alert": "^2.0.0",
     "react-redux": "^7.2.2",
+    "react-responsive-carousel": "^3.2.18",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.1",
@@ -76,6 +81,7 @@
   },
   "devDependencies": {
     "copy-webpack-plugin": "^8.1.1",
-    "file-loader": "^6.2.0"
+    "file-loader": "^6.2.0",
+    "style-loader": "^3.0.0"
   }
 }

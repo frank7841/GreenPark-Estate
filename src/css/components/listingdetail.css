@@ -71,6 +71,7 @@
 }
 .listing-detail-image{
     border-radius: 4px!important;
+    max-height: 550px!important;
     
 }
 .listing-detail-image:hover{

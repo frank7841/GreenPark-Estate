@@ -8,6 +8,10 @@ import { useHistory } from "react-router-dom";
 import Scroll from '../components/Scroll'
 import Footer from '../components/footer'
 import { Accordion, Card } from 'react-bootstrap';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
+
 
 const ListingDetail=(props)=> {
 
@@ -57,148 +61,176 @@ const ListingDetail=(props)=> {
     //         });
     //     }
     // }, [listing.realtor]);
+  
 
-    const displayInteriorImages=()=>{
+    const handleDragStart = (e) => e.preventDefault();
 
-        let images= [];
-        images.push(
-            <div key={1} className="row">
-                <div className="col-sm">
-                    {listing.photo_1 ?(
-                        <div className="listing-details">
-                            < a href={listing.photo_1}>
-                            <img className="img-responsive listing-detail-image" src= {listing.photo_1} alt=""/>
-                            </a>
-                        </div>    
-                    ): null
-                    }
-                </div>
+    const items = [
+        <img className="img-responsive listing-detail-image" src={listing.photo_main} onDragStart={handleDragStart} alt={listing.title} />,
+        <img className="img-responsive listing-detail-image"src={listing.photo_1} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_2} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_3} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image"src={listing.photo_4} onDragStart={handleDragStart} alt={listing.title} />,
+        <img className="img-responsive listing-detail-image" src={listing.photo_5} onDragStart={handleDragStart}alt={listing.title} />,
+        <img className="img-responsive listing-detail-image" src={listing.photo_6} onDragStart={handleDragStart}alt={listing.title} />,
+        <img className="img-responsive listing-detail-image"src={listing.photo_7} onDragStart={handleDragStart} alt={listing.title} />,
+        <img className="img-responsive listing-detail-image" src={listing.photo_8} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_9} onDragStart={handleDragStart}alt={listing.title} />,
+        <img className="img-responsive listing-detail-image"src={listing.photo_10} onDragStart={handleDragStart}alt={listing.title} />,
+        <img className="img-responsive listing-detail-image" src={listing.photo_11} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_12} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image"src={listing.photo_13} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_14} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_15} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image"src={listing.photo_16} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_17} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_18} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image"src={listing.photo_19} onDragStart={handleDragStart} alt={listing.title}/>,
+        <img className="img-responsive listing-detail-image" src={listing.photo_20} onDragStart={handleDragStart}  alt={listing.title}/>,
 
-                <div className="col-sm">
-                    {listing.photo_2 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_2} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                <div className="col-sm">
-                    {listing.photo_3 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_3} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                <div className="col-sm">
-                    {listing.photo_4 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_4} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-            </div> 
-        );
-        images.push(
-            <div key={2} className="row">
-                <div className="col-sm">
-                    {listing.photo_5 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_5} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-
-                <div className="col-sm">
-                    {listing.photo_6 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_6} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                <div className="col-sm">
-                    {listing.photo_7 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_7} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-            </div>
-        ); 
-        images.push(
-            <div key={3} className="row">
-                <div className="col-sm">
-                    {listing.photo_8 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_8} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-
-                <div className="col-sm">
-                    {listing.photo_9 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_9} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                <div className="col-sm">
-                    {listing.photo_10 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_10} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                 <div className="col-sm">
-                     {listing.photo_11 ?(
-                          <div className="listing-details">
-                               <img className="img-responsive  listing-detail-image" src= {listing.photo_11} alt=""/>
-                           </div>    
-                   ): null
-                     }
-                 </div>
-
-            </div>
-        );
-        images.push(
-            <div key={4} className="row">
-                <div className="col-sm">
-                    {listing.photo_12 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_12} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                <div className="col-sm">
-                    {listing.photo_13 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_13} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-                <div className="col-sm">
-                    {listing.photo_14 ?(
-                        <div className="listing-details">
-                            <img className="img-responsive  listing-detail-image" src= {listing.photo_14} alt=""/>
-                        </div>    
-                    ): null
-                    }
-                </div>
-
-            </div>
-        );
         
-        return images;
-    }
+      ];
+    // const displayInteriorImages=()=>{
+
+    //     let images= [];
+    //     images.push(
+    //         <div key={1} className="row">
+    //             <div className="col-sm">
+    //                 {listing.photo_1 ?(
+    //                     <div className="listing-details">
+    //                         < a href={listing.photo_1}>
+    //                         <img className="img-responsive listing-detail-image" src= {listing.photo_1} alt=""/>
+    //                         </a>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+
+    //             <div className="col-sm">
+    //                 {listing.photo_2 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_2} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //             <div className="col-sm">
+    //                 {listing.photo_3 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_3} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //             <div className="col-sm">
+    //                 {listing.photo_4 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_4} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //         </div> 
+    //     );
+    //     images.push(
+    //         <div key={2} className="row">
+    //             <div className="col-sm">
+    //                 {listing.photo_5 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_5} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+
+    //             <div className="col-sm">
+    //                 {listing.photo_6 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_6} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //             <div className="col-sm">
+    //                 {listing.photo_7 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_7} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //         </div>
+    //     ); 
+    //     images.push(
+    //         <div key={3} className="row">
+    //             <div className="col-sm">
+    //                 {listing.photo_8 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_8} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+
+    //             <div className="col-sm">
+    //                 {listing.photo_9 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_9} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //             <div className="col-sm">
+    //                 {listing.photo_10 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_10} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //              <div className="col-sm">
+    //                  {listing.photo_11 ?(
+    //                       <div className="listing-details">
+    //                            <img className="img-responsive  listing-detail-image" src= {listing.photo_11} alt=""/>
+    //                        </div>    
+    //                ): null
+    //                  }
+    //              </div>
+
+    //         </div>
+    //     );
+    //     images.push(
+    //         <div key={4} className="row">
+    //             <div className="col-sm">
+    //                 {listing.photo_12 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_12} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //             <div className="col-sm">
+    //                 {listing.photo_13 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_13} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+    //             <div className="col-sm">
+    //                 {listing.photo_14 ?(
+    //                     <div className="listing-details">
+    //                         <img className="img-responsive  listing-detail-image" src= {listing.photo_14} alt=""/>
+    //                     </div>    
+    //                 ): null
+    //                 }
+    //             </div>
+
+    //         </div>
+    //     );
+        
+    //     return images;
+    // }
 
 
     return(
@@ -287,17 +319,18 @@ const ListingDetail=(props)=> {
                
             <div className="height"></div>
             <div className="container">
-                <div className="row">
+                {/* <div className="row">
                
                 <div className="col-sm-12">
                         <img className="img-responsive max-height" src={listing.photo_main} alt={listing.title} />
                     </div>
                
-                </div>
+                </div> */}
                           
         </div>
             <div className="container">
-                {displayInteriorImages()}
+            <AliceCarousel mouseTracking items={items} />   
+                {/* {displayInteriorImages()} */}
             </div>   
             <div className="height"></div> 
             
