@@ -248,8 +248,15 @@ const ListingDetail=(props)=> {
            
                
                  <div className="container-fluid">
-                     <div className="row list-detail-top-img ">
-                        <img src={listing.photo_main} alt="House main" className="img-toppings img-responsive" />
+                     <AliceCarousel mouseTracking
+                     autoPlay
+                     autoPlayControls     
+                     keyboardNavigation={true}
+                     disableDotsControls={true}
+                     animationType="fadeout"
+                     items={items} />
+                         {/* <div className="row list-detail-top-img ">
+                            <img src={listing.photo_main} alt="House main" className="img-toppings img-responsive" />
                         <div className="details-unparallel text-center">
                             <h1 className="title-list-detail">{listing.title}</h1>
                             <hr className="horizontal-list-detail " size="large"/>
@@ -266,13 +273,28 @@ const ListingDetail=(props)=> {
                             <img className="logo-size-detail"src= {background} alt="Nibora Properties "/> 
                             <a className="listingsdetail-phone" href="tel:+254 111338357">0111338357</a>&nbsp;&nbsp; <span className="pointers" onClick={goToPreviousPath}> «</span> </h3> 
                         </div>  
-                    </div>
+                    </div> */}
                 </div>
 
        
                 <div clasName="container-fluid description-naming">
                     <div className="row">
-                        <p className="listing-detail-desc">Property Desription:<br/><br/>{listing.description}</p>
+                        <div className="col-sm">
+                            <p className="listing-detail-desc">Property Desription:<br/><br/>{listing.description}</p>
+                        </div>
+                        <div className="col-sm">
+                            <div className="pricess">
+                                <h1 className="title-list-detail">{listing.title}</h1>
+                                <hr className="horizontal-list-detail " size="large"/>
+                                <h2 className="details-location">{listing.town} - {listing.address}</h2>
+
+                                <h2 className="details-location">{listing.sale_type} - <NumberFormat value={listing.price} displayType={'text'} thousandSeparator={true} prefix={'Ksh'}/>-{listing.rate}</h2>
+                                <div className="sale-title">
+                                    <p className="sale-address">{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft</p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <div className="container-fluid ">    
@@ -329,7 +351,7 @@ const ListingDetail=(props)=> {
                           
         </div>
             <div className="container">
-            <AliceCarousel mouseTracking items={items} />   
+            {/* <AliceCarousel mouseTracking items={items} />    */}
                 {/* {displayInteriorImages()} */}
             </div>   
             <div className="height"></div> 

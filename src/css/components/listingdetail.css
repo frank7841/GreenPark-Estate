@@ -71,9 +71,34 @@
 }
 .listing-detail-image{
     border-radius: 4px!important;
-    max-height: 550px!important;
+    max-height: 600px!important;
     
 }
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+    position: absolute!important;
+    top: 50%!important;
+    width: auto!important;
+    font-size: 200px!important;
+    font-weight: 1000!important;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    /* border-radius: 15px!important; */
+    color: black!important;
+    text-align: center!important;
+    height: 0.1em!important;
+ 
+}
+.pricess{
+    padding-left: 0.5em;
+}
+
+
+.alice-carousel__next-btn {
+   right: 0!important;
+}
+
+
 .listing-detail-image:hover{
     border:1px solid black;
 }
@@ -343,6 +368,13 @@ img.img-toppings{
     .fixed-bottom-mobile:hover{
         background-color: black;
     }
+    .alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+
+    top: 30%!important;
+
+}
+
 
 
 }
