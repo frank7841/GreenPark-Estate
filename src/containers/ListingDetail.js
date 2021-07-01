@@ -3,7 +3,6 @@ import axios from 'axios'
 import {Helmet, HelmetProvider} from 'react-helmet-async';
 import NumberFormat from 'react-number-format';
 import { Icon } from 'semantic-ui-react'
-import background from'../components/asset/Logo.png'
 import { useHistory } from "react-router-dom";
 import Scroll from '../components/Scroll'
 import Footer from '../components/footer'
@@ -245,11 +244,13 @@ const ListingDetail=(props)=> {
             </Helmet>
             </HelmetProvider>
             <Scroll showBelow={250}/>
-           
+            <h3 className="listingdetail-name">
+                <a className="listingsdetail-phone" href={`tel: ${realtor.phone}`}>{realtor.phone}</a>&nbsp;&nbsp; <span className="pointers" onClick={goToPreviousPath}> «</span> </h3> 
+            <h3 className="d-title">{listing.title}</h3>
                 <div className="height"></div>
                  <div className="container-fluid">
                      <AliceCarousel mouseTracking
-                     autoPlay
+                     
                      autoPlayControls     
                      autoPlayInterval={1000}
                      animationDuration={1000}
@@ -257,9 +258,9 @@ const ListingDetail=(props)=> {
                      disableDotsControls={true}
                      animationType="fadeout"
                      items={items} />
-                         {/* <div className="row list-detail-top-img ">
-                            <img src={listing.photo_main} alt="House main" className="img-toppings img-responsive" />
-                        <div className="details-unparallel text-center">
+                         <div className="row list-detail-top-img ">
+                            {/* <img src={listing.photo_main} alt="House main" className="img-toppings img-responsive" /> */}
+                        {/* <div className="details-unparallel text-center">
                             <h1 className="title-list-detail">{listing.title}</h1>
                             <hr className="horizontal-list-detail " size="large"/>
                             <h2 className="details-location">{listing.town} - {listing.address}</h2>
@@ -269,17 +270,16 @@ const ListingDetail=(props)=> {
                                 <p className="sale-address">{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft</p>
                             </div>
                      
-                        </div>
-                        <div className="top-left-details">
+                        </div> */}
+                        {/* <div className="top-left-details">
                             <h3 className="listingdetail-name">
-                            <img className="logo-size-detail"src= {background} alt="Nibora Properties "/> 
-                            <a className="listingsdetail-phone" href="tel:+254 111338357">0111338357</a>&nbsp;&nbsp; <span className="pointers" onClick={goToPreviousPath}> «</span> </h3> 
-                        </div>  
-                    </div> */}
+                            <a className="listingsdetail-phone" href={`tel: ${realtor.phone}`}>{realtor.phone}</a>&nbsp;&nbsp; <span className="pointers" onClick={goToPreviousPath}> «</span> </h3> 
+                        </div>   */}
+                    </div>
                 </div>
 
        
-                <div clasName="container-fluid description-naming">
+                <div className="container-fluid description-naming">
                     <div className="row">
                         <div className="col-sm">
                             <p className="listing-detail-desc">Property Desription:<br/><br/>{listing.description}</p>
@@ -395,7 +395,7 @@ const ListingDetail=(props)=> {
                 </Card>
             </Accordion>
             <div className="height"></div>
-            <div className="container">
+            {/* <div className="container">
                 <div className="row">
                     <div className="col-sm">
                         <a className="fixedButton" href ="tel:+254 111338357">
@@ -414,7 +414,7 @@ const ListingDetail=(props)=> {
                     </div>    
                    
                 </div>
-            </div>
+            </div> */}
 
     
             
