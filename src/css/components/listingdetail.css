@@ -235,7 +235,7 @@ align-items: center;
     
 }
 .featured_display{
-    list-style-type:none;
+    list-style-type:'\2713';
     padding-left:2em;
 
 }
@@ -265,8 +265,8 @@ img.img-toppings{
     cursor: pointer;
 }
 .logo-size-detail{
-    height: 50px;
-    width: 100px;
+    height: 120px;
+    width: 170px;
 }
 .img-toppings {
     height: 650px!important;

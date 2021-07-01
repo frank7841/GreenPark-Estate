@@ -21,7 +21,7 @@ const ListingDetail=(props)=> {
     }
 
     const[listing, setListing]=useState({});
-    // const[realtor, setRealtor]= useState({})
+    const[realtor, setRealtor]= useState({})
    
 
     useEffect(()=>{
@@ -43,24 +43,24 @@ const ListingDetail=(props)=> {
         });
     }, [props.match.params.id])
 
-    // useEffect(()=>{
-    //     const id = listing.realtor
-    //     const config={
-    //         headers:{
-    //             // "Authorization" : `Bearer ${localStorage.getItem('token')}`
-    //             "Content-Type": "application/json"
-    //         }
-    //     };
-    //     if (id) {
-    //         axios.get(`http://localhost:8000/api/realtors/${id}`, config)
-    //         .then(res=>{
-    //             setRealtor(res.data)
-    //         })
-    //         .catch(err =>{
+    useEffect(()=>{
+        const id = listing.realtor
+        const config={
+            headers:{
+                // "Authorization" : `Bearer ${localStorage.getItem('token')}`
+                "Content-Type": "application/json"
+            }
+        };
+        if (id) {
+            axios.get(`https://niboraproperties.co.ke/api/realtors/${id}`, config)
+            .then(res=>{
+                setRealtor(res.data)
+            })
+            .catch(err =>{
 
-    //         });
-    //     }
-    // }, [listing.realtor]);
+            });
+        }
+    }, [listing.realtor]);
   
 
     const handleDragStart = (e) => e.preventDefault();
@@ -246,11 +246,13 @@ const ListingDetail=(props)=> {
             </HelmetProvider>
             <Scroll showBelow={250}/>
            
-               
+                <div className="height"></div>
                  <div className="container-fluid">
                      <AliceCarousel mouseTracking
                      autoPlay
                      autoPlayControls     
+                     autoPlayInterval={1000}
+                     animationDuration={1000}
                      keyboardNavigation={true}
                      disableDotsControls={true}
                      animationType="fadeout"
@@ -292,6 +294,30 @@ const ListingDetail=(props)=> {
                                 <div className="sale-title">
                                     <p className="sale-address">{listing.bedrooms}Beds&nbsp;&nbsp;&nbsp;&nbsp;{listing.bathrooms}Baths&nbsp;&nbsp;&nbsp;&nbsp;{listing.sqft}sqft</p>
                                 </div>
+                                <div className="height"></div>
+                                <div className="row">
+                                    <div className="col-sm">
+                                    <img className="logo-size-detail"src= {realtor.photo} alt={realtor.name}/>
+                                    </div>
+
+                                    <div className="col-sm">
+                                        <h2>{realtor.name}</h2>
+                                        
+                                    </div>
+                                    
+                                </div> 
+                                
+                                <div className="row">
+                                    <div className="col-sm">
+                                        <a href= {`tel: ${realtor.phone}`}> <button type="button" className="btn btn-danger"><Icon> <i class=" large phone  icon"></i></Icon></button></a>
+                                    </div>
+                                    <div className="col-sm">
+                                        <a href={`https://api.whatsapp.com/send?phone=${realtor.phone}`}> <button type="button" className="btn btn-success"><Icon> <i class=" large whatsapp  icon"></i></Icon></button></a>
+                                    </div>
+
+
+                                </div>
+
                             </div>
 
                         </div>
