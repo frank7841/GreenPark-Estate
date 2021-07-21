@@ -10,7 +10,9 @@ class Listing(models.Model):
     class PropertyType(models.TextChoices):
         HOME ='Home'
         GUESTHOUSE ='Guesthouse'
-        # HOTEL='Hotel'
+        LADIES_HOSTELS='Ladies-hostels'
+        GENTS_HOSTELS='Gents-hostels'
+        BEDSITTER='Bedsitter'
         TOWNHOUSE ='Townhouse' 
         PLOTS ='Plots'
         WAREHOUSE= 'Warehouse'

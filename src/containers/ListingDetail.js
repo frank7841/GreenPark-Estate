@@ -9,18 +9,34 @@ import Footer from '../components/footer'
 import { Accordion, Card } from 'react-bootstrap';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-
-
+import 'reactjs-popup/dist/index.css';
+import { Button, Modal, } from 'react-bootstrap';
+import emailjs from 'emailjs-com';
 
 const ListingDetail=(props)=> {
+
+    function sendEmail(e) {
+        
+        emailjs.sendForm('service_0gzq9yu', 'template_qr4r5xm', e.target, 'user_880oef8nAuEaVr8YhnTbp')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
+    
 
     let history = useHistory();
     const goToPreviousPath = () => {
         history.goBack()
     }
-
+    
     const[listing, setListing]=useState({});
     const[realtor, setRealtor]= useState({})
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
    
 
     useEffect(()=>{
@@ -323,6 +339,68 @@ const ListingDetail=(props)=> {
                         </div>
                     </div>
                 </div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm">
+                         </div>
+                         <div className="col-sm-4">   
+                                <Button variant="primary" onClick={handleShow}>Click to Book Listing</Button>
+                        </div>
+                        <div className="col-sm">
+
+                        </div>
+                    </div>    
+                <Modal show={show} onHide={handleClose}  {...props}
+                            size="lg"
+                            aria-labelledby="contained-modal-title-vcenter"
+                            centered>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Kindly Leave your Contact details</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <form onSubmit={sendEmail}>
+                            <div className="row">
+                                <div className=" form-group col">
+                                    <label for="f_name">First Name</label>
+                                    <input type="text" name ="fname"id ="f_name"className="form-control" placeholder="First name" />
+                                </div>
+                                <div className="form-group col">
+                                    <label for="l_name">Last Name</label>
+                                    <input type="text" name="lname"id="l_name"className="form-control" placeholder="Last name" />
+                                </div>
+                            </div>
+                            <div className="row">    
+                                <div className=" form-group col">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email"id ="email"className="form-control" placeholder="Email Address" />
+                                </div>
+                                <div className="form-group col">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" name="phone"id="phone"className="form-control" placeholder="0790943918" />
+                                </div>
+                           </div>
+                           <div className="row">
+                           <div className="form-group col">
+                                    <label for="listing">Listing</label>
+                                    <input type="text" name="listing"id="phone"className="form-control" value={listing.slug} />
+                                </div>
+                           </div>
+                           <div className="col-sm"></div>
+                           <div className="col-sm-3">
+                               <button className="btn btn-success" type="submit">Submit</button>
+                           </div>
+                           <div className="col-sm"></div>
+
+                        </form> 
+                    </Modal.Body>
+                        {/* <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>Close</Button>
+                            <Button variant="primary" onClick={handleClose}>Save Changes</Button>
+                    </Modal.Footer> */}
+                </Modal>     
+
+                </div>
+                
                 <div className="container-fluid ">    
                     <div className="row ">
                         <h1 className="align-center top-top-add">Features</h1>

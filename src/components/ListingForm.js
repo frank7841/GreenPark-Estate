@@ -89,6 +89,8 @@ const  Listingform= (props)=>{
               <option>Home</option>
               <option>Guesthouse</option>
               <option>Townhouse</option>
+              <option>Gents_hostels</option>
+              <option>Ladies_hostels</option>
               <option>Plots</option>
               <option>Warehouse</option>
               <option>Land</option>
