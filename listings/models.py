@@ -1,7 +1,25 @@
 from django.db import models
 from django.utils.timezone import now
 from realtors.models import Realtor   
+from multiselectefield import MultiSelectedField
 
+MY_CHOICES =((1, 'Outdoor Space'), 
+             (2,'Large Windows and Natural Lighting'),
+             (3,'Huge closet Space'),
+             (4,'Air Conditioning'),
+             (5,'Ample Parking'),
+             (6,'Swimming Pool'),
+             (7, '24hr CCTV '),
+             (8, 'Solar Water Heating'),
+             (9,'Laundry Area'),
+             (10, 'Dinning'),
+             (11, 'Open Plan Kitchen'),
+             (12, 'Roof-top'),
+             (13,'Borehole'),
+             (14,'Spacious'),
+             (15, 'Scenic View'),
+             (16,'Gated Community')
+             )
 class Listing(models.Model):
     class SaleType(models.TextChoices):
         FOR_SALE = 'For sale'
@@ -43,7 +61,14 @@ class Listing(models.Model):
     address = models.CharField(max_length=50)
     town = models.CharField(max_length= 50, choices =LocationTown.choices, default=LocationTown.KILIFI)
     county = models.CharField(max_length=100)
+    sale_type = models.CharField(max_length=50, choices=SaleType.choices, default=SaleType.FOR_SALE)
+    price = models.IntegerField() 
+    bedrooms = models.IntegerField()
+    bathrooms =models.IntegerField()
+    property_type = models.CharField(max_length= 50, choices =PropertyType.choices, default=PropertyType.HOME)
     description = models.TextField(blank=True)
+    rate = models.CharField(max_length=50, choices=Rates.choices,blank=True)
+    sqft = models.IntegerField()
     payment_plan=models.CharField(max_length=100, blank=True)
     feature_1= models.CharField(max_length=100, blank=True)
     feature_2= models.CharField(max_length=100, blank=True)
@@ -57,13 +82,8 @@ class Listing(models.Model):
     feature_10= models.CharField(max_length=100, blank=True)
     feature_11= models.CharField(max_length=100, blank=True)
     feature_12= models.CharField(max_length=100, blank=True)
-    rate = models.CharField(max_length=50, choices=Rates.choices,blank=True)
-    sale_type = models.CharField(max_length=50, choices=SaleType.choices, default=SaleType.FOR_SALE)
-    price = models.IntegerField() 
-    bedrooms = models.IntegerField()
-    bathrooms =models.IntegerField()
-    property_type = models.CharField(max_length= 50, choices =PropertyType.choices, default=PropertyType.HOME)
-    sqft = models.IntegerField()
+    amenities= multiselectefield(choices=MY_CHOICES)
+    
     featured = models.BooleanField(default =False)
     # property_availability = models.CharField(max_length=50, choices=AvailableType.choices, default=AvailableType.TRUE)
     open_house = models.BooleanField(default=False)
