@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.timezone import now
 from realtors.models import Realtor   
-from multiselectefield import MultiSelectedField
+from multiselectfield import MultiSelectField
 
 MY_CHOICES =((1, 'Outdoor Space'), 
              (2,'Large Windows and Natural Lighting'),
