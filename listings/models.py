@@ -3,7 +3,9 @@ from django.utils.timezone import now
 from realtors.models import Realtor   
 from multiselectfield import MultiSelectField
 
-MY_CHOICES =((1, 'Outdoor Space'), 
+
+class Listing(models.Model):
+    MY_CHOICES =((1, 'Outdoor Space'), 
              (2,'Large Windows and Natural Lighting'),
              (3,'Huge closet Space'),
              (4,'Air Conditioning'),
@@ -20,7 +22,6 @@ MY_CHOICES =((1, 'Outdoor Space'),
              (15, 'Scenic View'),
              (16,'Gated Community')
              )
-class Listing(models.Model):
     class SaleType(models.TextChoices):
         FOR_SALE = 'For sale'
         FOR_RENT = 'For rent'
@@ -82,7 +83,7 @@ class Listing(models.Model):
     feature_10= models.CharField(max_length=100, blank=True)
     feature_11= models.CharField(max_length=100, blank=True)
     feature_12= models.CharField(max_length=100, blank=True)
-    amenities= models.multiselectfield(choices=MY_CHOICES)
+    amenities= multiselectfield(choices=MY_CHOICES)
     
     featured = models.BooleanField(default =False)
     # property_availability = models.CharField(max_length=50, choices=AvailableType.choices, default=AvailableType.TRUE)
