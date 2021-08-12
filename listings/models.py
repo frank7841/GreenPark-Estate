@@ -83,7 +83,7 @@ class Listing(models.Model):
     feature_10= models.CharField(max_length=100, blank=True)
     feature_11= models.CharField(max_length=100, blank=True)
     feature_12= models.CharField(max_length=100, blank=True)
-    amenities= multiselectfield(choices=MY_CHOICES)
+    amenities= MultiSelectField(choices=MY_CHOICES)
     
     featured = models.BooleanField(default =False)
     # property_availability = models.CharField(max_length=50, choices=AvailableType.choices, default=AvailableType.TRUE)
