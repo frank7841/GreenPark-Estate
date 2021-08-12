@@ -5,7 +5,8 @@ from multiselectfield import MultiSelectField
 
 
 class Listing(models.Model):
-    MY_CHOICES =(('Outdoor Space', 'Outdoor Space'), 
+    MY_CHOICES =(
+             ('Outdoor Space', 'Outdoor Space'), 
              ('Large Windows and Natural Lighting','Large Windows and Natural Lighting'),
              ('Huge closet Space','Huge closet Space'),
              ('Air Conditioning','Air Conditioning'),
@@ -83,7 +84,7 @@ class Listing(models.Model):
     feature_10= models.CharField(max_length=100, blank=True)
     feature_11= models.CharField(max_length=100, blank=True)
     feature_12= models.CharField(max_length=100, blank=True)
-    amenities= MultiSelectField(choices=MY_CHOICES, blank=True)
+    amenities= MultiSelectField(choices=MY_CHOICES)
     
     featured = models.BooleanField(default =False)
     # property_availability = models.CharField(max_length=50, choices=AvailableType.choices, default=AvailableType.TRUE)
