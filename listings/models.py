@@ -5,22 +5,22 @@ from multiselectfield import MultiSelectField
 
 
 class Listing(models.Model):
-    MY_CHOICES =((1, 'Outdoor Space'), 
-             (2,'Large Windows and Natural Lighting'),
-             (3,'Huge closet Space'),
-             (4,'Air Conditioning'),
-             (5,'Ample Parking'),
-             (6,'Swimming Pool'),
-             (7, '24hr CCTV '),
-             (8, 'Solar Water Heating'),
-             (9,'Laundry Area'),
-             (10, 'Dinning'),
-             (11, 'Open Plan Kitchen'),
-             (12, 'Roof-top'),
-             (13,'Borehole'),
-             (14,'Spacious'),
-             (15, 'Scenic View'),
-             (16,'Gated Community')
+    MY_CHOICES =(('Outdoor Space', 'Outdoor Space'), 
+             ('Large Windows and Natural Lighting','Large Windows and Natural Lighting'),
+             ('Huge closet Space','Huge closet Space'),
+             ('Air Conditioning','Air Conditioning'),
+             ('Ample Parking','Ample Parking'),
+             ('Swimming Pool','Swimming Pool'),
+             ('24hr CCTV ', '24hr CCTV '),
+             ('Solar Water Heating', 'Solar Water Heating'),
+             ('Laundry Area','Laundry Area'),
+             ('Dinning', 'Dinning'),
+             ('Open Plan Kitchen', 'Open Plan Kitchen'),
+             ('Roof-top', 'Roof-top'),
+             ('Borehole','Borehole'),
+             ('Spacious''Spacious'),
+             ('Scenic View', 'Scenic View'),
+             ('Gated Community','Gated Community')
              )
     class SaleType(models.TextChoices):
         FOR_SALE = 'For sale'
